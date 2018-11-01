@@ -1,0 +1,217 @@
+.shoppingCartPage {
+    background: #EEE;
+    overflow: hidden;
+    padding-top: 68px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shoppingCartPage .PageHead {
+
+    background-image: linear-gradient(0deg, #00cac8, #0090d8);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 68px;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.shoppingCartPage .PageHead .title {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 48px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+.shoppingCartPage .PageHead .imgcont {
+    display: flex;
+    width: 50px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoppingCartPage .PageHead .imgcont img {
+    width: 48px;
+}
+
+.shoppingCartPage .PageHead i.icon {
+    font-size: 30px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    position: absolute;
+    height: 48px;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+}
+
+.shoppingCartPage .proinfo {
+    overflow: scroll;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background: #EEE;
+}
+
+.shoppingCartPage .proinfo .li {
+    display: flex;
+    border-bottom: 1px solid #EEE;
+    padding: 15px;
+    background: #FFF;
+    align-items: center;
+}
+
+.shoppingCartPage .proinfo .li .l {
+    flex-direction: row;
+}
+
+.shoppingCartPage .proinfo .li .l img {
+    width: 80px;
+    height: 80px;
+    align-self: flex-start;
+    border: 1px solid #EEE;
+    flex-shrink: 0;
+}
+
+.shoppingCartPage .proinfo .li div.l {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-left: 15px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.shoppingCartPage .proinfo .li div.l > div {
+    padding-left: 15px;
+    flex-grow: 1
+}
+
+.shoppingCartPage .proinfo .li div.l .price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shoppingCartPage .proinfo .li div.l .price span:first-child {
+    color: #F00;
+}
+
+.shoppingCartPage .ui.radio.checkbox {
+    padding: 0;
+}
+
+.shoppingCartPage .footBtn >div{
+    background: #FFF;
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.shoppingCartPage .footBtn .left {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.shoppingCartPage .footBtn .left label {
+    margin-right: 10px;
+}
+.shoppingCartPage .footBtn .left .price{
+    display: flex;
+    align-items: center;
+}
+.shoppingCartPage .footBtn .left .price > span {
+    color: #F00;
+    font-size: 16px;
+}
+
+.shoppingCartPage .footBtn .btn {
+    display: flex;
+    background: #5596d6;
+    color: #FFF;
+    align-self: stretch;
+    align-items: center;
+    padding: 0 30px;
+}
+.shoppingCartPage .proinfo .li div .btnControl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.shoppingCartPage .proinfo .btnControl > div {
+    border: 1px solid #EEE;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+.shoppingCartPage .proinfo .btnControl > div.num {
+    border: none;
+}
+.shoppingCartPage .proinfo .btnControl > div.num .ui.input {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+.shoppingCartPage .proinfo .btnControl > div.num .ui.input input {
+    border-radius: 0;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    width: 30px;
+    font-size: 14px;
+    height: 30px;
+    display: flex;
+
+}
+.shoppingCartPage .ui.checkbox{
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+.shoppingCartPage .ui.checkbox .box:before,
+.shoppingCartPage .ui.checkbox label:before{
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+}
+.shoppingCartPage .ui.checkbox .box:after,
+.shoppingCartPage .ui.checkbox label:after{
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background: #5596d6;
+    border-radius: 40px;
+    color: #FFF;
+    font-weight: 100;
+}
+.shoppingCartPage .ui.checkbox input:checked~.box:after,
+.shoppingCartPage .ui.checkbox input:checked~label:after{
+    color: #FFF;
+}
+.shoppingCartPage .footBtn{
+    border-top:1px solid #EEE;
+}
+.shoppingCartPage .footBtn .btn span{
+    font-size: 16px;
+}

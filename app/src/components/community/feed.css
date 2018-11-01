@@ -1,0 +1,539 @@
+.feedPage{
+    width: 100%;
+    background: #EEE;
+    justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.feedPage #ListInside >div{
+    margin-bottom: 15px;
+}
+.commentlistcontent{
+    background: #FFF;
+}
+.commentlistcontent.hide{
+    display: none;
+}
+.feedHead .ui.feed{
+    border-bottom: 1px solid #EEE;
+    background: #FFF;
+    margin:0;
+    padding-top: 10px;
+}
+.feedHead {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 15px
+}
+.feedContent{
+    padding: 0 15px 10px 15px;
+    border-bottom: 1px solid #EEE;
+}
+.feedContent .images{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.feedContent .images > div.communityImg{
+    width: 33.33%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+    align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding-top: 33.3%;
+    height: 0;
+    overflow: hidden;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #FFF;
+}
+
+
+.feedPage .PageHead {
+
+    background-image: linear-gradient(0deg, #00cac8, #0090d8);
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-shrink: 0;
+    position: relative;
+    padding-top: 20px;
+}
+
+.feedPage .PageHead .title {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 48px;
+    color: #FFF;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+.feedPage .PageHead .imgcont {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 50px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.feedPage .PageHead .imgcont img {
+    width: 48px;
+}
+
+.feedPage .PageHead i.icon {
+    font-size: 30px;
+    color: #FFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding-left: 10px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.feedPage i.blue.icon{
+    color:#00cac8!important
+}
+.feedPage .PageHead .ui.grid{
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    height: 48px;
+}
+
+.feedPage .PageHead .ui.grid>.row{
+    padding: 0
+}
+.feedPage .PageHead .ui.grid>.row>[class*="right aligned"].column.column{
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+}
+.feedPage .PageHead .ui.grid img{
+    width: 48px;
+}
+.ui.feed{
+    padding-top: 10px;
+    margin: 0;
+}
+.childComments > div{
+    padding: 10px 0;
+}
+.childComments.hide{
+    display: none;
+}
+.ui.feed>.event>.content>.feedContent .extra.images img{
+    margin: 3px;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+.feedHead .label {
+    margin-right: 10px;
+}
+
+.feedHead .label img {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.feedHead .summary {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.feedHead .ui.grid>.column:not(.row),
+.feedHead .ui.grid>.row>.column{
+    padding:0;
+}
+
+.ui.feed > .event > .content .summary > .date {
+    margin: 0;
+}
+.ui.feed > .event > .content .summary > .summaryName{
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1em;
+    color: rgba(0,0,0,.87);
+    font-weight: 700;
+}
+
+.topTip {
+    background: #EEE;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding:6px 0;
+}
+
+.topTip .con {
+    background: #333;
+    border-radius: 6px;
+    color: #FFF;
+    height: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding:0 8px;
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.topTip .con img {
+    width: 20px;
+    margin-right: 10px;
+    height: 20px;
+}
+.topTip .con span{
+    font-size: 14px;
+}
+.ui.feed>.event>.content .myMeta {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 0;
+}
+.ui.feed>.event>.content .myMeta .addCommunity,
+.ui.feed>.event>.content .myMeta > a{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 25%;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.communityInfo .feedContent{
+    border-bottom: none;
+}
+.ui.feed.communityInfo .event .content .myMeta {
+    border-bottom: 1px solid #EEE;
+}
+.ui.feed.communityInfo .event .content .avatarlist{
+    padding: 10px 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.ui.feed.communityInfo .event .content .avatarlist:active{
+    background: #EEE;
+}
+
+.ui.comments {
+    padding: 15px;
+    padding-bottom: 0;
+    margin: 0;
+}
+.myCommentAction{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.myCommentLnk{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.myCommentLnk > div{
+    padding:2px 5px;
+    color: #CCC;
+}
+
+.ui.comments .comment .myCommentAction .metadata{
+    margin: 0;
+}
+.communityInfoComment.ui.comments{
+    padding: 0;
+}
+.communityInfoComment .title{
+    padding: 0 15px 5px 15px;
+}
+.communityInfoComment.ui.comments .comment{
+    border-bottom: 1px solid #EEE;
+    padding: 15px;
+    background: #FFF;
+    margin: 0;
+}
+.communityInfoComment.ui.comments .comment .avatar img{
+    border-radius: 100%;
+}
+.communityInfoComment.ui.comments .comment .author{
+    color: #5694dd;
+    font-weight: normal;
+}
+.feedBottomReplyForm{
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.feedBottomReply{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content:  flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    background: #FFF;
+    border-top: 1px solid #EEE;
+    padding-top: 80px;
+    z-index: 1001;
+    height: 100%;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -moz-box-orient:vertical;
+        -moz-box-direction:normal;
+        flex-direction:column;
+        -webkit-flex-direction:column;
+}
+.feedBottomReply textarea{
+    height: 200px;
+    padding: 5px 15px;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+    resize: none;
+    font-size: 18px;
+}
+.feedBottomReply .ui.primary.button{
+    width: 80%;
+}
+.feedBottomReply span{
+    padding-right: 15px;
+}
+.commentlistcontent .ui.comments{
+    /*padding-top: 1;*/
+    border-top: 1px solid #EEE;
+}
+.feedPage .ui.feed{
+    padding-top: 10px;
+    background: #FFF
+}
+.commentlistcontent .ui.comments>div{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 10px;
+}
+.commentlistcontent .ui.comments>div:last-child{
+    margin-bottom: 0;
+    border: none;
+}
+.ui.comments .comentShowMore{
+    text-align: center;
+}
+.commentInfoPage .ui.comments{
+    margin: 0;
+}
+.commentInfoPage .ui.comments .comment .avatar img,
+.commentInfoPage .ui.comments .comment img.avatar{
+    height: 35px;
+    border-radius: 35px;
+}
+.commentInfoPage .ui.comments > div{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEE;
+}
+.commentInfoPage .ui.comments .childComments > div{
+    border-top: 1px solid #EEE;
+    margin-top: 10px;
+}
+.commentInfoPage .ui.comments .childComments > div:last-child{
+    padding-bottom: 0
+}
+.pageWamp >div.commentInfoPage{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+.commentInfoPage .tc{
+    flex-shrink: 1;
+    -moz-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    overflow: scroll;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+.commentInfoPage .tc > div{
+    width: 100%
+}
+.commentInfoPage .tb .feedBottomReply{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+}
+
+
+.commentInfoPage .th{
+    flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.feedPage{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.feedPage .tc{
+    flex-shrink: 1;
+    -moz-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow:hidden;
+    position: fixed;
+    top: -48px;
+    left: 0;
+    width: 100%;
+    background: #EEE;
+}
+.feedPage .tc > div{
+    width: 100%
+}
+.feedPage .tb .feedBottomReply{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+}
+
+.feedPage .ui.comments .comment .avatar img,
+.feedPage .ui.comments .comment img.avatar{
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+}
+.feedPage .list-view-section-body >div{
+    margin-bottom: 10px;
+}
+.feedPage .ui.input input{
+    width: 100%;
+    display:block;
+}
