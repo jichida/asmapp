@@ -161,9 +161,7 @@ export class Page extends React.Component {
     render() {
         return (
             <div className="UserLoginPage">
-                <FindpwdForm onClickOK={this.onClickOK}
-                              onClickLogin={this.onClickLogin}
-                              onClickReturn={this.onClickReturn}/>
+                <FindpwdForm onClickOK={this.onClickOK} onClickLogin={this.onClickLogin} onClickReturn={this.onClickReturn}/>
             </div>
         );
     }

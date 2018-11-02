@@ -4,6 +4,10 @@ import { Route,Switch } from 'react-router-dom';
 import Index from './index';
 
 import {requireAuthentication} from './requireauthentication';
+
+import Main from './main/main.js';
+import Good from './main/good.js';
+
 //圈子相关
 import Communityinfo from './community/info.js';
 import Communityreplypage from './community/replypage.js';
@@ -33,6 +37,11 @@ class AppRoot extends React.Component {
                   <Route path="/communityreplypage/:topicid" component={Communityreplypage}/>
                   <Route path="/mytopiclist" component={requireAuthentication(MyTopiclist)}/>
 
+                  <Route path="/main" component={Main}/>
+                  <Route path="/good" component={Good}/>
+
+
+                  <Route path="/index" component={Index}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/register" component={Register}/>
                   <Route path="/forgetpwd" component={ForgetPwd}/>
