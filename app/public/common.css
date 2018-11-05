@@ -1,0 +1,39 @@
+.body{
+	background: #f4f4f4;
+}
+.head{
+	background: #0074c3;
+	display: flex;
+	height: 70px;
+	justify-content: center;
+	padding: 15px 20px 0 20px;
+	align-items: center;
+	position: relative;
+}
+.head .title{
+	font-size: 20px;
+	color: #FFF;
+	font-weight: bold;
+}
+.head .city{
+	color: #FFF;
+	font-size: 16px;
+}
+.head .rightlnk,.head .leftlnk{
+	position: absolute;
+	height: 55;
+	display: block;
+	line-height: 55px;
+}
+.head .rightlnk {
+	right: 20px;
+	top:15px;
+}
+.head .leftlnk {
+	left: 20px;
+	top:15px;
+}
+.head .rightlnk .addPost{
+	color: #FFF;
+	font-size: 16px;
+}

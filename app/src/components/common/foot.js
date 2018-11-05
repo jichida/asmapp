@@ -2,8 +2,6 @@ import React,{ Component } from 'react';
 import { TabBar } from 'antd-mobile';
 import Community from '../community';
 import {withRouter} from 'react-router-dom';
-//咨询
-import Translate from '../translate/translate.js';
 
 
 class TabBarExample extends Component {
@@ -19,16 +17,14 @@ class TabBarExample extends Component {
   renderContent(pageText) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <br />
-        <br />
-        <br />
+        <Community />
       </div>
     );
   }
 
-  // poppush(url){
-  //   this.props.history.push(url);
-  // }
+  poppush(url){
+    this.props.history.push(url);
+  }
 
   render() {
     return (
@@ -80,10 +76,11 @@ class TabBarExample extends Component {
             selected={this.state.selectedTab === 'translate'}
             onPress={() => {
               this.setState({ selectedTab: 'translate' });
+              this.poppush('/translate');
             }}
             data-seed="logId1"
           >
-            <Translate />
+            {this.renderContent('咨询')}
           </TabBar.Item>
           <TabBar.Item
             icon={<i class="icon iconfont icon-31jifen" />}
@@ -91,10 +88,10 @@ class TabBarExample extends Component {
             title="积分"
             key="积分"
             dot
-            selected={this.state.selectedTab === 'jifen'}
+            selected={this.state.selectedTab === 'jife'}
             onPress={() => {
               this.setState({
-                selectedTab: 'jifen',
+                selectedTab: 'jife',
               });
             }}
           >

@@ -8,6 +8,7 @@ import {requireAuthentication} from './requireauthentication';
 import Main from './main/main.js';
 import Good from './main/good.js';
 
+
 //圈子相关
 import Communityinfo from './community/info.js';
 import Communityreplypage from './community/replypage.js';

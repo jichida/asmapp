@@ -45,6 +45,8 @@ let Data = (props)=> {
                 <div className="l">
                     <div>
                         <input type="rideo" />
+                        <input type="rideo" />
+                        <input type="rideo" />
                     </div>
                 </div>
             </div>

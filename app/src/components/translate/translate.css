@@ -1,0 +1,74 @@
+.translate .nav{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    padding: 0 20px;
+    align-items: center;
+    background: #FFF;
+    margin-bottom: 10px;
+}
+.translate .nav >div{
+	padding:  0 10px;
+	position: relative;
+	display: block;
+	font-size: 14px;
+	line-height: 50px;
+	height: 50px;
+}
+.translate .nav >div.sel{
+	color: #0070c0;
+}
+.translate .nav >div.sel:after{
+	content: "";
+	display: block;
+	height: 3px;
+	background: #0070c0;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+}
+.translate .img{
+	width: 100%;
+}
+.datalist .li{
+	background: #FFF;
+	margin-bottom: 10px;
+}
+.datalist .li .userinfo{
+	padding:10px 20px 5px 20px;
+	display: flex;
+}
+.datalist .li .userinfo .left{
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.datalist .li .userinfo .left img{
+	width: 40px;
+	border-radius: 40px;
+}
+.datalist .li .userinfo .right .name{
+	font-size: 16px;
+	font-weight: bold;
+}
+.datalist .li .userinfo .right .equipment{
+	color: #999
+}
+
+.datalist .li .imglist{
+	display: flex;
+	margin: 0 20px;
+	justify-content: space-between;
+}
+.datalist .li .imglist img{
+	width: 24%;
+	height: 24%;
+}
+.datalist .li .infotext{
+	padding: 10px 20px;
+	font-size: 16px;
+}
+
+
+
+
