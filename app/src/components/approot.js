@@ -19,6 +19,7 @@ import Register from './login/register.js';
 import Login from './login/login.js';
 import ForgetPwd from './login/forgetpwd.js';
 
+import Test from './test';//专门用来测试的网页
 class AppRoot extends React.Component {
     componentWillMount() {
 
@@ -32,6 +33,7 @@ class AppRoot extends React.Component {
               <div className="container">
                 <Switch>
                   <Route exact path="/" component={Index} />
+                  <Route exact path="/test" component={Test} />
                   <Route path="/newtopic" component={requireAuthentication(NewTopic)}/>
                   <Route path="/communityinfo/:topicid" component={Communityinfo}/>
                   <Route path="/communityreplypage/:topicid" component={Communityreplypage}/>
