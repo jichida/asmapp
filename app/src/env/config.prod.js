@@ -11,7 +11,8 @@ let config = {
     requesttimeout:5000,
     appversion:'1.2.5',
     sendlocationinterval:20000,
-    softmode:'app'
+    softmode:'app',
+    shopid:'5bd12be97ed9b65f0fff9edb'
 };
 
 

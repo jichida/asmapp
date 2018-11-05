@@ -26,8 +26,9 @@ const initial = {
 
         expressfee : 10,
         expressfeeforfree: 100,
-        productid1: '',
-        productid2: '',
+
+        productcategoryid_hardware: '',//硬件商城ID
+        productcategoryid_point: '',//积分商城ID
 
         newmsgnumber:0,
         innerheight : 0,

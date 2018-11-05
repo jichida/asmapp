@@ -6,7 +6,8 @@ import {delay} from 'redux-saga';
 // import lodashincludes from 'lodash.includes';
 
 const synccallreq = createAction('synccallreq');
-
+export const page_getproduct_request = createAction('page_getproduct_request');
+export const page_getproduct_result = createAction('page_getproduct_result');
 
 //以下导出放在视图
 export function callthen(actionreq,actionres,payload){
