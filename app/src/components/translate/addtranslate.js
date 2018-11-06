@@ -11,15 +11,25 @@ import "./translate.css";
 
 //顶部搜索
 let Head = (props)=> {
+    let poppush =(url)=>{
+        props.history.push(url);
+    }
+    let back=()=>{
+        props.history.goBack();
+    }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back"><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
             <div className="title">发布新帖</div>
         </div>
     );
 };
+Head = withRouter(Head);
 //首页数据
 let TranslateInfo = (props)=> {
+    let poppush =(url)=>{
+        props.history.push(url);
+    }
     return (
         <div className="addTranslateInfo">
             <div className="userinfo">
@@ -31,7 +41,7 @@ let TranslateInfo = (props)=> {
                     <div className="equipment">智能手表 2018-09-09 09:20:20</div>
                 </div>
             </div>
-            <div className="proinfo">
+            <div className="proinfo" onClick={()=>{poppush("/translate/selorder")}}>
                 <span className="shopping"><i class="icon iconfont icon-shopping" style={{color:"#0070c0"}} /></span>
                 <span className="proname">您购买的相关产品/服务</span>
                 <span className="selicon"><i class="icon iconfont icon-nvxingfuben" /></span>
@@ -49,7 +59,7 @@ let TranslateInfo = (props)=> {
         </div>
     );
 };
-
+TranslateInfo = withRouter(TranslateInfo);
 //底部回复控件
 let FootTools = (props)=> {
     return (

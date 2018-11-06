@@ -12,14 +12,20 @@ import "./translate.css";
 
 //顶部搜索
 let Head = (props)=> {
+    
+    let poppush =(url)=>{
+        props.history.push(url);
+    }
+
     return (
         <div className="head">
             <div className="leftlnk"><span className="city">常州 <i class="icon iconfont icon-down" /></span></div>
             <div className="title">咨询</div>
-            <div className="rightlnk"><span className="addPost">+ 发帖</span></div>
+            <div className="rightlnk"><span className="addPost" onClick={()=>{poppush('/translate/add')}}>+ 发帖</span></div>
         </div>
     );
 };
+Head =  withRouter(Head);
 
 //分类导航
 let Nav = (props)=> {

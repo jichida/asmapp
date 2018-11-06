@@ -271,6 +271,104 @@
 	text-align: center;
 	margin-bottom: 20px;
 }
+.selOrderPage{
+	display: flex;
+	flex-direction: column;
+}
+.selOrderPage .selOrderBtn{
+	background: #0070c0;
+	color: #FFF;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.selOrderPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.selOrderPage .selOrderData .li {
+	background: #FFF;
+	margin-bottom: 10px;
+}
+.selOrderPage .selOrderData .li .title{
+	line-height: 40px;
+	text-indent: 20px;
+	border-bottom: 1px solid #EEE;
+	font-size: 16px;
+}
+.selOrderPage .selOrderData .li .prolist .pli{
+	display: flex;
+	align-items: center;
+	padding:15px 20px;
+	border-bottom: 1px solid #EEE;
+}
+.selOrderPage .selOrderData .li .prolist .pli .rideoInput{
+	position: relative;
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+}
+.selOrderPage .selOrderData .li .prolist .pli .img{
+	width: 80px;
+	margin: 0 20px;
+}
+.selOrderPage .selOrderData .li .prolist .pli .img img{
+	width: 80px;
+	border-radius: 10px;
+}
+.selOrderPage .selOrderData .li .prolist .pli .rideoInput:before{
+	content: "";
+	display: flex;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: #EEE;
+	border:1px solid #DDD;
+	border-radius: 30px;
+	display: block;
+	width: 26px;
+	height: 26px;
+	z-index: 1;
+}
+.selOrderPage .selOrderData .li .prolist .pli .rideoInput:after{
+	content: "";
+	display: flex;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	background: #EEE;
+	border-radius: 24px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	z-index: 2;
+}
+.selOrderPage .selOrderData .li .prolist .pli.sel .rideoInput:after{
+	background: #0070c0;
+}
+
+.selOrderPage .selOrderData .li .prolist .pli .orderinfo .name{
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+.selOrderPage .selOrderData .li .prolist .pli .orderinfo .price{
+	color: #e60012;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
