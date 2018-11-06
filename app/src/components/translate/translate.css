@@ -1,3 +1,13 @@
+.translate{
+	position: relative;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.translate .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
 .translate .nav{
     display: flex;
     justify-content: space-around;
@@ -35,26 +45,65 @@
 	background: #FFF;
 	margin-bottom: 10px;
 }
-.datalist .li .userinfo{
+.translate .userinfo{
 	padding:10px 20px 5px 20px;
 	display: flex;
 }
-.datalist .li .userinfo .left{
+.translate .userinfo .left{
 	flex-shrink: 0;
 	margin-right: 15px;
 }
-.datalist .li .userinfo .left img{
+.translate .userinfo .left img{
 	width: 40px;
 	border-radius: 40px;
 }
-.datalist .li .userinfo .right .name{
+.translate .userinfo .right .name{
 	font-size: 16px;
 	font-weight: bold;
 }
-.datalist .li .userinfo .right .equipment{
+.translate .reply .userinfo .right .name{
+	color: #0070c0
+}
+.translate .userinfo .right .equipment{
 	color: #999
 }
-
+.translate .reply .userinfo .right .equipment{
+	padding: 5px 0;
+}
+.translate .userinfo .right .time{
+	height: 30px;
+	align-items: center;
+	display: flex;
+	padding: 5px 0;
+}
+.translate .userinfo .right .time .t{
+	color: #888;
+	margin-right: 20px;
+}
+.translate .userinfo .right .time .b{
+	display: block;
+	line-height: 26px;
+	height: 26px;
+	padding:0 20px;
+	color: #999;
+	border-radius: 26px;
+	border: 1px solid #DDD;
+}
+.translate .infotextarr p,
+.translate .infotextarr img{
+	margin-bottom: 0;
+	margin-bottom: 5px;
+}
+.translate .infotextarr{
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 20px;
+}
+.translate .infoarea{
+	margin-bottom: 10px;
+}
 .datalist .li .imglist{
 	display: flex;
 	margin: 0 20px;
@@ -68,7 +117,160 @@
 	padding: 10px 20px;
 	font-size: 16px;
 }
-
+.datalist .li .attribute{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px 10px 20px; 
+	color: #999;
+}
+.datalist.reply .li{
+	margin-bottom: 0;
+}
+.translate .infoarea{
+	background: #FFF;
+	padding-bottom: 10px;
+}
+.translate .infoarea .infolnk{
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
+.translate .infoarea .infolnk span{
+	display: block;
+	line-height: 36px;
+	min-width: 120px;
+	border-radius: 36px;
+	text-align: center;
+	border:1px solid #DDD;
+	color: #999
+}
+.translate .infoarea .infolnk span:first-child{
+	margin-right: 30px;
+}
+.translate .reply.datalist .li{
+	padding-bottom: 10px;
+	position: relative;
+}
+.translate .reply.datalist .li span.zan{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	width: 28px;
+	height: 28px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.translate .reply.datalist .li span.zaned{
+	color: #C00;	
+}
+.translate .reply.datalist .li span.zan .iconfont{
+	font-size: 26px;
+	line-height: 22px;
+}
+.translate .reply.datalist .li span.zan span{
+	line-height: 16px;
+}
+.footools.reply{
+	background: #FFF;
+	padding: 15px 20px;
+	border:1px solid #EEE;
+	display: flex;
+    justify-content: space-between;
+}
+.footools.reply input{
+	border:none;
+	background: #f8f8f8;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	height: 36px;
+	padding-left: 10px;
+	flex-grow: 1;
+}
+.footools.reply .iconfont{
+	line-height: 36px;
+	font-size: 18px;
+	color: #888;
+}
+.footools.reply span{
+	display: block;
+	width: 44px;
+	flex-shrink: 0;
+	height: 36px;
+	text-align: right;
+}
+.addTranslate.body{
+	flex-grow: 1;
+	background: #FFF;
+	display: flex;
+	flex-direction: column;
+}
+.addTranslateInfo{
+	display: flex;
+	flex-grow: 1;
+	flex-direction:column;
+}
+.addTranslateInfo .userinfo	{
+	background: #FFF;
+	padding-bottom: 15px;
+}
+.addTranslateInfo .proinfo{
+	background: #f4f4f4;
+	height: 60px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.addTranslateInfo .proinfo .proname{
+	flex-grow: 1;
+}
+.addTranslateInfo  .inputarea {
+	background: #FFF;
+	flex-grow: 1;
+	display: flex;
+}
+.addTranslateInfo  .inputarea textarea{
+	flex-grow: 1;
+	width: 100%;
+	border: none;
+	padding: 20px;
+}
+.addTranslateInfoFoot.footools.reply{
+	background: #EEE;
+}
+.addTranslateInfoFoot.footools.reply span{
+	display: flex;
+	align-items: center;
+}
+.addTranslateInfoFoot.footools.reply span i:first-child{
+	margin-right: 5px;
+}
+.addTranslateInfo .proinfo .shopping .iconfont{
+	font-size: 24px;
+	margin-right:10px ;
+}
+.addTranslateInfo .imglist{
+	display: flex;
+	justify-content: flex-start;
+	padding: 20px;
+}
+.addTranslateInfo .imglist img{
+	width: 25%;
+	margin-bottom: 5px;
+	height: 24%;
+	padding: 2px;
+}
+.addTranslateInfo .subbtn{
+	color:#FFF;
+	background: #0070c0;
+	margin: 0 20px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 20px;
+}
 
 
 

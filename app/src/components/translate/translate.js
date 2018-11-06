@@ -68,6 +68,13 @@ let DataList = (props)=> {
                         智能穿戴设备是应用穿戴式技术对日常穿戴进行智能化设计、开发出可以穿戴的设备的总称，如手表、手环、眼镜、服饰等......
                     </div>
                 </div>
+                <div className="attribute">
+                    <span>评论</span>
+                    <span>点赞</span>
+                    <span>收藏</span>
+                    <span>举报</span>
+                    <span>屏蔽</span>
+                </div>
             </div>
             <div className="li">
                 <div className="userinfo">
@@ -97,26 +104,25 @@ let DataList = (props)=> {
 
 
 export class Page extends React.Component {
-
     constructor(props) {  
         super(props);  
         this.state = {
             p: 0,
             innerHeight : window.innerHeight
-        };
-    } 
-
+        }
+    }
     render() {
         return (
             <div className="translate">
                 <Head />
-                <img src="./img/1.png" className="img" />
-                <Nav />
-                <DataList />
+                <div className="body">
+                    <img src="./img/1.png" className="img" />
+                    <Nav />
+                    <DataList />
+                </div>
             </div>
         )
     }
-
 }
 const stores = ({userlogin}) => {
     return {...userlogin};

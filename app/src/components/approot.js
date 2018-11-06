@@ -8,6 +8,10 @@ import {requireAuthentication} from './requireauthentication';
 import Main from './main/main.js';
 import Good from './main/good.js';
 
+//咨询详情
+import TranslateInfo from './translate/info.js';
+import TranslateReplyList from './translate/replylist.js';
+import TranslateAdd from './translate/addtranslate.js';
 
 //圈子相关
 import Communityinfo from './community/info.js';
@@ -43,6 +47,9 @@ class AppRoot extends React.Component {
                   <Route path="/main" component={Main}/>
                   <Route path="/good" component={Good}/>
 
+                  <Route path="/translate/info/:translateid" component={TranslateInfo}/>
+                  <Route path="/translate/reply" component={TranslateReplyList}/>
+                  <Route path="/translate/add" component={TranslateAdd}/>
 
                   <Route path="/index" component={Index}/>
                   <Route path="/login" component={Login}/>
