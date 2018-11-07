@@ -12,14 +12,17 @@ import "./translate.css";
 
 //顶部搜索
 let Head = (props)=> {
+    let back=()=>{
+        props.history.goBack();
+    }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back"><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={back}><i class="icon iconfont icon-Left" /></span></div>
             <div className="title">资讯详细</div>
         </div>
     );
 };
-
+Head = withRouter(Head);
 //帖子详情
 //icon-zan
 let Info = (props)=>{

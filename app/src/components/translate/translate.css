@@ -275,6 +275,10 @@
 	display: flex;
 	flex-direction: column;
 }
+.selOrderPage .head .rightlnk .search .iconfont{
+	font-size: 18px;
+	color: #FFF;
+}
 .selOrderPage .selOrderBtn{
 	background: #0070c0;
 	color: #FFF;

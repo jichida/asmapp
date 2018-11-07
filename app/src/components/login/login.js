@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import {login_request} from '../../actions/index.js';
 import {withRouter} from 'react-router-dom';
+import "./login.css";
 
 //import 'semantic-ui/dist/semantic.min.css';
 let renderLoginForm = (fields)=> {
@@ -30,13 +31,15 @@ let renderLoginForm = (fields)=> {
     //选中时候怎么弄？  <Icon name={ispasswordvisiable?"lock":"eye"} className="sel" onClick={onChangePasswordvisiable}/>
     return (<div className='loginform'>
         <div className="username logininput">
-            <Input placeholder='输入手机号' {...fields.username.input} type="text"/>
+            <i class="icon iconfont icon-shouji" />
+            <Input placeholder='请输入您的手机号' {...fields.username.input} type="text"/>
             {fields.username.meta.touched && fields.username.meta.error &&
             <Label basic color='red' pointing>{fields.username.meta.error}</Label>}
             <Icon name="mobile" className='lefticon'/>
         </div>
         <div className="password logininput">
-            <Input placeholder='输入密码'  {...fields.password.input} type={ispasswordvisiable?"text":"password"}/>
+            <i class="icon iconfont icon-suo" />
+            <Input placeholder='请输入您的密码'  {...fields.password.input} type={ispasswordvisiable?"text":"password"}/>
             {fields.password.meta.touched && fields.password.meta.error &&
             <Label basic color='red' pointing>{fields.password.meta.error}</Label>}
             <Icon name="lock" className='lefticon'/>
@@ -50,29 +53,17 @@ let LoginForm = (props)=> {
     let onClickReturn = ()=> {
         props.history.goBack();
     }
-
-
-
     return (
-        <Form onSubmit={handleSubmit(onClickLogin)} id={id}>
+        <Form onSubmit={handleSubmit(onClickLogin)} id={id} className="UserLoginPageForm">
             <div className="loginPageTop">
-
-                <div className="loginHead" onClick={()=>{}}>
-                    <Icon  name='angle left' onClick={onClickReturn} />
-                    <img src="img/4.png" className="loginhead" alt=""/>
-                </div>
                 <Fields names={[ 'username', 'password','ispasswordvisiable','ischeckedpassword' ]}
                         component={renderLoginForm}/>
                 <div className="loginBotton">
                     <Button primary>登录</Button>
-                    <Button basic type="button" onClick={onClickRegister}>快速注册</Button>
-                    <div className="forgetpwdcon">
-                        <div className="loginbysms" onClick={onClickLoginbysms}>验证码登录</div>
-                        <div className="forgetpwd" onClick={onClickForgetPasword}>忘记密码</div>
-                    </div>
                 </div>
             </div>
-        </Form>);
+        </Form>
+    );
 };
 const validate = values => {
     const errors = {}
@@ -175,17 +166,34 @@ export class Page extends React.Component {
         }
     }
 
+    back = ()=>{
+        this.props.history.goBack();
+    }
+
 
     render() {
         return (
-            <div className="UserLoginPage">
-                <div>
-                <LoginForm onClickRegister={this.onClickRegister}
-                           onClickLogin={this.onClickLogin}
-                           onClickForgetPasword={this.onClickForgetPasword}
-                           onClickLoginbysms={this.onClickLoginbysms}
-                           id="UserLoginPageForm"
-                            {...this.props}/>
+            <div className="UserLoginPage" style={{minHeight : this.state.innerHeight + "px"}}>
+                <div className="loginHead">
+                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="title">登录</span>
+                </div>
+                <img src="./img/bg.png" className="bg" />
+                <div className="loginPage">
+                    <img src="./img/logo.png" className="logo" />
+                    <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
+                    <LoginForm 
+                        onClickRegister={this.onClickRegister}
+                        onClickLogin={this.onClickLogin}
+                        onClickForgetPasword={this.onClickForgetPasword}
+                        onClickLoginbysms={this.onClickLoginbysms}
+                        id="UserLoginPageForm"
+                        {...this.props}
+                        />
+                </div>
+                <div className="loginLnk">
+                    <div className="registerLnk" onClick={this.onClickRegister}>注册账号</div>
+                    <div className="forgetpwdLnk" onClick={this.onClickForgetPasword}>忘记密码</div>
                 </div>
             </div>
         );

@@ -51,9 +51,12 @@ let MainSrcollImg = (props)=> {
 
 //首页数据
 let DataList = (props)=> {
+    let poppush =(url)=>{
+        props.history.push(url);
+    }
     return (
         <div className="datalist">
-            <div className="li">
+            <div className="li" onClick={()=>{poppush("/translate/info/1")}}>
                 <div className="userinfo">
                     <div className="left">
                         <img className="avatar" src="./img/2.png" />
@@ -107,7 +110,7 @@ let DataList = (props)=> {
         </div>
     );
 };
-
+DataList = withRouter(DataList);
 
 export class Page extends React.Component {
     constructor(props) {  

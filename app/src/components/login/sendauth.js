@@ -57,7 +57,7 @@ export class Page extends Component {
                     text: this.state.time+"秒",
                     unlabel : true,
                     unlabelstyle: {
-                        background: "#999999"
+                        background: "#EEE"
                     }
                 });
             }

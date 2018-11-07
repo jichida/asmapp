@@ -3,12 +3,12 @@ import React from 'react';
 import { Input,  Button, Icon,Label} from 'semantic-ui-react';
 import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
-
 // import {login_request} from '../../actions/index.js';
 import {sendauth_request,register_request} from '../../actions/index.js';
 // import {register} from '../actions/sagacallback.js';
 import Sendauth from './sendauth.js';
 import {withRouter} from 'react-router-dom';
+import "./login.css";
 
 let renderRegisterForm = (fields)=> {
     let ispasswordvisiable = fields.ispasswordvisiable.input.value;
@@ -44,29 +44,30 @@ let renderRegisterForm = (fields)=> {
             <Input placeholder='输入手机号' {...fields.username.input} type="text"/>
             {fields.username.meta.touched && fields.username.meta.error &&
             <Label basic color='red' pointing>{fields.username.meta.error}</Label>}
-            <Icon name="mobile" className='lefticon'/>
+            <Icon name="mobile" className='lefticon' />
         </div>
         <div className="password logininput yanzhenyinput">
             <Input placeholder='输入验证码'  {...fields.authcode.input} type="text"/>
             {fields.authcode.meta.touched && fields.authcode.meta.error &&
             <Label basic color='red' pointing>{fields.authcode.meta.error}</Label>}
-            <img src="img/rg2.png" className='lefticon' alt=""/>
+            <img src="img/rg2.png" className='lefticon' alt="" />
             <Sendauth primary action={onClickAuth} className="yanzhenBtn" />
         </div>
         <div className="password logininput">
             <Input placeholder='输入密码'  {...fields.password.input} type={ispasswordvisiable?"text":"password"}/>
             {fields.password.meta.touched && fields.password.meta.error &&
             <Label basic color='red' pointing>{fields.password.meta.error}</Label>}
-            <img src="img/rg3.png" className='lefticon' alt=""/>
+            <img src="img/rg3.png" className='lefticon' alt="" />
             <img className="eye" src={ispasswordvisiable?"img/eye.png":"img/eye2.png"} onClick={onChangePasswordvisiable} alt=""/>
         </div>
         <div className="password logininput">
-            <Input placeholder='输入邀请码'  {...fields.invitecode.input} type="text"/>
+            <Input placeholder='输入邀请码'  {...fields.invitecode.input} type="text" />
             {fields.invitecode.meta.touched && fields.invitecode.meta.error &&
             <Label basic color='red' pointing>{fields.invitecode.meta.error}</Label>}
-            <img src="img/rg4.png" className='lefticon' alt=""/>
+            <img src="img/rg4.png" className='lefticon' alt="" />
         </div>
-        <div style={{paddingLeft:"6%"}} className="logininput">
+
+        <div style={{paddingLeft:"6%", display:"none"}} className="logininput">
             <label className="weui-agree">
                 <input className="weui-agree__checkbox" {...fields.aggree.input} type="checkbox" />
                 <span className="weui-agree__text">
@@ -115,19 +116,16 @@ export class RegisterForm extends React.Component {
         let {handleSubmit,onClickRegister,onClickLogin,onClickReturn} = this.props;
         return (
             <Form
-                onSubmit={handleSubmit(onClickRegister)} id="UserLoginPageForm"
+                onSubmit={handleSubmit(onClickRegister)} 
+                id="UserLoginPageForm"
+                className="UserLoginPageForm"
                 // style={{height:this.state.innerHeight + "px", overflow:"scroll"}}
                 >
             <div className="loginPageTop">
-                <div className="loginHead">
-                    <Icon name='angle left' onClick={onClickReturn}/>
-                    <img src="img/4.png" className="loginhead" alt=""/>
-                </div>
                 <Fields names={['username','ispasswordvisiable','password','authcode','invitecode','aggree']} component={renderRegisterForm}/>
-
-                <div className="loginBotton" style={{padding: "2px 14% 10px 14%"}}>
+                <div className="loginBotton">
                     <Button primary>注册</Button>
-                    <Button basic type="button" onClick={onClickLogin}>快速登录</Button>
+                    <Button basic type="button" style={{display:"none"}} onClick={onClickLogin}>快速登录</Button>
                 </div>
             </div>
         </Form>);
@@ -207,20 +205,12 @@ RegisterForm = reduxForm({
 // let resizetime2 = null;
 export class Page extends React.Component {
 
-//     constructor(props) {  
-//         super(props);  
-//         this.state = {
-//             innerHeight : window.innerHeight
-//         };
-//     } 
-//     componentWillMount() {
-//         window.onresize = ()=>{
-//             window.clearTimeout(resizetime2);
-//             resizetime2 = window.setTimeout(()=>{
-//                 this.setState({innerHeight: window.innerHeight});
-//             }, 10)
-//         }
-//     }
+    constructor(props) {  
+        super(props);  
+        this.state = {
+            innerHeight : window.innerHeight
+        };
+    }
 
     onClickReturn =()=>{
         this.props.history.goBack();
@@ -247,12 +237,27 @@ export class Page extends React.Component {
 
     }
 
+    back = ()=>{
+        this.props.history.goBack();
+    }
+
     render() {
         return (
-            <div className="UserLoginPage">
-                <RegisterForm onClickRegister={this.onClickRegister}
-                              onClickLogin={this.onClickLogin}
-                              onClickReturn={this.onClickReturn}/>
+            <div className="UserLoginPage register" style={{minHeight : this.state.innerHeight + "px"}}>
+                <div className="loginHead">
+                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="title">新用户注册</span>
+                </div>
+                <img src="./img/bg.png" className="bg" />
+                <div className="loginPage">
+                    <img src="./img/logo.png" className="logo" />
+                    <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
+                    <RegisterForm 
+                        onClickRegister={this.onClickRegister}
+                        onClickLogin={this.onClickLogin}
+                        onClickReturn={this.onClickReturn}
+                        />
+                </div>
             </div>
         );
     }

@@ -7,7 +7,7 @@ import {sendauth_request,findpwd_request} from '../../actions/index.js';
 // import {register} from '../actions/sagacallback.js';
 import { NavBar } from 'antd-mobile';
 import Sendauth from './sendauth.js';
-
+import "./login.css";
 
 let renderFindPwdForm = (fields)=> {
     console.dir(fields);
@@ -43,15 +43,19 @@ let renderFindPwdForm = (fields)=> {
             {fields.authcode.meta.touched && fields.authcode.meta.error &&
             <Label basic color='red' pointing>{fields.authcode.meta.error}</Label>}
             <Icon name="lock" className='lefticon'/>
-
             <Sendauth primary action={onClickAuth} className="yanzhenBtn" />
         </div>
         <div className="password logininput">
-            <Input placeholder='输入密码'  {...fields.password.input} type={ispasswordvisiable?"text":"password"}/>
+            <Input placeholder='请输入密码'  {...fields.password.input} type="password"/>
             {fields.password.meta.touched && fields.password.meta.error &&
             <Label basic color='red' pointing>{fields.password.meta.error}</Label>}
             <Icon name="lock" className='lefticon'/>
-            <Icon name="eye" className={ispasswordvisiable?"eye sel":"eye"} onClick={onChangePasswordvisiable}/>
+        </div>
+        <div className="password logininput">
+            <Input placeholder='请重复输入密码'  {...fields.passwordagain.input} type="password"/>
+            {fields.password.meta.touched && fields.password.meta.error &&
+            <Label basic color='red' pointing>{fields.password.meta.error}</Label>}
+            <Icon name="lock" className='lefticon'/>
         </div>
     </div>);
 }
@@ -59,16 +63,16 @@ renderFindPwdForm = connect()(renderFindPwdForm);
 
 let FindpwdForm = (props)=> {
     let {handleSubmit,onClickOK,onClickReturn} = props;
-    return (<Form onSubmit={handleSubmit(onClickOK)}>
-        <div className="loginPageTop">
-            <NavBar lefttitle="返回" title="重置密码" onClickLeft={onClickReturn}/>
-            <Fields names={['username','ispasswordvisiable','password','authcode']} component={renderFindPwdForm}/>
-
-            <div className="loginBotton">
-                <Button primary>确定</Button>
+    return (
+        <Form onSubmit={handleSubmit(onClickOK)} className="UserLoginPageForm">
+            <div className="loginPageTop">
+                <Fields names={['username','ispasswordvisiable','password','authcode','passwordagain']} component={renderFindPwdForm}/>
+                <div className="loginBotton">
+                    <Button primary>确定</Button>
+                </div>
             </div>
-        </div>
-    </Form>);
+        </Form>
+    );
 };
 
 
@@ -121,12 +125,20 @@ FindpwdForm = reduxForm({
         username: '',
         password: '',
         authcode: '',
+        passwordagain: '',
         ispasswordvisiable: false,
     }
 })(FindpwdForm);
 
 
 export class Page extends React.Component {
+
+    constructor(props) {  
+        super(props);  
+        this.state = {
+            innerHeight : window.innerHeight
+        };
+    }
 
     componentWillMount() {
     }
@@ -158,10 +170,23 @@ export class Page extends React.Component {
         this.props.history.goBack();
     }
 
+    back = ()=>{
+        this.props.history.goBack();
+    }
+
     render() {
         return (
-            <div className="UserLoginPage">
-                <FindpwdForm onClickOK={this.onClickOK} onClickLogin={this.onClickLogin} onClickReturn={this.onClickReturn}/>
+            <div className="UserLoginPage register" style={{minHeight : this.state.innerHeight + "px"}}>
+                <div className="loginHead">
+                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="title">找回密码</span>
+                </div>
+                <img src="./img/bg.png" className="bg" />
+                <div className="loginPage">
+                    <img src="./img/logo.png" className="logo" />
+                    <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
+                    <FindpwdForm onClickOK={this.onClickOK} onClickLogin={this.onClickLogin} onClickReturn={this.onClickReturn}/>
+                </div>
             </div>
         );
     }

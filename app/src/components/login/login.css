@@ -1,0 +1,155 @@
+.UserLoginPage .loginPage{
+	width: 100%;
+	padding: 0 20px;
+}
+.UserLoginPage{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 20px;
+}
+.UserLoginPage .loginHead{
+	height: 40px;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.UserLoginPage .loginHead .title{ 
+	color:#338dcd;
+	font-size: 22px;
+	font-size: 18px;
+}
+.UserLoginPage .loginHead .back{
+	position: absolute;
+	left: 20px;
+	top: 9px;
+}
+.UserLoginPage .bg{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1
+}
+.UserLoginPage .loginPage{
+	position: relative;
+	z-index: 2;
+	flex-grow: 1;
+}
+.UserLoginPage .logo{
+	width: 140px;
+}
+.UserLoginPage .loginPage{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.UserLoginPage .loginPage .logintext{
+	color: #338dcd;
+	font-size: 18px;
+	margin-top: 30px;
+}
+.UserLoginPage .UserLoginPageForm{
+	width: 100%;
+	padding-top: 40px;
+}
+.UserLoginPage .loginform{
+	margin-bottom: 80px;
+}
+.UserLoginPage .loginform .logininput .ui.input{
+	position: relative;
+	height: 50px;
+	display: flex;
+	flex-grow: 1;
+}
+.UserLoginPage .loginform .logininput .ui.input input{
+	border:none;
+	background: none;
+	height: 50px;
+	line-height: 50px;
+	outline: none;
+	flex-grow: 1;
+}
+.UserLoginPage .loginform .logininput{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #888888;
+	margin-bottom: 20px;
+}
+.UserLoginPage.register .loginform .logininput{
+	margin-bottom: 5px;
+}
+.UserLoginPage.register .loginPage{
+	flex-grow: 1;
+}
+.UserLoginPage .loginform .logininput .iconfont{
+	font-size: 24px;
+	margin: 0 10px 0 10px;
+	color: #1283d2;
+}
+.UserLoginPage .loginLnk{
+	position: relative;
+	z-index: 3;
+	margin-bottom: 20px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+.UserLoginPage .loginLnk >div{
+	font-size: 22px;
+	color: #338dcd;
+	font-weight: 100;
+}
+.UserLoginPage .loginPageTop .loginBotton{
+	background: #1b7bc0;
+}
+.UserLoginPage .loginPageTop .loginBotton button{
+	text-align: center;
+	color: #FFF;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 200;
+}
+.yanzhenBtn{
+	color: #338dcd;
+	border:1px solid #338dcd;
+	border-radius: 6px;
+	background: none;
+	height: 34px;
+	width: 100px;
+	text-align: center;
+	line-height: 34px;
+}
+.unlabel.yanzhenBtn{
+	background: #EEE;
+	border:1px solid #666;
+	color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
