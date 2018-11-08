@@ -1,0 +1,86 @@
+.searchPage{
+	display: flex;
+	flex-direction: column;
+}
+.searchPage .body{
+	overflow-y: scroll;
+	flex-grow: 1;
+}
+.searchPage .datalist .li{
+	display: flex;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+.searchPage .datalist .li .img{
+	width: 100px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.searchPage .datalist .li .img img{
+	width: 100%;
+}
+.searchPage .datalist .li .inf{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.searchPage .datalist .li .inf .name{
+	font-size: 16px;
+}
+.searchPage .datalist .li .inf p{
+	display: flex;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.searchPage .datalist .li .inf p .price{
+	color: #e60012;
+	font-weight: 400;
+	margin-right: 30px;
+	font-size: 16px;
+}
+.searchPage .datalist .li .inf p .num{
+	color: #bbb;
+	font-size: 16px;
+}
+.searchPage .searchInput{
+	background: #0074c3;
+	padding: 10px 20px 20px 20px; 
+	position: relative;
+}
+.searchPage .searchInput input{
+	background: #FFF;
+	border-radius: 20px;
+	height: 32px;
+	line-height: 32px;
+	border:none;
+	text-indent: 20px;
+	width: 100%;
+}
+.searchPage .searchInput .iconfont{
+	position: absolute;
+    right: 30px;
+    top: 11px;
+    color: #338dcd;
+    font-size: 19px;
+}
+.Nodata{
+	padding: 20px;
+	font-size: 16px;
+}
+.Nodata .tit{
+	color: #338dcd;
+}
+.Nodata >div{
+	margin-bottom: 10px;
+}
+.Nodata >div >div span{
+	line-height: 40px;
+	margin-right: 20px;
+}
+
+
+
+
+
+
+

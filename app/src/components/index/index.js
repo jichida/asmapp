@@ -4,6 +4,7 @@ import Community from '../community';
 import {withRouter} from 'react-router-dom';
 //咨询
 import Translate from '../translate/translate.js';
+import Main from '../main/main.js';
 
 
 class TabBarExample extends Component {
@@ -53,7 +54,7 @@ class TabBarExample extends Component {
             }}
             data-seed="logId"
           >
-            {this.renderContent('首页')}
+            <Main />
           </TabBar.Item>
           <TabBar.Item
             title="智能"

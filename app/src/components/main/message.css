@@ -1,0 +1,64 @@
+.messagePage{
+	display: flex;
+	flex-direction: column;
+}
+.messagePage .body{
+	overflow-y: scroll;
+	flex-grow: 1;
+	position: relative;
+	z-index: 2;
+	background: none;
+	margin: 0 20px;
+	border-radius: 12px;
+	background: #FFF;
+}
+.messagePage .bg{
+	background: #0074c3;
+	height: 60px;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top:70px;
+}
+.messagePage .body .datalist .li{
+	background: none;
+	display: flex;
+	padding: 10px;
+	border-bottom:1px solid #EEE;
+}
+.messagePage .body .datalist .list{
+	background: #FFF;
+}
+.messagePage .body .datalist .li img{
+	width: 50px;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+.messagePage .body .datalist .li .inf{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+}
+.messagePage .body .datalist .li .inf p{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2px;
+}
+.messagePage .body .datalist .li .inf p span.name{
+	color: #666;
+	font-size: 16px;
+}
+.messagePage .body .datalist .li .text{
+	color: #999;
+}
+
+
+
+
+
+
+
+

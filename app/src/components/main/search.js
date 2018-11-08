@@ -1,3 +1,5 @@
+//订单列表
+
 import React from 'react';
 // import '../../public/css/user.css';
 import { Input, Button, Icon, Label } from 'semantic-ui-react';
@@ -5,40 +7,53 @@ import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import "./main.css";
+import "./search.css";
 
 //顶部搜索
-let HeadStarch = (props)=> {
+let Head = (props)=> {
+    let poppush =(url)=>{
+        props.history.push(url);
+    }
+    let back=()=>{
+        props.history.goBack();
+    }
     return (
-        <div className="mainHead">
-            <div className="city">常州 <i class="icon iconfont icon-down" /></div>
-            <div className="seatch"><input type="text" /><i class="icon iconfont icon-sousuo" /></div>
-            <div className="more"><i class="icon iconfont icon-gengduo-tianchong moreLnk" /></div>
+        <div className="head">
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="title">搜索</div>
+        </div>
+    );
+};
+Head = withRouter(Head);
+
+//顶部搜索
+let Nodata = (props)=> {
+
+    return (
+        <div className="Nodata">
+            <div>
+                <div className="tit">最近搜索</div>
+                <div><span>智能血糖仪</span><span>智能血糖仪</span><span>智能血糖仪</span></div>
+            </div>
+            <div>
+                <div className="tit">热门搜索</div>
+                <div><span>智能血糖仪</span><span>智能血糖仪</span><span>智能血糖仪</span></div>
+            </div>
         </div>
     );
 };
 
-//首页滚动图片
-let MainSrcollImg = (props)=> {
+//顶部搜索
+let SearchInput = (props)=> {
+
     return (
-        <div className="scrollImg">
-            <img src="./img/1.png" />
+        <div className="searchInput">
+            <input type="text" placeholder="维修电脑" />
+            <i className="icon iconfont icon-sousuo" />
         </div>
     );
 };
 
-let Nav =(props)=>{
-    return (
-        <div className="nav">
-            <span className="sel">全部商品</span>
-            <span>智能家居</span>
-            <span>智能家电</span>
-            <span>健康穿戴</span>
-        </div>
-    )
-}
-
-//首页数据
 let DataList = (props)=> {
     let poppush =(url)=>{
         props.history.push(url);
@@ -77,7 +92,6 @@ let DataList = (props)=> {
 DataList = withRouter(DataList);
 
 export class Page extends React.Component {
-
     constructor(props) {  
         super(props);  
         this.state = {
@@ -85,16 +99,15 @@ export class Page extends React.Component {
             innerHeight : window.innerHeight
         };
     } 
-
     render() {
         return (
-            <div className="mainPage">
-                <HeadStarch />
+            <div className="searchPage" style={{height: window.innerHeight+"px"}}>
+                <Head />
+                <SearchInput />
+                <Nodata />
                 <div className="body">
-                    <MainSrcollImg />
-                    <Nav />
                     <DataList />
-                    </div>
+                </div>
             </div>
         )
     }

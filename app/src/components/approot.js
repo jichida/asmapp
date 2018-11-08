@@ -5,14 +5,18 @@ import Index from './index';
 
 import {requireAuthentication} from './requireauthentication';
 
-import Main from './main/main.js';
-import Good from './main/good.js';
+import Main from './main/main.js';//首页
+import Good from './main/good.js';//商品详情页面
+import OrderList from './main/orderlist.js';//订单列表
+import Search from './main/search.js';//搜索页面
+import Messages from './main/message.js';//消息页面
+import MessageInfo from './main/messageinfo.js'//消息详情
 
 //咨询详情
-import TranslateInfo from './translate/info.js';
-import TranslateReplyList from './translate/replylist.js';
-import TranslateAdd from './translate/addtranslate.js';
-import TranslateSelOrder from './translate/selorder.js';
+import TranslateInfo from './translate/info.js';//咨询详情页面
+import TranslateReplyList from './translate/replylist.js';//咨询回复列表
+import TranslateAdd from './translate/addtranslate.js';//新增咨询页面
+import TranslateSelOrder from './translate/selorder.js';//咨询选择订单
 
 //圈子相关
 import Communityinfo from './community/info.js';
@@ -46,7 +50,12 @@ class AppRoot extends React.Component {
                   <Route path="/mytopiclist" component={requireAuthentication(MyTopiclist)}/>
 
                   <Route path="/main" component={Main}/>
-                  <Route path="/good" component={Good}/>
+                  <Route path="/good/:goodid" component={Good}/>
+                  <Route path="/order/list" component={OrderList}/>
+                  <Route path="/search" component={Search}/>
+                  <Route path="/messages" component={Messages}/>
+                  <Route path="/message/:messageid" component={MessageInfo}/>
+
 
                   <Route path="/translate/info/:translateid" component={TranslateInfo}/>
                   <Route path="/translate/reply" component={TranslateReplyList}/>
