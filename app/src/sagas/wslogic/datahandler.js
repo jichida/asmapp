@@ -3,7 +3,7 @@ import {
 
     loginwithtoken_request,
     login_request,
-    login_result,
+    md_login_result,
 
     register_request,
     register_result,
@@ -46,7 +46,7 @@ let recvmessagetoresultpair = {
   'common_err':common_err,
   'register_result':register_result,
   'sendauth_result':sendauth_result,
-  'login_result':login_result,
+  'login_result':md_login_result,
   'logout_result':logout_result,
   'getcategory_result':getcategory_result,
   'getsystemconfig_result':getsystemconfig_result,

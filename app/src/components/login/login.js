@@ -31,14 +31,14 @@ let renderLoginForm = (fields)=> {
     //选中时候怎么弄？  <Icon name={ispasswordvisiable?"lock":"eye"} className="sel" onClick={onChangePasswordvisiable}/>
     return (<div className='loginform'>
         <div className="username logininput">
-            <i class="icon iconfont icon-shouji" />
+            <i className="icon iconfont icon-shouji" />
             <Input placeholder='请输入您的手机号' {...fields.username.input} type="text"/>
             {fields.username.meta.touched && fields.username.meta.error &&
             <Label basic color='red' pointing>{fields.username.meta.error}</Label>}
             <Icon name="mobile" className='lefticon'/>
         </div>
         <div className="password logininput">
-            <i class="icon iconfont icon-suo" />
+            <i className="icon iconfont icon-suo" />
             <Input placeholder='请输入您的密码'  {...fields.password.input} type={ispasswordvisiable?"text":"password"}/>
             {fields.password.meta.touched && fields.password.meta.error &&
             <Label basic color='red' pointing>{fields.password.meta.error}</Label>}
@@ -175,12 +175,12 @@ export class Page extends React.Component {
         return (
             <div className="UserLoginPage" style={{minHeight : this.state.innerHeight + "px"}}>
                 <div className="loginHead">
-                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="back" onClick={this.back}><i className="icon iconfont icon-Left" /></span>
                     <span className="title">登录</span>
                 </div>
-                <img src="./img/bg.png" className="bg" />
+                <img src="./img/bg.png" className="bg" alt=""/>
                 <div className="loginPage">
-                    <img src="./img/logo.png" className="logo" />
+                    <img src="./img/logo.png" className="logo" alt=""/>
                     <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
                     <LoginForm
                         onClickRegister={this.onClickRegister}
