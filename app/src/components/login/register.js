@@ -1,11 +1,8 @@
 import React from 'react';
-// import '../../public/css/user.css';
 import { Input,  Button, Icon,Label} from 'semantic-ui-react';
 import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
-// import {login_request} from '../../actions/index.js';
 import {sendauth_request,register_request} from '../../actions/index.js';
-// import {register} from '../actions/sagacallback.js';
 import Sendauth from './sendauth.js';
 import {withRouter} from 'react-router-dom';
 import "./login.css";
@@ -27,7 +24,6 @@ let renderRegisterForm = (fields)=> {
         const phone =  !!name && !(name.match(/\D/g)||name.length !== 11||!name.match(/^1/));
         console.log(phone);
         if(phone){
-
             fields.dispatch(sendauth_request({username: name,reason:'register'}));
         }
         callback(phone);
@@ -61,9 +57,9 @@ let renderRegisterForm = (fields)=> {
             <img className="eye" src={ispasswordvisiable?"img/eye.png":"img/eye2.png"} onClick={onChangePasswordvisiable} alt=""/>
         </div>
         <div className="password logininput">
-            <Input placeholder='输入邀请码'  {...fields.invitecode.input} type="text" />
-            {fields.invitecode.meta.touched && fields.invitecode.meta.error &&
-            <Label basic color='red' pointing>{fields.invitecode.meta.error}</Label>}
+            <Input placeholder='重复输入密码'  {...fields.password2.input} type="text" />
+            {fields.password2.meta.touched && fields.password2.meta.error &&
+            <Label basic color='red' pointing>{fields.password2.meta.error}</Label>}
             <img src="img/rg4.png" className='lefticon' alt="" />
         </div>
 
@@ -92,37 +88,17 @@ renderRegisterForm = connect()(renderRegisterForm);
 renderRegisterForm = withRouter(renderRegisterForm);
 
 
-// let resizetime = null;
-
-// let RegisterForm = (props)=> {
 export class RegisterForm extends React.Component {
-
-//     constructor(props) {  
-//         super(props);  
-//         this.state = {
-//             innerHeight : window.innerHeight
-//         };
-//     } 
-//     componentWillMount() {
-//         window.onresize = ()=>{
-//             window.clearTimeout(resizetime);
-//             resizetime = window.setTimeout(()=>{
-//                 this.setState({innerHeight: window.innerHeight});
-//             }, 10)
-//         }
-//     }
-
     render(){
-        let {handleSubmit,onClickRegister,onClickLogin,onClickReturn} = this.props;
+        let {onClickRegister,handleSubmit,onClickLogin} = this.props;
         return (
             <Form
-                onSubmit={handleSubmit(onClickRegister)} 
                 id="UserLoginPageForm"
                 className="UserLoginPageForm"
-                // style={{height:this.state.innerHeight + "px", overflow:"scroll"}}
+                onSubmit={handleSubmit(onClickRegister)}
                 >
             <div className="loginPageTop">
-                <Fields names={['username','ispasswordvisiable','password','authcode','invitecode','aggree']} component={renderRegisterForm}/>
+                <Fields names={['username','ispasswordvisiable','authcode','password','password2','aggree']} component={renderRegisterForm}/>
                 <div className="loginBotton">
                     <Button primary>注册</Button>
                     <Button basic type="button" style={{display:"none"}} onClick={onClickLogin}>快速登录</Button>
@@ -173,17 +149,10 @@ const validate = values => {
         }
     }
 
-   if (values.invitecode) {
-        let invitecode = values.invitecode;
-        if (invitecode.match(/\D/g) || invitecode.length !== 8) {
-            errors.invitecode = '八位数字(选填)';
-        }
+    if(values.password !== values.password2){
+      errors.password = '两次输入密码必须相同';
     }
 
-
-    if (!values.aggree) {
-        errors.aggree = '!';
-    }
 
     return errors;
 }
@@ -194,8 +163,8 @@ RegisterForm = reduxForm({
     initialValues: {
         username: '',
         password: '',
+        password2:'',
         authcode: '',
-        invitecode:'',
         aggree: false,
         ispasswordvisiable: false,
     }
@@ -224,12 +193,7 @@ export class Page extends React.Component {
             authcode: values.authcode,
             invitecode:values.invitecode
         }
-        //alert(JSON.stringify(formdata));
-        // this.props.dispatch(register_request(payload)).then((result)=> {
-        //     this.props.history.replace('/');
-        // }).catch((error)=> {
-        //     console.log("注册失败:" + JSON.stringify(error));
-        // });
+        this.props.dispatch(register_request(payload));
     }
 
     onClickLogin = ()=> {
@@ -245,14 +209,14 @@ export class Page extends React.Component {
         return (
             <div className="UserLoginPage register" style={{minHeight : this.state.innerHeight + "px"}}>
                 <div className="loginHead">
-                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="back" onClick={this.back}><i className="icon iconfont icon-Left" /></span>
                     <span className="title">新用户注册</span>
                 </div>
-                <img src="./img/bg.png" className="bg" />
+                <img src="./img/bg.png" className="bg" alt=""/>
                 <div className="loginPage">
-                    <img src="./img/logo.png" className="logo" />
+                    <img src="./img/logo.png" className="logo" alt=""/>
                     <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
-                    <RegisterForm 
+                    <RegisterForm
                         onClickRegister={this.onClickRegister}
                         onClickLogin={this.onClickLogin}
                         onClickReturn={this.onClickReturn}

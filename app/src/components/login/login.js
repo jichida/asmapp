@@ -49,7 +49,7 @@ let renderLoginForm = (fields)=> {
 }
 
 let LoginForm = (props)=> {
-    let {handleSubmit,onClickRegister,onClickLogin,onClickForgetPasword,onClickLoginbysms, id} = props;
+    let {handleSubmit,onClickLogin, id} = props;
     let onClickReturn = ()=> {
         props.history.goBack();
     }
@@ -182,7 +182,7 @@ export class Page extends React.Component {
                 <div className="loginPage">
                     <img src="./img/logo.png" className="logo" />
                     <div className="logintext">欢迎使用爱上门平台，请先注册/登录</div>
-                    <LoginForm 
+                    <LoginForm
                         onClickRegister={this.onClickRegister}
                         onClickLogin={this.onClickLogin}
                         onClickForgetPasword={this.onClickForgetPasword}

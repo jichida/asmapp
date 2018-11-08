@@ -2,7 +2,9 @@ import { put,takeLatest,call} from 'redux-saga/effects';
 // import {delay} from 'redux-saga';
 import {
   test_page_getproduct,
+  test_getproductinfo,
 
+  getproductinfo_request
 } from '../../actions';
 
 import {callthen,page_getproduct_request,page_getproduct_result} from '../pagination';
@@ -34,4 +36,8 @@ export function* testflow() {
     console.log(result);
   });
 
+  yield takeLatest(`${test_getproductinfo}`, function*(action) {
+    yield put(getproductinfo_request({_id:'5bdfd22de334f0839c6817d4'}));
+
+  });
 }
