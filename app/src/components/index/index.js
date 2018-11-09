@@ -11,7 +11,7 @@ class TabBarExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'index',
       hidden: false,
       fullScreen: true,
     };
@@ -45,7 +45,7 @@ class TabBarExample extends Component {
             key="首页"
             icon={<i class="icon iconfont icon-shouye" />}
             selectedIcon={<i class="icon iconfont icon-shouye sel" />}
-            selected={this.state.selectedTab === 'index'}
+            selected={ this.state.selectedTab === 'index'}
             onPress={() => {
               this.setState({
                 selectedTab: 'index',
