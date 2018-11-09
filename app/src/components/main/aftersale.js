@@ -51,7 +51,8 @@ OrderInfo = withRouter(OrderInfo);
 let Foot = (props)=> {
     return (
         <div className="foot">
-            <div>提交申请</div>
+            <div className="subBtn bule">提交申请</div>
+            <div className="subBtn green">填写退货信息</div>
         </div>
     );
 };
@@ -85,6 +86,26 @@ let AfterSaleInput = (props)=> {
                     <i className="icon iconfont icon-camera" />
                     <span>凭证</span>
                 </span>
+            </div>
+            <div className="describe describelist">
+                <div className="li">
+                    <div className="title">你的描述</div>
+                    <div className="text">
+                        宝贝和描述不一样
+                    </div>
+                </div>
+                <div className="li status warning">
+                    卖家拒绝了您的申请
+                </div>
+                <div className="li status success">
+                    卖家同意了您的申请
+                </div>
+                <div className="li">
+                    <div className="title">爱上门旗舰店</div>
+                    <div className="text">
+                        请选择退货退款
+                    </div>
+                </div>
             </div>
             <div className="describe">
                 <div className="title">你的描述</div>

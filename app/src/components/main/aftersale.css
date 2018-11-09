@@ -111,13 +111,41 @@
 	padding: 20px;
 	height: 300px;
 	display: flex;
+	padding-top: 10px;
 	flex-direction: column;
 }
+.aftersalePage .afterSaleInput .describe.describelist{
+	height: auto;
+	padding-bottom: 0;
+}
+
 .aftersalePage .afterSaleInput .describe .text{
 	width: 100%;
 	padding: 15px 0;
 	height: 100%;
 	display: flex;
+}
+.aftersalePage .afterSaleInput .describe.describelist .text{
+	padding: 5px 0;
+}
+.aftersalePage .afterSaleInput .describe.describelist .li{
+	margin-bottom: 10px;
+}
+.aftersalePage .afterSaleInput .describe.describelist .li.status.warning{
+	background: #f7d4d8;
+	color: #d7273c;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.aftersalePage .afterSaleInput .describe.describelist .li.status.success{
+	background: #ccebda;
+	color: #009944;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
 }
 .aftersalePage .afterSaleInput .describe textarea{
 	border:none;
@@ -137,7 +165,12 @@
 	background: #0070c0;
 	font-size: 20px;
 }
-
+.aftersalePage .foot .subBtn.bule{
+	background: #0070c0;
+}
+.aftersalePage .foot .subBtn.green{
+	background: #009944;
+}
 
 
 

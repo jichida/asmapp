@@ -1,0 +1,203 @@
+.createOrderPage{
+	display: flex;
+	flex-direction: column;
+}
+.createOrderFoot{
+	height: 60px;
+	background: #FFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top:1px solid #EEE;
+	display: flex;
+	justify-content: space-between;
+}
+.createOrderFoot >div{
+	display: flex;
+}
+.createOrderFoot >div.leftlnk{
+	flex-grow: 1;
+	text-align: right;
+	margin-right: 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 14px;
+	color: #999;
+}
+.createOrderFoot >div.leftlnk .red{
+	font-size: 20px;
+}
+.createOrderFoot >div.sublnk{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f39800;
+	color: #FFF;
+	font-size: 18px;
+	line-height: 60px;
+	padding: 0 30px;
+}
+.createOrderPage .address{
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	display: flex;
+	padding: 20px;
+	background: #FFF;
+	position: relative;
+	align-items: center;
+}
+.createOrderPage .address .icon{
+	flex-shrink: 0;
+}
+.createOrderPage .address .icon:first-child{
+	margin-right: 5px;
+	color: #f39800;
+	font-size: 26px;
+}
+.createOrderPage .address .icon_xiangyou{
+	font-size: 26px;
+}
+.createOrderPage .address .i{
+	flex-grow: 1;
+	margin-right: 10px;
+}
+.createOrderPage .address .title{
+	color: #0070c0;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.createOrderPage .address .text{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.createOrderPage .address .bg{
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-size: 80px 4px;
+}
+.createOrderPage .orderinfo {
+	background: #FFF;
+}
+.createOrderPage .orderinfo .title{
+	height: 36px;
+	border-bottom: 1px solid #EEE;
+	padding-left: 20px;
+	line-height: 36px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.createOrderPage .orderinfo .pli{
+	display: flex;
+	padding: 15px;
+	border-bottom:1px solid #EEE;
+}
+.createOrderPage .orderinfo .pli .img{
+	width: 112px;
+	flex-shrink: 0;
+	margin-right: 10px;
+}
+.createOrderPage .orderinfo .pli .img img{
+	width: 100%;
+}
+.createOrderPage .orderinfo .pli .orderinfo{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.createOrderPage .orderinfo .pli .orderinfo .name{
+	font-size: 16px;
+}
+.createOrderPage .orderinfo .pli .orderinfo .info{
+	flex-grow: 1;
+	justify-content: flex-start;
+	color: #999;
+}
+.createOrderPage .orderinfo .pli .orderinfo .info p{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.createOrderPage .orderinfo .pli .orderinfo .price{
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+}
+.createOrderPage .orderinfo .canshu .li{
+	padding: 0 20px;
+	height: 40px;
+	border-bottom: 1px solid #EEE;
+	display: flex;
+	justify-content: space-between;
+}
+.createOrderPage .orderinfo .canshu .li >div{
+	display: flex;
+	align-items: center;
+}
+.createOrderPage .orderinfo .canshu .li .addtools{
+	display: flex;
+	align-items: center;
+}
+.createOrderPage .orderinfo .canshu .li .addtools .del,
+.createOrderPage .orderinfo .canshu .li .addtools .add{
+	width: 30px;
+	height: 30px;
+	background: #EEE;
+	border:1px solid #DDD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.createOrderPage .orderinfo .canshu .li .addtools input{
+	background: none;
+	border-radius: none;
+	height: 40px;
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	border:none;
+}
+.createOrderPage .orderinfo .canshu .li .liuyan{
+	flex-grow: 1;
+}
+.createOrderPage .orderinfo .canshu .li .liuyan input{
+	background: none;
+	border-radius: none;
+	height: 40px;
+	text-align: center;
+	line-height: 30px;
+	border:none;
+	flex-grow: 1;
+	text-align: right;
+}
+.createOrderPage .orderinfo .heji {
+	height: 40px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.createOrderPage .orderinfo .heji span:first-child{
+	margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
