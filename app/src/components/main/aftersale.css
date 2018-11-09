@@ -1,0 +1,147 @@
+.aftersalePage{
+	display: flex;
+	flex-direction: column;
+}
+.aftersalePage .orderinfo {
+	display: flex;
+	margin-bottom: 10px;
+	padding: 15px 20px;
+	background: #FFF;
+	flex-shrink: 0;
+}
+.aftersalePage .orderinfo .left{
+	width: 80px;
+	margin-right: 10px;
+}
+.aftersalePage .orderinfo .left img{
+	width: 80px;
+	border-radius: 6px;
+}
+.aftersalePage .orderinfo .right{
+	flex-grow: 1;
+}
+.aftersalePage .orderinfo .right .text{
+	display: flex;
+	flex-direction: column;
+	color: #999;
+}
+.aftersalePage .orderinfo .right .price{
+	display: flex;
+	justify-content: space-between;
+}
+.aftersalePage .BtnList{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+	padding: 15px 0;
+}
+.aftersalePage .BtnList  >div{
+	background: #d7273c;
+	color: #FFF;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	width: 120px;
+}
+.aftersalePage .BtnList  >div:first-child{
+	margin-right: 15px;
+}
+.aftersalePage .selReason{
+	display: flex;
+	padding: 0 20px;
+	border-bottom: 1px solid #EEE;
+	line-height: 40px;
+	background: #FFF;
+}
+.aftersalePage .selReason .selinput{
+	flex-grow: 1;
+	display: flex;
+}
+.aftersalePage .selReason .selinput select{
+	flex-grow: 1;
+	height: 40px;
+	text-align: right;
+	direction: rtl;
+}
+.aftersalePage .selReason .selinput .iconfont{
+	color: #999;
+}
+.aftersalePage .afterSaleInput{
+	margin-bottom: 10px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+.aftersalePage .afterSaleInput >div{
+	flex-shrink: 0;
+}
+.aftersalePage .afterSaleInput .imglist{
+	display: flex;
+	padding:20px;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	background: #FFF;
+}
+.aftersalePage .afterSaleInput .imglist img{
+	width: 24%;
+	height: 24%;
+	margin: 2px;
+}
+.aftersalePage .afterSaleInput .imglist .imglistbtn{
+	display: block;
+	width: 24%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2px;
+	border:1px solid #EEE;
+	flex-shrink: 0;
+}
+.aftersalePage .afterSaleInput .imglist .imglistbtn .iconfont{
+	font-size: 50px;
+	margin-bottom: -15px;
+	margin-top: -15px;
+}
+.aftersalePage .afterSaleInput .describe{
+	background: #FFF;
+	padding: 20px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+}
+.aftersalePage .afterSaleInput .describe .text{
+	width: 100%;
+	padding: 15px 0;
+	height: 100%;
+	display: flex;
+}
+.aftersalePage .afterSaleInput .describe textarea{
+	border:none;
+	width: 100%;
+
+}
+.aftersalePage .afterSaleInput .describe .title{
+	font-size: 16px;
+	color: #0070c0
+}
+.aftersalePage .foot{
+	height: 60px;
+	flex-shrink: 0;
+	text-align: center;
+	line-height: 60px;
+	color: #FFF;
+	background: #0070c0;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+

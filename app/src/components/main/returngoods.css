@@ -1,0 +1,96 @@
+.returngoodsPage{
+	display: flex;
+	flex-direction: column;
+}
+.returngoodsPage .body{
+	flex-grow: 1;
+}
+.returngoodsPage .foot{
+	height: 60px;
+	flex-shrink: 0;
+	text-align: center;
+	line-height: 60px;
+	color: #FFF;
+	background: #0070c0;
+	font-size: 20px;
+}
+.returngoodsPage .body .address{
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background: #FFF;
+	position: relative;
+}
+.returngoodsPage .body .address .title{
+	color: #0070c0;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.returngoodsPage .body .address .text{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.returngoodsPage .body .address .bg{
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-size: 80px 4px;
+}
+.express {
+	background: #FFF;
+}
+.express .title{
+	padding:0 20px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #EEE;
+	justify-content: space-between;
+}
+.express .title .chickExpress{
+	border:1px solid #DDD;
+	background: #EEE;
+	color: #0070c0;
+	line-height: 30px;
+	border-radius: 18px;
+	padding: 0 20px;
+}
+.express .info .i {
+	display: flex;
+	padding: 20px 0 20px 20px;
+	height: 40px;
+	align-items: center;
+	border-bottom: 1px solid #EEE;
+}
+.express .info .i span:first-child {
+	display: block;
+	width: 70px;
+}
+.express .info .i span:last-child{
+	flex-grow: 1;
+	display: flex;
+}
+.express .info .i span:last-child input,
+.express .info .i span:last-child select{
+	border: none;
+	background: #FFF;
+	flex-grow: 1;
+	height: 36px;
+	line-height: 36px;
+}
+.express .title{
+	color:#0070c0;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
