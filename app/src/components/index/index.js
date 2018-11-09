@@ -33,7 +33,7 @@ class TabBarExample extends Component {
 
   render() {
     return (
-      <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
+      <div className="footContainer" style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -46,7 +46,6 @@ class TabBarExample extends Component {
             icon={<i class="icon iconfont icon-shouye" />}
             selectedIcon={<i class="icon iconfont icon-shouye sel" />}
             selected={this.state.selectedTab === 'index'}
-            badge={1}
             onPress={() => {
               this.setState({
                 selectedTab: 'index',
@@ -62,7 +61,6 @@ class TabBarExample extends Component {
             icon={<i class="icon iconfont icon-zhineng" />}
             selectedIcon={<i class="icon iconfont icon-zhineng sel" />}
             selected={this.state.selectedTab === 'zhineng'}
-            badge={1}
             onPress={() => {
               this.setState({
                 selectedTab: 'zhineng',
@@ -77,7 +75,6 @@ class TabBarExample extends Component {
             selectedIcon={<i class="icon iconfont icon-xinxi sel" />}
             title="咨询"
             key="咨询"
-            badge={'new'}
             selected={this.state.selectedTab === 'translate'}
             onPress={() => {
               this.setState({ selectedTab: 'translate' });
@@ -91,7 +88,6 @@ class TabBarExample extends Component {
             selectedIcon={<i class="icon iconfont icon-31jifen sel" />}
             title="积分"
             key="积分"
-            dot
             selected={this.state.selectedTab === 'jifen'}
             onPress={() => {
               this.setState({
