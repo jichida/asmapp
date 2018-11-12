@@ -25,10 +25,13 @@
 	height: 55;
 	display: block;
 	line-height: 55px;
+	color: #FFF;
+	font-size: 16px;
 }
 .head .rightlnk {
 	right: 20px;
 	top:15px;
+
 }
 .head .leftlnk {
 	left: 20px;

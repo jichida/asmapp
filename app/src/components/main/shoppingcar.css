@@ -1,0 +1,211 @@
+.shoppingCarPage{
+	display: flex;
+	flex-direction: column;
+}
+.shoppingCarPage .head .rightlnk .search .iconfont{
+	font-size: 18px;
+	color: #FFF;
+}
+.shoppingCarPage .selOrderBtn{
+	background: #0070c0;
+	color: #FFF;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.shoppingCarPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+	background: none;
+}
+.shoppingCarPage .selOrderData .li {
+	background: #FFF;
+	margin-bottom: 10px;
+	margin: 15px;
+	margin-top: 0;
+	border-radius: 10px;
+}
+.shoppingCarPage .selOrderData .li .title{
+	line-height: 40px;
+	text-indent: 20px;
+	border-bottom: 1px solid #EEE;
+	font-size: 16px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli{
+	display: flex;
+	align-items: center;
+	padding:15px ;
+	border-bottom: 1px solid #EEE;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .rideoInput{
+	position: relative;
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .img{
+	width: 80px;
+	margin-right: 20px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .img img{
+	width: 74px;
+	border-radius: 10px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .rideoInput{
+	position: relative;
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .rideoInput:before{
+	content: "";
+	display: flex;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: #EEE;
+	border:1px solid #DDD;
+	border-radius: 30px;
+	display: block;
+	width: 26px;
+	height: 26px;
+	z-index: 1;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .rideoInput:after{
+	content: "";
+	display: flex;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	background: #EEE;
+	border-radius: 24px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	z-index: 2;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli.sel .rideoInput:after{
+	background: #0070c0;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .orderinfo .price{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .orderinfo .name{
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+.shoppingCarPage .selOrderData .li .prolist .pli .orderinfo .price{
+	color: #e60012;
+	font-size: 18px;
+}
+.shoppingCarPage .bg{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top:68px;
+	background: #0074c3;
+	height: 40px;
+	z-index: 1;
+}
+.shoppingCarPage .body,
+.shoppingCarPage .head,
+.shoppingCarPage .footools{
+	position: relative;
+	z-index: 2
+}
+
+.shoppingCarPage .selOrderData .li .addtools{
+	display: flex;
+	align-items: center;
+	color: #333;
+}
+.shoppingCarPage .selOrderData .li .addtools .del,
+.shoppingCarPage .selOrderData .li .addtools .add{
+	width: 30px;
+	height: 30px;
+	background: #EEE;
+	border:1px solid #DDD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.shoppingCarPage .selOrderData .li .addtools input{
+	background: none;
+	border-radius: none;
+	height: 40px;
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	border:none;
+}
+.shooopintSubBtn {
+	display: flex;
+	padding:  0 20px;
+	height: 80px; 
+	align-items: center;
+	justify-content: space-between;
+	background: #FFF;
+	border-top:1px solid #EEE;
+}
+.shooopintSubBtn .subbtn{
+	background: #0070c0;
+	color: #FFF;
+	width: 80px;
+	height: 36px;
+	border-radius: 18px;
+	line-height: 36px;
+	text-align: center;
+}
+
+.shooopintSubBtn .setAllInput{
+	position: relative;
+	height: 20px;
+	flex-shrink: 0;
+	margin-right: 2px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+}
+.shooopintSubBtn .setAllInput:before{
+	content: "";
+	display: flex;
+	left: 0;
+	top:0;
+	background: #EEE;
+	border:1px solid #DDD;
+	border-radius: 30px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+	z-index: 1;
+}
+.shooopintSubBtn .setAllInput:after{
+	content: "";
+	display: flex;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	background: #EEE;
+	border-radius: 16px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	z-index: 2;
+}
+.shooopintSubBtn .setAllInput:after{
+	background: #0070c0;
+}
+.shooopintSubBtn .price span{
+	margin-right: 4px;
+}
+
+
+
+

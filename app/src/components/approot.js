@@ -14,6 +14,9 @@ import MessageInfo from './main/messageinfo.js'//消息详情
 import Aftersale from './main/aftersale.js'//售后
 import Returngoods from './main/returngoods.js'//退货处理
 import CreateOrder from './main/createorder.js'//订单确认
+import ShoppingCar from './main/shoppingcar.js'//购物车
+import Store from './main/store.js'//购物车
+import OrderInfo from './main/orderinfo.js'//订单详情-待发货
 
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
@@ -62,6 +65,11 @@ class AppRoot extends React.Component {
                   <Route path="/order/aftersale" component={Aftersale}/>
                   <Route path="/order/returngoods" component={Returngoods}/>
                   <Route path="/order/createorder" component={CreateOrder}/>
+                  <Route path="/order/:orderid" component={OrderInfo}/>
+                  <Route path="/shopping/car" component={ShoppingCar}/>
+                  <Route path="/shopping/store" component={Store}/>
+                  
+
 
 
 

@@ -1,0 +1,40 @@
+.storePage{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.storePage .head{
+	width: 100%;
+}
+.storePage .data{
+	display: flex;
+	flex-direction: column;
+}
+.storePage .imgscroll img{
+	width: 100%;
+}
+.storePage .imgscroll{
+	padding: 15px;
+}
+.storePage .datali{
+	margin: 0 15px;
+	background: #FFF;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.storePage .datali div{
+	height: 50px;
+	padding-left: 15px;
+	line-height: 50px;
+	border-bottom: 1px solid #EEE;
+}
+.storePage .datali div:last-child{
+	border:none;
+}
+.storePage .datali div span:first-child{
+	color: #999;
+	margin-right: 10px;
+}
+.storePage .datali div .lnk{
+	color: #0074c3
+}

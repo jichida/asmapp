@@ -1,7 +1,7 @@
 import React from 'react';
 // import '../../public/css/user.css';
-import { Input, Button, Icon, Label } from 'semantic-ui-react';
-import { Fields, reduxForm,Form  } from 'redux-form';
+// import { Input, Button, Icon, Label } from 'semantic-ui-react';
+// import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';

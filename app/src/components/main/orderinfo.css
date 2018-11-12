@@ -1,9 +1,15 @@
-.createOrderPage{
+.orderInfoPage{
 	display: flex;
 	flex-direction: column;
 }
-.createOrderFoot{
-	height: 60px;
+.orderInfoPage .body{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.orderInfoFoot{
+	height: 50px;
 	background: #FFF;
 	position: fixed;
 	bottom: 0;
@@ -11,35 +17,30 @@
 	width: 100%;
 	border-top:1px solid #EEE;
 	display: flex;
-	justify-content: space-between;
-}
-.createOrderFoot >div{
-	display: flex;
-}
-.createOrderFoot >div.leftlnk{
-	flex-grow: 1;
-	text-align: right;
-	margin-right: 20px;
-	display: flex;
 	justify-content: flex-end;
+	padding-right: 20px;
 	align-items: center;
-	font-size: 14px;
-	color: #999;
 }
-.createOrderFoot >div.leftlnk .red{
-	font-size: 20px;
-}
-.createOrderFoot >div.sublnk{
+.orderInfoFoot >div{
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	background: #f39800;
-	color: #FFF;
-	font-size: 18px;
-	line-height: 60px;
-	padding: 0 30px;
 }
-.createOrderPage .address{
+.orderInfoFoot >div.sublnk{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background: #f4f4f4;
+	color: #333;
+	font-size: 14px;
+	line-height: 36px;
+	padding: 0 20px;
+	height: 36px;
+	margin-left: 15px;
+	border-radius: 18px;
+	font-weight: 200;
+	border:1px solid #BBB;
+}
+.orderInfoPage .address{
 	padding-bottom: 20px;
 	margin-bottom: 10px;
 	display: flex;
@@ -47,33 +48,35 @@
 	background: #FFF;
 	position: relative;
 	align-items: center;
-}
-.createOrderPage .address .icon{
 	flex-shrink: 0;
 }
-.createOrderPage .address .icon:first-child{
+.orderInfoPage .address .icon{
+	flex-shrink: 0;
+}
+.orderInfoPage .address .icon:first-child{
 	margin-right: 5px;
 	color: #f39800;
 	font-size: 26px;
 }
-.createOrderPage .address .icon_xiangyou{
+.orderInfoPage .address .icon_xiangyou{
 	font-size: 26px;
 }
-.createOrderPage .address .i{
+.orderInfoPage .address .i{
 	flex-grow: 1;
 	margin-right: 10px;
 }
-.createOrderPage .address .title{
+.orderInfoPage .address .title{
 	color: #0070c0;
 	font-size: 16px;
 	margin-bottom: 5px;
 }
-.createOrderPage .address .text{
+
+.orderInfoPage .address .text{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 5px;
 }
-.createOrderPage .address .bg{
+.orderInfoPage .address .bg{
 	height: 4px;
 	position: absolute;
 	bottom: 0;
@@ -81,10 +84,11 @@
 	width: 100%;
 	background-size: 80px 4px;
 }
-.createOrderPage .orderinfo {
+.orderInfoPage .orderinfo {
 	background: #FFF;
+	margin-bottom: 10px;
 }
-.createOrderPage .orderinfo .title{
+.orderInfoPage .orderinfo .title{
 	height: 36px;
 	border-bottom: 1px solid #EEE;
 	padding-left: 20px;
@@ -92,64 +96,66 @@
 	display: flex;
 	justify-content: space-between;
 }
+.orderInfoPage .orderinfo .title.bold{
+	font-weight: bold;
+}
 
-
-.createOrderPage .orderinfo .pli{
+.orderInfoPage .orderinfo .pli{
 	display: flex;
 	padding: 15px;
 	border-bottom:1px solid #EEE;
 }
-.createOrderPage .orderinfo .pli .img{
+.orderInfoPage .orderinfo .pli .img{
 	width: 80px;
 	flex-shrink: 0;
 	margin-right: 10px;
 }
-.createOrderPage .orderinfo .pli .img img{
+.orderInfoPage .orderinfo .pli .img img{
 	width: 100%;
 	border-radius: 3px;
 }
-.createOrderPage .orderinfo .pli .orderinfo{
+.orderInfoPage .orderinfo .pli .orderinfo{
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-.createOrderPage .orderinfo .pli .orderinfo .name{
+.orderInfoPage .orderinfo .pli .orderinfo .name{
 	font-size: 14px;
 }
-.createOrderPage .orderinfo .pli .orderinfo .info{
+.orderInfoPage .orderinfo .pli .orderinfo .info{
 	flex-grow: 1;
 	justify-content: flex-start;
 	color: #999;
 	font-size: 12px;
 }
-.createOrderPage .orderinfo .pli .orderinfo .info p{
+.orderInfoPage .orderinfo .pli .orderinfo .info p{
 	margin-bottom: 0;
 	padding-bottom: 0;
 	font-size: 12px;
 }
-.createOrderPage .orderinfo .pli .orderinfo .price{
+.orderInfoPage .orderinfo .pli .orderinfo .price{
 	display: flex;
 	justify-content: space-between;
 	font-size: 14px;
 }
-.createOrderPage .orderinfo .canshu .li{
+.orderInfoPage .orderinfo .canshu .li{
 	padding: 0 20px;
 	height: 40px;
 	border-bottom: 1px solid #EEE;
 	display: flex;
 	justify-content: space-between;
 }
-.createOrderPage .orderinfo .canshu .li >div{
+.orderInfoPage .orderinfo .canshu .li >div{
 	display: flex;
 	align-items: center;
 }
-.createOrderPage .orderinfo .canshu .li .addtools{
+.orderInfoPage .orderinfo .canshu .li .addtools{
 	display: flex;
 	align-items: center;
 }
-.createOrderPage .orderinfo .canshu .li .addtools .del,
-.createOrderPage .orderinfo .canshu .li .addtools .add{
+.orderInfoPage .orderinfo .canshu .li .addtools .del,
+.orderInfoPage .orderinfo .canshu .li .addtools .add{
 	width: 30px;
 	height: 30px;
 	background: #EEE;
@@ -158,7 +164,7 @@
 	align-items: center;
 	justify-content: center;
 }
-.createOrderPage .orderinfo .canshu .li .addtools input{
+.orderInfoPage .orderinfo .canshu .li .addtools input{
 	background: none;
 	border-radius: none;
 	height: 40px;
@@ -167,10 +173,10 @@
 	width: 30px;
 	border:none;
 }
-.createOrderPage .orderinfo .canshu .li .liuyan{
+.orderInfoPage .orderinfo .canshu .li .liuyan{
 	flex-grow: 1;
 }
-.createOrderPage .orderinfo .canshu .li .liuyan input{
+.orderInfoPage .orderinfo .canshu .li .liuyan input{
 	background: none;
 	border-radius: none;
 	height: 40px;
@@ -180,25 +186,37 @@
 	flex-grow: 1;
 	text-align: right;
 }
-.createOrderPage .orderinfo .heji {
+.orderInfoPage .orderinfo .heji {
 	height: 40px;
 	padding: 0 20px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
-.createOrderPage .orderinfo .heji span:first-child{
+.orderInfoPage .orderinfo .heji span:first-child{
 	margin-right: 15px;
 }
 
-
-
-
-
-
-
-
-
+.orderInfoPage .orderinfo .lnk{
+	display: flex;
+	justify-content: space-around;
+	height: 60px;
+}
+.orderInfoPage .orderinfo .lnk >div{
+	color: #0074c3;
+	display: flex;
+	line-height: 60px;
+	align-items: center;
+	font-weight: 100;
+	font-size: 18px;
+}
+.orderInfoPage .orderinfo .lnk >div i{
+	margin-right: 5px;
+	font-size: 20px;
+}
+.orderInfoPage .orderinfobox{
+	padding-bottom: 60px;
+}
 
 
 

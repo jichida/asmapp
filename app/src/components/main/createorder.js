@@ -1,7 +1,7 @@
 import React from 'react';
 // import '../../public/css/user.css';
-import { Input, Button, Icon, Label } from 'semantic-ui-react';
-import { Fields, reduxForm,Form  } from 'redux-form';
+// import { Input, Button, Icon, Label } from 'semantic-ui-react';
+// import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
@@ -58,7 +58,7 @@ let OrderInfo = (props)=> {
             <div className="pli">
                 <div className="img"><img src="./img/2.png" /></div>
                 <div className="orderinfo">
-                    <div className="name">爱上门新款血压仪送长辈十分有面子新增测血压血糖新功能</div>
+                    <div className="name">爱上门新款血压仪送长辈十分有面子</div>
                     <div className="info"><p>颜色：黑色 / 型号 ：235ASM</p><p>版本：加强版</p></div>
                     <div className="price"><span className="pic red">￥ 250.00</span><span className="num">X 1</span></div>
                 </div>
@@ -91,7 +91,7 @@ let OrderInfo = (props)=> {
                     <div className="liuyan"><input type="text" placeholder="选填：填写内容请和商家确认" /></div>
                 </div>
             </div>
-            <div className="heji"><span>共计商品1个</span><span>小计：</span><span className="red">$ 230.00</span></div>
+            <div className="heji"><span>共计商品1个</span><span>小计：</span><span className="red">￥ 230.00</span></div>
         </div>
     );
 };
