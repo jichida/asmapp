@@ -1,0 +1,82 @@
+.selLocationPage{
+	display: flex;
+	flex-direction: column;
+}
+.selLocationPage .datahead{
+	padding-bottom: 20px;
+}
+.selLocationPage .datahead .nowlocation{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background: #FFF;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.selLocationPage .datahead .nowlocation .selbtn span{
+	margin-right: 10px;
+}
+.selLocationPage .datahead .headlist .tit{
+	line-height: 40px;
+}
+.selLocationPage .datahead .headlist .headli{
+	padding: 0 20px;
+}
+.selLocationPage .datahead .headlist .li{
+	display: flex;
+	flex-wrap: wrap;
+}
+.selLocationPage .datahead .headlist .li div{
+	display: block;
+	width: 25%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 1px;
+}
+.selLocationPage .datahead .headlist .li div.sel span{
+	background: #338dcd;
+	color: #FFF;
+}
+.selLocationPage .datahead .headlist .li div span{
+	display: block;
+	width: 99%;
+	background: #FFF;
+	line-height: 36px;
+}
+.selLocationPage .data{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.selLocationPage .data .list {
+	background: #FFF;
+	padding: 10px 20px;
+}
+.selLocationPage .data .list .tt{
+	font-size: 24px;
+	color: #888;
+	border-bottom:1px solid #EEE;
+}
+.selLocationPage .data .list .li{
+	display: flex;
+	flex-direction: column;
+}
+.selLocationPage .data .list .li span{
+	display: block;
+	border-bottom: 1px solid #EEE;
+	margin-left: 5px;
+	height: 40px;
+	line-height: 40px;
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+

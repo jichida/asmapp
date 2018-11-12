@@ -208,15 +208,66 @@
 	line-height: 60px;
 	align-items: center;
 	font-weight: 100;
-	font-size: 18px;
+	font-size: 14px;
 }
 .orderInfoPage .orderinfo .lnk >div i{
 	margin-right: 5px;
-	font-size: 20px;
+	font-size: 18px;
 }
 .orderInfoPage .orderinfobox{
 	padding-bottom: 60px;
 }
+.expressinfo .address .info{
+	display: flex;
+	margin-bottom: 10px;
+}
+.expressinfo .address{
+	flex-direction: column;
+}
+.expresslist .li{
+	display: flex;
+	position: relative;
+	align-items: center;
+	overflow:hidden;
+	padding: 5px 0;
+	padding-left: 8px;
+	font-size: 14px;
+}
+.expresslist .li.now{
+	color: #f39800;
+}
+.expresslist .li:before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: #f39800;
+	border-radius: 10px;
+	margin-right: 10px;
+	flex-shrink: 0;
+	align-self: flex-start;
+	margin-top: 5px;
+}
+.expresslist .li:after{
+	content: "";
+	display: block;
+	width: 2px;
+	height: 200px;
+	position: absolute;
+	left: 12px;
+	top: 0;
+	z-index: 2;
+	background: #f39800;
+}
+.expresslist .li:first-child:after{
+	top: 12px;
+}
+
+
+
+
+
+
 
 
 

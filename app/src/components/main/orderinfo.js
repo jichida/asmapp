@@ -47,6 +47,34 @@ let Address = (props)=> {
         </div>
     );
 };
+
+//快递信息
+let ExpressInfo = (props)=> {
+    let back=()=>{
+        props.history.goBack();
+    }
+    return (
+        <div className="expressinfo">
+            <div className="address">
+                <div className="info">
+                    <i class="icon iconfont icon-buoumaotubiao23" />
+                    <div className="i">
+                        <div className="addressinfo">
+                            收货地址: 常州市武进区科教城天润科技大厦A307
+                        </div>
+                    </div>
+                </div>
+                <div className="expresslist">
+                    <div className="li now">包裹已经被签收，签收人：蜂巢快递柜</div>
+                    <div className="li">派件中，快递员：王小五，联系电话：18088888888</div>
+                    <div className="li">快件到达常州科教城，正在联系派件中...</div>
+                </div>
+                <div className='bg' style={{backgroundImage: "url('./img/line.png')"}}></div>
+            </div>
+        </div>
+    );
+};
+
 //顶部搜索
 let OrderInfo = (props)=> {
     let back=()=>{
@@ -124,6 +152,9 @@ let Foot = (props)=> {
             <div className="sublnk sublnk2">
                 <div>提醒发货</div>
             </div>
+            <div className="sublnk sublnk2">
+                <div>申请售后</div>
+            </div>
         </div>
     );
 };
@@ -144,6 +175,7 @@ export class Page extends React.Component {
                 <Head />
                 <div className="body">
                     <Address />
+                    <ExpressInfo />
                     <OrderInfo />
                 </div>
                 <Foot />

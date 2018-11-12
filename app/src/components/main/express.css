@@ -1,0 +1,146 @@
+.expressInfoPage{
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	position: relative;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+.expressInfoPage .head{
+
+}
+.expressInfoPage .datahead {
+	display: flex;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.expressInfoPage .datali{
+	background: #FFF;
+	position: relative;
+	padding: 15px 20px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.expressInfoPage .datali .bg{
+	height: 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-size: 80px 4px;
+}
+.expressInfoPage .datahead .left{
+	width: 76px;
+	margin-right: 10px;
+}
+.expressInfoPage .datahead .left img{
+	width: 100%;
+	border-radius: 6px;
+}
+
+.expressInfoPage .datali .i{
+	display: flex;
+	align-items: center;
+	padding-bottom: 10px;
+}
+.expressInfoPage .datali .i .day{
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+}
+.expressInfoPage .datali .i >div{
+	flex-shrink: 0;
+}
+.expressInfoPage .datali .i .point{
+	background: #f39800;
+	width: 13px;
+	height: 13px;
+	border-radius: 14px;
+	margin: 0 10px 0 5px;
+	position: relative;
+	color: #FFF;
+	text-align: center;
+	color: #FFF;
+}
+.expressInfoPage .datali .i .point:before{
+	content: "";
+	display: block;
+	width: 1px;
+	background: #f39800;
+	height: 100px;
+	position: absolute;
+	left: 6px;
+	top: 0;
+}
+.expressInfoPage .datali .i .day span{
+	font-size: 12px;
+}
+.expressInfoPage .datali .i .info{
+	font-size: 12px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.expressInfoPage .datali .i .day span:last-child{
+	color: #999;
+}
+.expressInfoPage .datali .i.nowi {
+	margin: 10px 0;
+}
+.expressInfoPage .datali .i.nowi .day{
+	width: 37px;
+}
+.expressInfoPage .datali .i.nowi .point{
+	width: 20px;
+	height: 20px;
+}
+.expressInfoPage .datali .i.nowi .point:before{
+	content: none;
+}
+.expressInfoPage .expressPerson{
+	background: #FFF;
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+.expressInfoPage .expressPerson .avatar{
+	width: 40px;
+	margin-right: 20px;
+}
+.expressInfoPage .expressPerson .avatar img{
+	width: 40px;
+	border-radius: 60px;
+}
+.expressInfoPage .expressPerson .person{
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+.expressInfoPage .expressPerson .i{
+	background: #f39800;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

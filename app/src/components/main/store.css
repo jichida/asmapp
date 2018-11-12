@@ -36,5 +36,26 @@
 	margin-right: 10px;
 }
 .storePage .datali div .lnk{
-	color: #0074c3
+	color: #0074c3;
 }
+.storeAptitudePage {
+	display: flex;
+	flex-direction: column;
+}
+.storeAptitudePage .data{
+	padding: 15px;
+}
+.storeAptitudePage .data img{
+	width: 100%;
+}
+.storeAptitudePage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+
+
+
+
+
+
+

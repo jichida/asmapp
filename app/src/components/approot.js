@@ -15,8 +15,13 @@ import Aftersale from './main/aftersale.js'//售后
 import Returngoods from './main/returngoods.js'//退货处理
 import CreateOrder from './main/createorder.js'//订单确认
 import ShoppingCar from './main/shoppingcar.js'//购物车
-import Store from './main/store.js'//购物车
+import Store from './main/store.js'//商家详情
+import StoreAptitude from './main/storeaptitude.js'//商家资质
 import OrderInfo from './main/orderinfo.js'//订单详情-待发货
+import OrderExpress from './main/express.js'//订单快递信息
+import SetLocation from './main/setlocation.js'//订单快递信息
+
+
 
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
@@ -50,10 +55,11 @@ class AppRoot extends React.Component {
                 <Switch>
                   <Route exact path="/" component={Index} />
                   <Route exact path="/test" component={Test} />
-                  <Route path="/newtopic" component={requireAuthentication(NewTopic)}/>
+                  <Route path="/newtopic" component={requireAuthentication(NewTopic)} />
                   <Route path="/communityinfo/:topicid" component={Communityinfo}/>
                   <Route path="/communityreplypage/:topicid" component={Communityreplypage}/>
                   <Route path="/mytopiclist" component={requireAuthentication(MyTopiclist)}/>
+                  <Route path="/setlocation" component={SetLocation}/>
 
                   <Route path="/main" component={Main}/>
                   <Route path="/good/:goodid" component={Good}/>
@@ -66,20 +72,16 @@ class AppRoot extends React.Component {
                   <Route path="/order/returngoods" component={Returngoods}/>
                   <Route path="/order/createorder" component={CreateOrder}/>
                   <Route path="/order/:orderid" component={OrderInfo}/>
+
+                  <Route path="/orderexpress/:expressid" component={OrderExpress}/>
                   <Route path="/shopping/car" component={ShoppingCar}/>
-                  <Route path="/shopping/store" component={Store}/>
+                  <Route path="/shopping/store/:storeid" component={Store}/>
+                  <Route path="/shopping/storeaptitude/:storeid" component={StoreAptitude}/>
                   
-
-
-
-
-
-
                   <Route path="/translate/info/:translateid" component={TranslateInfo}/>
                   <Route path="/translate/reply" component={TranslateReplyList}/>
                   <Route path="/translate/add" component={TranslateAdd}/>
                   <Route path="/translate/selorder" component={TranslateSelOrder}/>
-
 
                   <Route path="/index" component={Index}/>
                   <Route path="/login" component={Login}/>
