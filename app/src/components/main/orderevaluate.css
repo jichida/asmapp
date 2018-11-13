@@ -1,0 +1,163 @@
+.orderEvaluatePage{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.orderEvaluatePage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.orderEvaluatePage .datahead .pli{
+	display: flex;
+	padding: 15px;
+	border-bottom:1px solid #EEE;
+}
+.orderEvaluatePage .datahead .pli .img{
+	width: 80px;
+	flex-shrink: 0;
+	margin-right: 10px;
+}
+.orderEvaluatePage .datahead .pli .img img{
+	width: 100%;
+	border-radius: 3px;
+}
+.orderEvaluatePage .datahead .pli .orderinfo{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.orderEvaluatePage .datahead .pli .orderinfo .name{
+	font-size: 14px;
+}
+.orderEvaluatePage .datahead .pli .orderinfo .info{
+	flex-grow: 1;
+	justify-content: flex-start;
+	color: #999;
+	font-size: 12px;
+}
+.orderEvaluatePage .datahead .pli .orderinfo .info p{
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-size: 12px;
+}
+.orderEvaluatePage .datahead .pli .orderinfo .price{
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}
+.orderEvaluatePage .datahead{
+	margin-bottom: 10px;
+	background: #FFF;
+}
+.orderEvaluatePage .level{
+	background: #FFF;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 50px 10px 50px;
+}
+.orderEvaluatePage .level .iconfont{
+	font-size: 40px;
+	margin-bottom: -10px;
+}
+.orderEvaluatePage .level .iconfont.icon-haoping{
+	color: #0070c0;
+}
+.orderEvaluatePage .level .iconfont.icon-zhongping{
+	color: #f39800;
+}
+.orderEvaluatePage .level .iconfont.icon-chaping{
+	color: #888888;
+}
+.orderEvaluatePage .level >div{
+	display: flex;
+	flex-direction: column;
+}
+.orderEvaluatePage .level >div span{
+	display: block;
+	text-align: center;
+}
+.orderEvaluatePage .textarea{
+	width: 100%;
+	height: 150px;
+	display: flex;
+	border-top:1px solid #EEE;
+}
+.orderEvaluatePage .textarea textarea{
+	border: none;
+	flex-grow: 1;
+	height: 100%;
+	padding: 20px;
+}
+.orderEvaluatePage .imglist{
+	display: flex;
+	padding: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	padding-top: 0;
+	background: #FFF;
+}
+.orderEvaluatePage .imglist img{
+	width: 25%;
+	height: 25%;
+	padding: 2px;
+}
+.orderEvaluatePage .imglist .imglistbtn{
+	display: block;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border:1px solid #EEE;
+	flex-shrink: 0;
+}
+.orderEvaluatePage .imglist .imglistbtn .iconfont{
+	font-size: 50px;
+	margin-bottom: -15px;
+	margin-top: -15px;
+}
+.orderEvaluatePage .foot{
+	height: 50px;
+	background: #0070c0;
+	color: #FFF;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.orderEvaluatePage .starbox {
+	background: #FFF;
+	padding: 10px 20px;
+}
+.orderEvaluatePage .starbox .li{
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+.orderEvaluatePage .starbox .li .star{
+	color: #f39800;
+}
+.orderEvaluatePage .starbox .li .title{
+	margin-right: 10px;
+}
+.orderEvaluatePage .starbox .li .star .iconfont{
+	font-size: 22px;
+	margin-right: 10px;
+}
+.orderEvaluatePage .starbox .li .star .iconfont.off{
+	color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

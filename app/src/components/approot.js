@@ -17,11 +17,10 @@ import CreateOrder from './main/createorder.js'//订单确认
 import ShoppingCar from './main/shoppingcar.js'//购物车
 import Store from './main/store.js'//商家详情
 import StoreAptitude from './main/storeaptitude.js'//商家资质
-import OrderInfo from './main/orderinfo.js'//订单详情-待发货
+import OrderInfo from './main/orderinfo.js'//订单详情-待发货-待收货...
 import OrderExpress from './main/express.js'//订单快递信息
-import SetLocation from './main/setlocation.js'//订单快递信息
-
-
+import SetLocation from './main/setlocation.js'//定位
+import OrderEvaluate from './main/orderevaluate.js'//评价订单
 
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
@@ -72,6 +71,7 @@ class AppRoot extends React.Component {
                   <Route path="/order/returngoods" component={Returngoods}/>
                   <Route path="/order/createorder" component={CreateOrder}/>
                   <Route path="/order/:orderid" component={OrderInfo}/>
+                  <Route path="/orderevaluate" component={OrderEvaluate}/>
 
                   <Route path="/orderexpress/:expressid" component={OrderExpress}/>
                   <Route path="/shopping/car" component={ShoppingCar}/>
