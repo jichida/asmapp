@@ -22,6 +22,11 @@ import OrderExpress from './main/express.js'//订单快递信息
 import SetLocation from './main/setlocation.js'//定位
 import OrderEvaluate from './main/orderevaluate.js'//评价订单
 
+//个人中心
+import UserCenter from './user/user.js'//我的
+import AddressList from './user/addresslist.js'//评价订单
+import UserInfo from './user/userinfo.js'//评价订单
+
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
 import TranslateReplyList from './translate/replylist.js';//咨询回复列表
@@ -72,6 +77,11 @@ class AppRoot extends React.Component {
                   <Route path="/order/createorder" component={CreateOrder}/>
                   <Route path="/order/:orderid" component={OrderInfo}/>
                   <Route path="/orderevaluate" component={OrderEvaluate}/>
+
+                  <Route path="/user/center" component={UserCenter}/>
+                  <Route path="/user/addresslist" component={AddressList}/>
+                  <Route path="/user/info" component={UserInfo}/>
+
 
                   <Route path="/orderexpress/:expressid" component={OrderExpress}/>
                   <Route path="/shopping/car" component={ShoppingCar}/>

@@ -1,0 +1,48 @@
+.addressListPage{
+	display: flex;
+	flex-direction: column;
+}
+.addressListPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.addressListPage .addresslist >div{
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+	flex-shrink: 0;
+}
+.addressListPage .addresslist >div .a{
+	background: #0070c0;
+	height: 36px;
+	width: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+	border-radius: 18px;
+	margin-right: 15px;
+	flex-shrink: 0;
+}
+.addressListPage .addresslist >div .info{
+	margin-right: 10px;
+}
+.addressListPage .addresslist >div .editlnk{
+	width: 50px;
+	text-align: right;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-left:1px solid #EEE;
+	flex-shrink: 0;
+}
+.addressListPage .addresslist >div .info .defaultAddress{
+	background: #f39800;
+	color: #FFF;
+	padding: 1px 3px;
+	border-radius: 3px;
+	margin-right: 5px;
+}

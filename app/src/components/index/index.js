@@ -4,6 +4,7 @@ import Community from '../community';
 import {withRouter} from 'react-router-dom';
 //咨询
 import Translate from '../translate/translate.js';
+import UserCenter from '../user/user.js';
 import Main from '../main/main.js';
 
 
@@ -109,7 +110,7 @@ class TabBarExample extends Component {
               });
             }}
           >
-            {this.renderContent('我的')}
+            <UserCenter />
           </TabBar.Item>
         </TabBar>
       </div>

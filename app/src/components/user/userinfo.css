@@ -1,0 +1,16 @@
+.userInfoPage{
+
+}
+.userInfoPage .userInfo .li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+}
+.userInfoPage .userInfo .li.avatar img{
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+}
