@@ -42,7 +42,7 @@ let Nav = (props)=> {
     }
     return (
         <div className="nav">
-            <div><span>2300</span><span>我的现金</span></div>
+            <div onClick={()=>{poppush("/user/Wealth")}}><span>2300</span><span>我的现金</span></div>
             <div><span>2300</span><span>我的积分</span></div>
             <div><span>2300</span><span>我的红包</span></div>
             <div><span>2300</span><span>我的收藏</span></div>
@@ -60,7 +60,7 @@ let Datalist = (props)=> {
         <div className="userCenterList">
             <div><span>我的订单</span><i className="icon iconfont icon-xiangyou" /></div>
             <div><span>我的分享</span><i className="icon iconfont icon-xiangyou" /></div>
-            <div><span>我的帖子</span><i className="icon iconfont icon-xiangyou" /></div>
+            <div onClick={()=>{poppush("/user/posts")}}><span>我的帖子</span><i className="icon iconfont icon-xiangyou" /></div>
             <div onClick={()=>{poppush("/user/addresslist")}}><span>地址管理</span><i className="icon iconfont icon-xiangyou" /></div>
             <div><span>实名认证</span><i className="icon iconfont icon-xiangyou" /></div>
             <div><span>联系客服</span><i className="icon iconfont icon-xiangyou" /></div>

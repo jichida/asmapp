@@ -72,7 +72,7 @@
 .userCenterPage .userCenterList >div{
 	display: flex;
 	justify-content: space-between;
-	height: 40px;
+	height: 46px;
 	border-bottom: 1px solid #EEE;
 	align-items: center;
 	padding: 0 20px;

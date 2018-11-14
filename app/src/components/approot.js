@@ -28,6 +28,17 @@ import UserCenter from './user/user.js'//我的
 import AddressList from './user/addresslist.js'//评价订单
 import UserInfo from './user/userinfo.js'//评价订单
 import Setting from './user/setting.js'//系统设置
+import Wealth from './user/wealth.js'//系统设置
+import Bill from './user/bill.js'//我的账单
+import Posts from './user/posts.js'//我的账单
+import Shareinstructions from './user/shareinstructions.js'//分享说明
+import Postsmycreate from './user/postsmycreate.js'//我的发布
+import Postsmycomments from './user/postsmycomments.js'//我的评论
+import Postscollection from './user/postscollection.js'//我的收藏
+import Postsshielding from './user/postsshielding.js'//我的屏蔽
+import Postshistory from './user/postshistory.js'//我的浏览历史
+import Postsmyzan from './user/postsmyzan.js'//我的赞过的帖子
+
 
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
@@ -84,6 +95,19 @@ class AppRoot extends React.Component {
                   <Route path="/user/addresslist" component={AddressList}/>
                   <Route path="/user/info" component={UserInfo}/>
                   <Route path="/user/setting" component={Setting}/>
+                  <Route path="/user/wealth" component={Wealth}/>
+                  <Route path="/user/bill" component={Bill}/>
+                  <Route path="/user/shareinstructions" component={Shareinstructions}/>
+                  <Route path="/user/posts" component={Posts}/>
+                  <Route path="/user/postsmycreate" component={Postsmycreate}/>
+                  <Route path="/user/postsmycomments" component={Postsmycomments}/>
+                  <Route path="/user/postscollection" component={Postscollection}/>
+                  <Route path="/user/postsshielding" component={Postsshielding}/>
+                  <Route path="/user/postshistory" component={Postshistory}/>
+                  <Route path="/user/postsmyzan" component={Postsmyzan}/>
+
+
+
 
 
                   <Route path="/orderexpress/:expressid" component={OrderExpress}/>

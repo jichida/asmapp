@@ -1,0 +1,106 @@
+.wealthPage{
+	display: flex;
+	flex-direction: column;
+}
+.wealthPage .body{
+	flex-grow: 1;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.wealthPage .body .data{
+	flex-grow: 1;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.wealthPage .datahead{
+	background: #0074c3;
+	color: #FFF;
+}
+.wealthPage .datahead .allnum{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+.wealthPage .datahead .typsnum{
+	display: flex;
+}
+.wealthPage .datahead .typsnum >div{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wealthPage .datahead .datainfo{
+	padding: 15px 0;
+}
+.wealthPage .datahead .datainfo .typsnum{
+	line-height: 20px;
+	font-size: 16px;
+	padding: 10px 0;
+	font-weight: 100;
+}
+.wealthPage .datahead .datainfo .typsnum>div:first-child{
+	border-right: 1px solid #95c8ed;
+}
+.wealthPage .datahead .datainfo .typsnum>div>span:last-child{
+	font-size: 14px;
+}
+.wealthPage .datahead  .headlnk{
+	background: #0069b4;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+}
+.wealthPage .datalist {
+	background: #FFF;
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.wealthPage .listhead{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	padding: 0 20px;
+	font-size: 16px;
+	justify-content: space-between;
+	background: #EEE;
+}
+.wealthPage .datalist .li.month{
+	color: #0070c0;
+	font-size: 16px;
+}
+.wealthPage .datalist .li{
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	margin: 0 20px;
+	border-bottom: 1px solid #EEE;
+	align-items: center;
+	font-size: 12px;
+}
+.wealthPage .datalist .li .l2{
+	flex-grow: 1;
+}
+.wealthPage .datalist .li .l1{
+	width: 50px;
+}
+.wealthPage .datalist .li .l3{
+	width: 80px;
+}
+.wealthPage .datalist .li .l4{
+	width: 80px;
+}
+
+
+
+
+
+
+
+
+
+

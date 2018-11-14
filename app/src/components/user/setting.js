@@ -7,7 +7,6 @@ import { Fields, reduxForm,Form  } from 'redux-form';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import "./user.css";
 
 //顶部
 let Head = (props)=> {

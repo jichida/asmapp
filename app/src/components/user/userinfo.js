@@ -33,7 +33,7 @@ let Datalist = (props)=> {
             <div className="li avatar">
                 <span>我的头像</span><img src="../img/2.png" />
             </div>
-            <div class="li">
+            <div className="li">
                 <span>会员昵称</span><span>wegweg</span>
             </div>
             <div className="li">
