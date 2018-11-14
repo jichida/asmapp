@@ -11,9 +11,9 @@ import "./main.css";
 let HeadStarch = (props)=> {
     return (
         <div className="mainHead">
-            <div className="city">常州 <i class="icon iconfont icon-down" /></div>
-            <div className="seatch"><input type="text" /><i class="icon iconfont icon-sousuo" /></div>
-            <div className="more"><i class="icon iconfont icon-gengduo-tianchong moreLnk" /></div>
+            <div className="city">常州 <i className="icon iconfont icon-down" /></div>
+            <div className="seatch"><input type="text" /><i className="icon iconfont icon-sousuo" /></div>
+            <div className="more"><i className="icon iconfont icon-gengduo-tianchong moreLnk" /></div>
         </div>
     );
 };

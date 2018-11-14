@@ -17,7 +17,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={back}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={back}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">资讯详细</div>
         </div>
     );
@@ -66,7 +66,7 @@ let DataList = (props)=> {
                         <div className="time"><span className='t'>2018-11-02 14:49:30</span><span className="b">回复</span></div>
                     </div>
                 </div>
-                <span className="zan zaned"><i class="icon iconfont icon-zan" /><span>234</span></span>
+                <span className="zan zaned"><i className="icon iconfont icon-zan" /><span>234</span></span>
             </div>
             <div className="li">
                 <div className="userinfo">
@@ -82,7 +82,7 @@ let DataList = (props)=> {
                         <div className="time"><span className='t'>2018-11-02 14:49:30</span><span className="b">回复</span></div>
                     </div>
                 </div>
-                <span className="zan"><i class="icon iconfont icon-zan" /></span>
+                <span className="zan"><i className="icon iconfont icon-zan" /></span>
             </div>
         </div>
     );
@@ -93,9 +93,9 @@ let FootTools = (props)=> {
     return (
         <div className="footools reply">
             <input type="text" placeholder="发表评论" />
-            <span><i class="icon iconfont icon-message" /></span>
-            <span><i class="icon iconfont icon-shoucang" /></span>
-            <span><i class="icon iconfont icon-zan1" /></span>
+            <span><i className="icon iconfont icon-message" /></span>
+            <span><i className="icon iconfont icon-shoucang" /></span>
+            <span><i className="icon iconfont icon-zan1" /></span>
         </div>
     );
 };

@@ -19,7 +19,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">发布新帖</div>
         </div>
     );
@@ -42,9 +42,9 @@ let TranslateInfo = (props)=> {
                 </div>
             </div>
             <div className="proinfo" onClick={()=>{poppush("/translate/selorder")}}>
-                <span className="shopping"><i class="icon iconfont icon-shopping" style={{color:"#0070c0"}} /></span>
+                <span className="shopping"><i className="icon iconfont icon-shopping" style={{color:"#0070c0"}} /></span>
                 <span className="proname">您购买的相关产品/服务</span>
-                <span className="selicon"><i class="icon iconfont icon-nvxingfuben" /></span>
+                <span className="selicon"><i className="icon iconfont icon-nvxingfuben" /></span>
             </div>
             <div className="inputarea">
                 <textarea placeholder="fwfwe"></textarea>
@@ -64,8 +64,8 @@ TranslateInfo = withRouter(TranslateInfo);
 let FootTools = (props)=> {
     return (
         <div className="footools reply addTranslateInfoFoot">
-            <span><i class="icon iconfont icon-jianpan" style={{fontSize:"34px"}} /><i class="icon iconfont icon-nvxingfuben" /></span>
-            <span><i class="icon iconfont icon-tupian" style={{fontSize:"30px"}} /></span>
+            <span><i className="icon iconfont icon-jianpan" style={{fontSize:"34px"}} /><i className="icon iconfont icon-nvxingfuben" /></span>
+            <span><i className="icon iconfont icon-tupian" style={{fontSize:"30px"}} /></span>
         </div>
     );
 };

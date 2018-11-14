@@ -18,7 +18,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">待发货</div>
         </div>
     );
@@ -43,9 +43,9 @@ let Data = (props)=> {
                 </div>
             </div>
             <div className="level">
-                <div><i class="icon iconfont icon-haoping" /><span>好评</span></div>
-                <div><i class="icon iconfont icon-zhongping" /><span>中评</span></div>
-                <div><i class="icon iconfont icon-chaping" /><span>差评</span></div>
+                <div><i className="icon iconfont icon-haoping" /><span>好评</span></div>
+                <div><i className="icon iconfont icon-zhongping" /><span>中评</span></div>
+                <div><i className="icon iconfont icon-chaping" /><span>差评</span></div>
             </div>
             <div className="textarea">
                 <textarea placeholder="输入您的评价"></textarea>

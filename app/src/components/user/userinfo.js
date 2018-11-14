@@ -19,7 +19,7 @@ let UserHead = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">基本信息</div>
         </div>
     );
@@ -30,34 +30,34 @@ UserHead = withRouter(UserHead);
 let Datalist = (props)=> {
     return (
         <div className="userInfo">
-            <div class="li avatar">
+            <div className="li avatar">
                 <span>我的头像</span><img src="../img/2.png" />
             </div>
             <div class="li">
                 <span>会员昵称</span><span>wegweg</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>联系电话</span><span>18088888888</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>性别</span><span>男</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>常住</span><span>江苏省常州市武进区科教城天润科技...</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>简介</span><span>我是一个爱上门的忠实粉丝</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>收货地址</span><span>常州市武进区科教城天润科...</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>行业</span><span>互联网</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>职位名称</span><span>总经理</span>
             </div>
-            <div class="li">
+            <div className="li">
                 <span>院校名称</span><span>常州机电学院</span>
             </div>
         </div>

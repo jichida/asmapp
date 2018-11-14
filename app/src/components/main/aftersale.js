@@ -17,7 +17,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">售后</div>
         </div>
     );

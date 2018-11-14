@@ -1,11 +1,14 @@
 import React,{ Component } from 'react';
 import { TabBar } from 'antd-mobile';
 import Community from '../community';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 //咨询
 import Translate from '../translate/translate.js';
 import UserCenter from '../user/user.js';
 import Main from '../main/main.js';
+//action
+import { set_mainSelectedTab } from '../../actions/index.js';
 
 
 class TabBarExample extends Component {
@@ -31,8 +34,16 @@ class TabBarExample extends Component {
   // poppush(url){
   //   this.props.history.push(url);
   // }
+  onPressFn (payload){
+      this.props.dispatch(set_mainSelectedTab(payload));
+  }
 
   render() {
+
+    const { mainSelectedTab } = this.props;
+    console.log("mainSelectedTab");
+    console.log(mainSelectedTab);
+
     return (
       <div className="footContainer" style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
         <TabBar
@@ -44,14 +55,10 @@ class TabBarExample extends Component {
           <TabBar.Item
             title="首页"
             key="首页"
-            icon={<i class="icon iconfont icon-shouye" />}
-            selectedIcon={<i class="icon iconfont icon-shouye sel" />}
-            selected={ this.state.selectedTab === 'index'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'index',
-              });
-            }}
+            icon={<i className="icon iconfont icon-shouye" />}
+            selectedIcon={<i className="icon iconfont icon-shouye sel" />}
+            selected={ mainSelectedTab === 'index'}
+            onPress={() => {this.onPressFn("index")}}
             data-seed="logId"
           >
             <Main />
@@ -59,56 +66,42 @@ class TabBarExample extends Component {
           <TabBar.Item
             title="智能"
             key="智能"  //icon-zhineng
-            icon={<i class="icon iconfont icon-zhineng" />}
-            selectedIcon={<i class="icon iconfont icon-zhineng sel" />}
-            selected={this.state.selectedTab === 'zhineng'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'zhineng',
-              });
-            }}
+            icon={<i className="icon iconfont icon-zhineng" />}
+            selectedIcon={<i className="icon iconfont icon-zhineng sel" />}
+            selected={ mainSelectedTab === 'zhineng'}
+            onPress={() => {this.onPressFn("zhineng")}}
             data-seed="logId"
           >
             {this.renderContent('智能')}
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-xinxi" />}
-            selectedIcon={<i class="icon iconfont icon-xinxi sel" />}
+            icon={<i className="icon iconfont icon-xinxi" />}
+            selectedIcon={<i className="icon iconfont icon-xinxi sel" />}
             title="咨询"
             key="咨询"
-            selected={this.state.selectedTab === 'translate'}
-            onPress={() => {
-              this.setState({ selectedTab: 'translate' });
-            }}
+            selected={ mainSelectedTab === 'translate'}
+            onPress={() => {this.onPressFn("translate")}}
             data-seed="logId1"
           >
             <Translate />
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-31jifen" />}
-            selectedIcon={<i class="icon iconfont icon-31jifen sel" />}
+            icon={<i className="icon iconfont icon-31jifen" />}
+            selectedIcon={<i className="icon iconfont icon-31jifen sel" />}
             title="积分"
             key="积分"
-            selected={this.state.selectedTab === 'jifen'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'jifen',
-              });
-            }}
+            selected={ mainSelectedTab === 'jifen'}
+            onPress={() => {this.onPressFn("jifen")}}
           >
             {this.renderContent('积分')}
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-yonghu" />}
-            selectedIcon={<i class="icon iconfont icon-yonghu sel" />}
+            icon={<i className="icon iconfont icon-yonghu" />}
+            selectedIcon={<i className="icon iconfont icon-yonghu sel" />}
             title="我的"
             key="我的"
-            selected={this.state.selectedTab === 'user'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'user',
-              });
-            }}
+            selected={ mainSelectedTab === 'user'}
+            onPress={() => {this.onPressFn("user")}}
           >
             <UserCenter />
           </TabBar.Item>
@@ -118,5 +111,10 @@ class TabBarExample extends Component {
   }
 }
 
+const stores = ({app}) => {
+    return {...app};
+}
+
+TabBarExample = connect(stores)(TabBarExample);
 TabBarExample = withRouter(TabBarExample);
 export default TabBarExample;

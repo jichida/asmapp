@@ -178,7 +178,7 @@ export class Page extends React.Component {
         return (
             <div className="UserLoginPage register" style={{minHeight : this.state.innerHeight + "px"}}>
                 <div className="loginHead">
-                    <span className="back" onClick={this.back}><i class="icon iconfont icon-Left" /></span>
+                    <span className="back" onClick={this.back}><i className="icon iconfont icon-Left" /></span>
                     <span className="title">找回密码</span>
                 </div>
                 <img src="./img/bg.png" className="bg" />

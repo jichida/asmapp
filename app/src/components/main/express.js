@@ -19,7 +19,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">爱上门旗舰店</div>
         </div>
     );
@@ -44,7 +44,7 @@ let Datalist = (props)=> {
             <div className="expressPerson">
                 <div className="avatar"><img src="./img/2.png" /></div>
                 <div className="person"><span>快递员：赵小刘</span><span>123142554</span></div>
-                <div className="i"><i class="icon iconfont icon-dianhuazhengzaibohao" /></div>
+                <div className="i"><i className="icon iconfont icon-dianhuazhengzaibohao" /></div>
             </div>
             <div className="datali">
                 <div className='bg' style={{backgroundImage: "url('./img/line.png')"}}></div>

@@ -18,7 +18,7 @@ let UserHead = (props)=> {
         props.history.goBack();
     }
     return (
-        <div className="userhead">
+        <div className="userhead" onClick={()=>{poppush("/user/info")}}>
             <div className="avatar">
                 <img src="./img/2.png" />
             </div>
@@ -66,7 +66,7 @@ let Datalist = (props)=> {
             <div><span>联系客服</span><i className="icon iconfont icon-xiangyou" /></div>
             <div><span>服务热线</span><i className="icon iconfont icon-xiangyou" /></div>
             <div><span>售后规则</span><i className="icon iconfont icon-xiangyou" /></div>
-            <div><span>系统设置</span><i className="icon iconfont icon-xiangyou" /></div>
+            <div onClick={()=>{poppush("/user/setting")}}><span>系统设置</span><i className="icon iconfont icon-xiangyou" /></div>
         </div>
     );
 };

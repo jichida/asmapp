@@ -17,7 +17,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">待发货</div>
         </div>
     );
@@ -32,7 +32,7 @@ let Address = (props)=> {
     return (
         <div className="address">
 
-            <i class="icon iconfont icon-buoumaotubiao23" />
+            <i className="icon iconfont icon-buoumaotubiao23" />
             <div className="i">
                 <div className="text">
                    <span>收货人: 李小四</span>
@@ -42,7 +42,7 @@ let Address = (props)=> {
                     收货地址: 常州市武进区科教城天润科技大厦A307
                 </div>
             </div>
-            <i class="icon iconfont icon-xiangyou" />
+            <i className="icon iconfont icon-xiangyou" />
             <div className='bg' style={{backgroundImage: "url('./img/line.png')"}}></div>
         </div>
     );
@@ -57,7 +57,7 @@ let ExpressInfo = (props)=> {
         <div className="expressinfo">
             <div className="address">
                 <div className="info">
-                    <i class="icon iconfont icon-buoumaotubiao23" />
+                    <i className="icon iconfont icon-buoumaotubiao23" />
                     <div className="i">
                         <div className="addressinfo">
                             收货地址: 常州市武进区科教城天润科技大厦A307
@@ -132,8 +132,8 @@ let OrderInfo = (props)=> {
                         <div>2018-09-09 12:09:09</div>
                     </div>
                     <div className="lnk">
-                        <div><i class="icon iconfont icon-xinxi1" /><span>联系卖家</span></div>
-                        <div><i class="icon iconfont icon-dianhuazhengzaibohao" /><span>拨打电话</span></div>
+                        <div><i className="icon iconfont icon-xinxi1" /><span>联系卖家</span></div>
+                        <div><i className="icon iconfont icon-dianhuazhengzaibohao" /><span>拨打电话</span></div>
                     </div>
                 </div>
             </div>

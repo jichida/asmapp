@@ -38,8 +38,8 @@ class TabBarExample extends Component {
           <TabBar.Item
             title="首页"
             key="首页"
-            icon={<i class="icon iconfont icon-shouye" />}
-            selectedIcon={<i class="icon iconfont icon-shouye sel" />}
+            icon={<i className="icon iconfont icon-shouye" />}
+            selectedIcon={<i className="icon iconfont icon-shouye sel" />}
             selected={this.state.selectedTab === 'index'}
             badge={1}
             onPress={() => {
@@ -54,8 +54,8 @@ class TabBarExample extends Component {
           <TabBar.Item
             title="智能"
             key="智能"  //icon-zhineng
-            icon={<i class="icon iconfont icon-zhineng" />}
-            selectedIcon={<i class="icon iconfont icon-zhineng sel" />}
+            icon={<i className="icon iconfont icon-zhineng" />}
+            selectedIcon={<i className="icon iconfont icon-zhineng sel" />}
             selected={this.state.selectedTab === 'zhineng'}
             badge={1}
             onPress={() => {
@@ -68,8 +68,8 @@ class TabBarExample extends Component {
             {this.renderContent('智能')}
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-xinxi" />}
-            selectedIcon={<i class="icon iconfont icon-xinxi sel" />}
+            icon={<i className="icon iconfont icon-xinxi" />}
+            selectedIcon={<i className="icon iconfont icon-xinxi sel" />}
             title="咨询"
             key="咨询"
             badge={'new'}
@@ -83,8 +83,8 @@ class TabBarExample extends Component {
             {this.renderContent('咨询')}
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-31jifen" />}
-            selectedIcon={<i class="icon iconfont icon-31jifen sel" />}
+            icon={<i className="icon iconfont icon-31jifen" />}
+            selectedIcon={<i className="icon iconfont icon-31jifen sel" />}
             title="积分"
             key="积分"
             dot
@@ -98,8 +98,8 @@ class TabBarExample extends Component {
             {this.renderContent('积分')}
           </TabBar.Item>
           <TabBar.Item
-            icon={<i class="icon iconfont icon-yonghu" />}
-            selectedIcon={<i class="icon iconfont icon-yonghu sel" />}
+            icon={<i className="icon iconfont icon-yonghu" />}
+            selectedIcon={<i className="icon iconfont icon-yonghu sel" />}
             title="我的"
             key="我的"
             selected={this.state.selectedTab === 'user'}

@@ -17,7 +17,7 @@ let Head = (props)=> {
     }
     return (
         <div className="head">
-            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i class="icon iconfont icon-Left" /></span></div>
+            <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">请退货</div>
         </div>
     );
@@ -32,7 +32,7 @@ let Address = (props)=> {
     return (
         <div className="address">
 
-            <i class="icon iconfont icon-buoumaotubiao23" />
+            <i className="icon iconfont icon-buoumaotubiao23" />
             <div className="i">
                 <div className="text">
                    <span>收货人: 李小四</span>
@@ -42,7 +42,7 @@ let Address = (props)=> {
                     收货地址: 常州市武进区科教城天润科技大厦A307
                 </div>
             </div>
-            <i class="icon iconfont icon-xiangyou" />
+            <i className="icon iconfont icon-xiangyou" />
             <div className='bg' style={{backgroundImage: "url('./img/line.png')"}}></div>
         </div>
     );
@@ -75,16 +75,16 @@ let OrderInfo = (props)=> {
                 </div>
                 <div className="li">
                     <div>配送方式</div>
-                    <div><select><option value="1">快递 包邮</option></select><i class="icon iconfont icon-xiangyou" /></div>
+                    <div><select><option value="1">快递 包邮</option></select><i className="icon iconfont icon-xiangyou" /></div>
 
                 </div>
                 <div className="li">
                     <div>使用红包</div>
-                    <div><select><option value="1">新人50元红包</option></select><i class="icon iconfont icon-xiangyou" /></div>
+                    <div><select><option value="1">新人50元红包</option></select><i className="icon iconfont icon-xiangyou" /></div>
                 </div>
                 <div className="li">
                     <div>支付方式</div>
-                    <div><select><option value="1">支付宝</option></select><i class="icon iconfont icon-xiangyou" /></div>
+                    <div><select><option value="1">支付宝</option></select><i className="icon iconfont icon-xiangyou" /></div>
                 </div>
                 <div className="li">
                     <div>买家留言</div>

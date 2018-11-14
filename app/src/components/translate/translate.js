@@ -19,7 +19,7 @@ let Head = (props)=> {
 
     return (
         <div className="head">
-            <div className="leftlnk"><span className="city">常州 <i class="icon iconfont icon-down" /></span></div>
+            <div className="leftlnk"><span className="city">常州 <i className="icon iconfont icon-down" /></span></div>
             <div className="title">咨询</div>
             <div className="rightlnk"><span className="addPost" onClick={()=>{poppush('/translate/add')}}>+ 发帖</span></div>
         </div>

@@ -15,9 +15,9 @@ let GoodsImg = (props)=> {
     return (
         <div className="goodsinfoHead">
             <div className="goodImg">
-                <a className="backLnk"><i class="icon iconfont icon-Left" onClick={back} /></a>
-                <a className="shoppingcar"><i class="icon iconfont icon-gouwuche" /></a>
-                <a className="moreLnk"><i class="icon iconfont icon-gengduo-tianchong" /></a>
+                <a className="backLnk"><i className="icon iconfont icon-Left" onClick={back} /></a>
+                <a className="shoppingcar"><i className="icon iconfont icon-gouwuche" /></a>
+                <a className="moreLnk"><i className="icon iconfont icon-gengduo-tianchong" /></a>
                 <img src="./img/1.png" />
             </div>
             <div className="data">
@@ -27,7 +27,7 @@ let GoodsImg = (props)=> {
                         <span className="name">爱上门血压仪</span>
                     </div>
                     <div className="right">
-                        <span className="shear"><i class="icon iconfont icon-fenxiang"/> 分享</span>
+                        <span className="shear"><i className="icon iconfont icon-fenxiang"/> 分享</span>
                     </div>
                 </div>
                 <div className="nm">
@@ -45,9 +45,9 @@ let GoodsFoot = (props)=> {
     return (
         <div className="goodsFoot">
             <div className="leftlnk">
-                <div><i class="icon iconfont icon-dianpu" /><span>店铺</span></div>
-                <div><i class="icon iconfont icon-kefu" /><span>客服</span></div>
-                <div><i class="icon iconfont icon-shoucang1" /><span>收藏</span></div>
+                <div><i className="icon iconfont icon-dianpu" /><span>店铺</span></div>
+                <div><i className="icon iconfont icon-kefu" /><span>客服</span></div>
+                <div><i className="icon iconfont icon-shoucang1" /><span>收藏</span></div>
             </div>
             <div className="sublnk">
                 <div>加入购物车</div>
@@ -63,8 +63,8 @@ let GoodsBtnList = (props)=> {
     }
     return (
         <div className="goodsBtnList">
-            <div onClick={()=>{poppush("/goodinfo/canshu")}}><span>参数</span><i class="icon iconfont icon-xiangyou" /></div>
-            <div onClick={()=>{poppush("/goodinfo/sel")}}><span>选择</span><i class="icon iconfont icon-xiangyou" /></div>
+            <div onClick={()=>{poppush("/goodinfo/canshu")}}><span>参数</span><i className="icon iconfont icon-xiangyou" /></div>
+            <div onClick={()=>{poppush("/goodinfo/sel")}}><span>选择</span><i className="icon iconfont icon-xiangyou" /></div>
         </div>
     );
 };

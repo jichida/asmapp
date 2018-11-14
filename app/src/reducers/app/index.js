@@ -2,11 +2,15 @@ import { createReducer } from 'redux-act';
 import {
     uicommentimg,
     getsystemconfig_result,
+    set_mainSelectedTab
 } from '../../actions/index.js';
 import moment from 'moment';
 
 const initial = {
     app: {
+
+        mainSelectedTab : "index",
+
         curtabindex: 0,
         type: 'error',
         title: '',
@@ -49,7 +53,9 @@ const initial = {
 };
 
 const app = createReducer({
-
+    [set_mainSelectedTab]: (state, payload) => {
+        return { ...state, mainSelectedTab : payload };
+    },
     [getsystemconfig_result]: (state, payload) => {
         return { ...state, ...payload };
     },
