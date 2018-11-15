@@ -84,6 +84,7 @@
 	display: flex;
 	padding: 20px;
 	margin-bottom: 10px;
+	background: #FFF;
 }
 .mainPage .datalist .li .img{
 	width: 100px;

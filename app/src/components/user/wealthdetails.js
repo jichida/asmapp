@@ -7,7 +7,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import "./bill.css";
+import "./wealthdetails.css";
 
 //顶部搜索
 let Head = (props)=> {

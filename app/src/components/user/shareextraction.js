@@ -1,4 +1,4 @@
-//我的财富
+//我分享提现记录
 
 import React from 'react';
 // import '../../public/css/user.css';
@@ -20,8 +20,7 @@ let Head = (props)=> {
     return (
         <div className="head">
             <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
-            <div className="title">我的现金</div>
-            <div className="rightlnk"><span>充值</span></div>
+            <div className="title">提现记录</div>
         </div>
     );
 };
@@ -34,39 +33,25 @@ let Datalist = (props)=> {
     }
     return (
         <div className="data">
-            <div className="datahead">
-                <div className="datainfo">
-                    <div className="allnum">123124.00</div>
-                    <div className="typsnum">
-                        <div><span>10000</span><span>可提现(元)</span></div>
-                        <div><span>14000</span><span>不可提现(元)</span></div>
-                    </div>
-                </div>
-                <div className="headlnk">提现申请</div>
-            </div>
-            <div className="listhead">
-                <span>账单明细</span>
-                <span onClick={()=>{poppush("/user/wealthdetails")}}>查看详情 <i className="icon iconfont icon-xiangyou" /></span>
-            </div>
             <div className="datalist">
                 <div className="li month">
                     <span>11月</span>
                 </div>
                 <div className="li">
                     <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4 warning">提现处理中 </span>
                 </div>
                 <div className="li">
                     <span className="l1">03号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4">交易完成 </span>
                 </div>
                 <div className="li">
                     <span className="l1">01号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4">交易完成 </span>
                 </div>
@@ -75,40 +60,19 @@ let Datalist = (props)=> {
                 </div>
                 <div className="li">
                     <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4 warning">提现处理中 </span>
                 </div>
                 <div className="li">
                     <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4">交易完成 </span>
                 </div>
                 <div className="li">
                     <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
-                    <span className="l3">￥300.00</span>
-                    <span className="l4">交易完成 </span>
-                </div>
-                <div className="li month">
-                    <span>10月</span>
-                </div>
-                <div className="li">
-                    <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
-                    <span className="l3">￥300.00</span>
-                    <span className="l4 warning">提现处理中 </span>
-                </div>
-                <div className="li">
-                    <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
-                    <span className="l3">￥300.00</span>
-                    <span className="l4">交易完成 </span>
-                </div>
-                <div className="li">
-                    <span className="l1">05号</span>
-                    <span className="l2">支付宝</span>
+                    <span className="l2">12:23:33</span>
                     <span className="l3">￥300.00</span>
                     <span className="l4">交易完成 </span>
                 </div>

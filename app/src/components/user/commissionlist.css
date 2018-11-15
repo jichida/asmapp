@@ -1,0 +1,47 @@
+.commissionlistPage{
+
+}
+.commissionlistPage .datalist .li{
+	display: flex;
+	padding: 20px;
+	margin-bottom: 10px;
+	background: #FFF;
+}
+.commissionlistPage .datalist .li .img{
+	width: 80px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.commissionlistPage .datalist .li .img img{
+	width: 100%;
+	border-radius: 6px;
+}
+.commissionlistPage .datalist .li .inf{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.commissionlistPage .datalist .li .inf .name{
+	font-size: 12px;
+}
+.commissionlistPage .datalist .li .inf .p{
+	display: flex;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.commissionlistPage .datalist .li .inf .p .l{
+	display: flex;
+	flex-direction: column;
+}
+.commissionlistPage .datalist .li .inf .p .price{
+	color: #e60012;
+	font-weight: 400;
+	margin-right: 30px;
+	font-size: 16px;
+}
+.commissionlistPage .datalist .li .inf .p .num{
+	color: #bbb;
+	font-size: 16px;
+}

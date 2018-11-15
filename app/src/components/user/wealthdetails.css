@@ -102,6 +102,7 @@
 	align-items: center;
 	justify-content: space-around;
 	padding: 0 5px;
+	flex-shrink: 0;
 }
 .billPage .nav span{
 	align-self: stretch;
@@ -131,6 +132,70 @@
 	font-size: 12px;
 	line-height: 20px;
 }
+
+.rewardslist .li{
+	margin: 0 20px;
+	margin-bottom: 10px;
+	border: 1px solid #C00;
+	border-radius: 6px;
+	background: #C00;
+}
+.rewardslist .li.off{
+	margin: 0 20px;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	background: #999;
+}
+.rewardslist .li.off .num .n .l1{
+	color: #999;
+}
+.rewardslist .li .num{
+	display: flex;
+	justify-content: space-between;
+	padding:15px;
+	border-radius: 6px;
+	background: #FFF;
+	flex-direction: column;
+}
+.rewardslist .li .num .orderinfo{
+	text-align: center;
+}
+.rewardslist .li .num .n{
+	display: flex;
+	justify-content: space-between;
+}
+.rewardslist .li .num .n .l1{
+	font-size: 30px;
+	color: #C00;
+	align-items: center;
+	font-weight: bold;
+}
+.rewardslist .li .num .n span{
+	display: flex;
+	align-items: center;
+}
+.rewardslist .li .rol{
+	color: #FFF;
+	border-radius: 0 0 4px 4px;
+	padding:5px 10px;
+	display: flex;
+	font-size: 12px;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

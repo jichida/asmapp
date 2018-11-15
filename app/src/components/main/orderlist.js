@@ -20,7 +20,7 @@ let Head = (props)=> {
     return (
         <div className="head">
             <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
-            <div className="title">相关订单</div>
+            <div className="title">订单列表</div>
             <div className="rightlnk"><span className="search"><i className="icon iconfont icon-sousuo" /></span></div>
         </div>
     );
