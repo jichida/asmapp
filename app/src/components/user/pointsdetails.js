@@ -1,5 +1,4 @@
-//我的积分
-
+//积分详情
 import React from 'react';
 // import '../../public/css/user.css';
 // import { Input, Button, Icon, Label } from 'semantic-ui-react';
@@ -7,20 +6,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import "./wealth.css";
+import "./wealthdetails.css";
 
 //顶部搜索
 let Head = (props)=> {
-    let poppush =(url)=>{
-        props.history.push(url);
-    }
     let back=()=>{
         props.history.goBack();
     }
     return (
         <div className="head">
             <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
-            <div className="title">我的积分</div>
+            <div className="title">积分明细</div>
         </div>
     );
 };
@@ -28,21 +24,8 @@ Head = withRouter(Head);
 
 //首页数据
 let Datalist = (props)=> {
-    let poppush =(url)=>{
-        props.history.push(url);
-    }
     return (
         <div className="data">
-            <div className="datahead">
-                <div className="datainfo">
-                    <div className="allnum">123124.00</div>
-                    <div className="sharetext">你一共拥有的积分</div>
-                </div>
-            </div>
-            <div className="listhead">
-                <span>积分明细</span>
-                <span onClick={()=>{poppush("/user/pointsdetails")}}>查看详情 <i className="icon iconfont icon-xiangyou" /></span>
-            </div>
             <div className="datalist">
                 <div className="li month">
                     <span>11月</span>
@@ -58,6 +41,14 @@ let Datalist = (props)=> {
                     <span className="l2">退货-智能手表</span>
                     <span className="l3">+ 300.00</span>
                     <span className="l4">退分成功 </span>
+                </div>
+                <div className="liinfo">
+                    <div><span className="f18">积分 10000</span><span className="warning">(处理中)</span></div>
+                    <div>付分方: 不吃鱼的猫</div>
+                    <div>收分方: 爱上门旗舰店(积分商城)</div>
+                    <div>商品说明: 退货返还</div>
+                    <div>创建时间: 2018-09-09 11:20:22</div>
+                    <div>订单号: 3235235222352</div>
                 </div>
                 <div className="li">
                     <span className="l1">01号</span>
@@ -90,8 +81,6 @@ let Datalist = (props)=> {
         </div>
     );
 };
-Datalist = withRouter(Datalist);
-
 
 
 export class Page extends React.Component {
@@ -104,7 +93,7 @@ export class Page extends React.Component {
     } 
     render() {
         return (
-            <div className="wealthPage" style={{height: window.innerHeight+"px"}}>
+            <div className="billPage" style={{height: window.innerHeight+"px"}}>
                 <Head />
                 <div className="body">
                     <Datalist />

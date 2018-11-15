@@ -13,7 +13,14 @@
 	margin-bottom: 10px;
 	position: relative;
 }
-
+.postsmycreatePage .body .list .li .status{
+	display: flex;
+	align-items: center;
+	height: 46px;
+	border-bottom: 1px solid #EEE;
+	padding:  0 20px;
+	justify-content: space-between;
+}
 .postsmycreatePage .body .list .li .tit{
 	display: flex;
 	padding: 15px 20px 5px 20px;
@@ -135,3 +142,12 @@
 	font-size: 26px;
 	margin-bottom: -10px;
 }
+
+
+
+
+
+
+
+
+

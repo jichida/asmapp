@@ -1,0 +1,64 @@
+.editAddressPage{
+	display: flex;
+	flex-direction: column;
+}
+.editAddressPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.editAddressPage .body .f{
+	background: #FFF;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+.editAddressPage .body .f .li{
+	height: 46px;
+	border-bottom: 1px solid #EEE;
+	display: flex;
+	align-items: center;
+}
+.editAddressPage .body .f .li .colorLnk{
+	width: 70px;
+}
+.editAddressPage .body .f .li .selarea,
+.editAddressPage .body .f .li input{
+	height: 42px;
+	border: none;
+	line-height: 42px;
+	flex-grow: 1;
+	text-align: right;
+}
+.editAddressPage .body .f .li .selarea{
+	display: flex;
+	color: #999;
+	text-align: right;
+	justify-content: flex-end;
+	align-items: center;
+}
+.editAddressPage .body .f .li .selarea .icon{
+	font-size: 16px;
+	margin-left: 10px;
+}
+.editAddressPage .body .f .li.lilnk{
+	display: flex;
+	justify-content: space-between;
+}
+.editAddressPage .body .f .li.lilnk .t{
+	width: 100px;
+}
+.editAddressPage .body .f .li:last-child{
+	border:none;
+}
+.editAddressPage .body .fbtn{
+	height: 50px;
+	color: #FFF;
+	background: #0070c0;
+	text-align: center;
+	margin: 15px;
+	line-height: 50px;
+	font-size: 18px;
+}
+
+
+
+

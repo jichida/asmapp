@@ -30,6 +30,7 @@ import UserInfo from './user/userinfo.js'//评价订单
 import Setting from './user/setting.js'//系统设置
 import Wealth from './user/wealth.js'//系统设置
 import Wealthdetails from './user/wealthdetails.js'//我的账单明细
+import Pointsdetails from './user/pointsdetails.js'//我的账单明细
 import Posts from './user/posts.js'//我的发帖
 import Shareinstructions from './user/shareinstructions.js'//分享说明
 import Postsmycreate from './user/postsmycreate.js'//我的发布
@@ -39,11 +40,15 @@ import Postsshielding from './user/postsshielding.js'//我的屏蔽
 import Postshistory from './user/postshistory.js'//我的浏览历史
 import Postsmyzan from './user/postsmyzan.js'//我的赞过的帖子
 import Myshare from './user/myshare.js'//我的分享
+import Myreport from './user/myreport.js'//我的举报
+import Bereport from './user/bereport.js'//被举报的帖子
 import Shareextraction from './user/shareextraction.js'//我的分享提现记录
 import Commissionlist from './user/commissionlist.js'//我的佣金记录
 import Rules from './user/rules.js'//我的佣金记录
 import Rewards from './user/rewards.js'//我的佣金记录
 import Points from './user/points.js'//我的积分
+import Editaddress from './user/editaddress.js'//编辑地址
+import Addaddress from './user/addaddress.js'//新增地址
 
 
 //咨询详情
@@ -103,6 +108,8 @@ class AppRoot extends React.Component {
                   <Route path="/user/setting" component={Setting}/>
                   <Route path="/user/wealth" component={Wealth}/>
                   <Route path="/user/wealthdetails" component={Wealthdetails}/>
+                  <Route path="/user/pointsdetails" component={Pointsdetails}/>
+
                   <Route path="/user/shareinstructions" component={Shareinstructions}/>
                   <Route path="/user/posts" component={Posts}/>
                   <Route path="/user/postsmycreate" component={Postsmycreate}/>
@@ -117,6 +124,13 @@ class AppRoot extends React.Component {
                   <Route path="/user/rules" component={Rules}/>
                   <Route path="/user/rewards" component={Rewards}/>
                   <Route path="/user/points" component={Points}/>
+                  <Route path="/user/editaddress" component={Editaddress}/>
+                  <Route path="/user/addaddress" component={Addaddress}/>
+                  <Route path="/user/myreport" component={Myreport}/>
+                  <Route path="/user/bereport" component={Bereport}/>
+
+
+
 
 
 

@@ -21,34 +21,18 @@ let UserHead = (props)=> {
         <div className="head">
             <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
             <div className="title">地址管理</div>
-            <div className="rightlnk">+ 添加</div>
+            <div className="rightlnk"  onClick={()=>{poppush('/user/addaddress')}}>+ 添加</div>
 
         </div>
     );
 };
 UserHead = withRouter(UserHead);
 
-//导航
-let Nav = (props)=> {
+//首页数据
+let Datalist = (props)=> {
     let poppush =(url)=>{
         props.history.push(url);
     }
-    let back=()=>{
-        props.history.goBack();
-    }
-    return (
-        <div className="nav">
-            <div><span>2300</span><span>我的现金</span></div>
-            <div><span>2300</span><span>我的积分</span></div>
-            <div><span>2300</span><span>我的红包</span></div>
-            <div><span>2300</span><span>我的收藏</span></div>
-        </div>
-    );
-};
-Nav = withRouter(Nav);
-
-//首页数据
-let Datalist = (props)=> {
     return (
         <div className="addresslist">
             <div>
@@ -57,7 +41,7 @@ let Datalist = (props)=> {
                     <div>张小三 18088888888</div>
                     <div><span className="defaultAddress">默认地址</span><span>江苏省常州市武进区科教城天润科技大厦A307</span></div>
                 </div>
-                <div className="editlnk">编辑</div>
+                <div className="editlnk" onClick={()=>{poppush('/user/editaddress')}}>编辑</div>
             </div>
             <div>
                 <span className="a">张</span>
@@ -65,12 +49,12 @@ let Datalist = (props)=> {
                     <div>张小三 18088888888</div>
                     <div><span>江苏省常州市武进区科教城天润科技大厦A307</span></div>
                 </div>
-                <div className="editlnk">编辑</div>
+                <div className="editlnk" onClick={()=>{poppush('/user/editaddress')}}>编辑</div>
             </div>
         </div>
     );
 };
-
+Datalist = withRouter(Datalist);
 
 export class Page extends React.Component {
     constructor(props) {  

@@ -41,13 +41,13 @@ let Datalist = (props)=> {
             <div onClick={()=>{poppush("/user/postscollection")}}>
                 <span>我的收藏</span><i className="icon iconfont icon-xiangyou" />
             </div>
-            <div onClick={()=>{poppush("/forgetpwd")}}>
+            <div onClick={()=>{poppush("/user/myreport")}}>
                 <span>我的举报</span><i className="icon iconfont icon-xiangyou" />
             </div>
             <div onClick={()=>{poppush("/user/postsshielding")}}>
                 <span>我的屏蔽</span><i className="icon iconfont icon-xiangyou" />
             </div>
-            <div onClick={()=>{poppush("/forgetpwd")}}>
+            <div onClick={()=>{poppush("/user/bereport")}}>
                 <span>被举报帖</span><i className="icon iconfont icon-xiangyou" />
             </div>
             <div onClick={()=>{poppush("/user/postshistory")}}>
