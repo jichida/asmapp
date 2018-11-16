@@ -1,0 +1,176 @@
+.devicePage{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.devicePage .tit{
+	font-size: 18px;
+	color: #FFF;
+	line-height: 40px;
+	padding-top: 20px;
+	text-align: center;
+}
+.devicePage .imgscroll{
+	margin: 0 15px;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow:  0 5px 10px rgba(0,0,0,.2);
+}
+.devicePage .imgscroll img{
+	width: 100%;
+}
+.devicePage .adddevicebtn{
+	width: 200px;
+	height: 200px;
+	background: rgba(64,187,220, .9);
+	margin:  auto;
+	border-radius: 120px;
+	display: flex;
+	margin-top: 40px;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+}
+.devicePage .adddevicebtn:before{
+	content: "";
+	width: 160px;
+	height: 160px;
+	background: rgba(160, 220, 238, 0.9);
+	border-radius: 100px;
+	box-shadow:  0px 0px 20px rgba(0,0,0,.1);
+}
+.devicePage .adddevicebtn span{
+	display: flex;
+	width: 120px;
+	height: 120px;
+	background: rgba(230, 245, 249, 0.9);
+	border-radius: 80px;
+	box-shadow:  0px 0px 20px rgba(0,0,0,.1);
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	align-items: center;
+	justify-content: center;
+}
+.devicePage .devicelist{
+	padding-top: 30px;
+}
+.devicePage .devicelist .li{
+	padding: 15px 20px;
+	background: #FFF;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 15px;
+	box-shadow:  0 5px 10px rgba(0,0,0,.2);
+	margin-bottom: 15px;
+}
+.devicePage .devicelist .li .l,
+.devicePage .devicelist .li .r{
+	display: flex;
+	flex-direction: column;
+}
+.devicePage .devicelist .li .l{
+	justify-content: flex-end;
+}
+.devicePage .devicelist .li .r{
+	text-align: center;
+}
+.devicePage .devicelist .li .r .value{
+	font-size: 30px;
+	line-height: 40px;
+}
+.devicePage .devicelist .li .r .value.warning{
+	color: #e32e3c	
+}
+.devicePage .devicelist .li .l .name{
+	font-size: 26px;
+}
+.devicePage .devicelist .li .r span.color9{
+	line-height: 16px;
+}
+.devicePage .adddevicebtn span:before{
+	content: "";
+	width: 80px;
+	height: 80px;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 100px;
+	box-shadow:  0px 0px 20px rgba(0,0,0,.1);
+}
+.devicePage .adddevicebtn span .icon{
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	color: #0092cc;
+	line-height: 40px;
+}
+.devicePage .nodevicetext{
+	text-align: center;
+	color: #FFF;
+	font-weight: 100;
+	line-height: 20px;
+	font-size: 16px;
+	padding-top: 20px;
+}
+.adddevicePage{
+	display: flex;
+	flex-direction: column;	
+}
+.adddevicePage .step{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1;
+	overflow-y: scroll;
+	justify-content: space-around;
+}
+.adddevicePage .step .img img{
+	width: 170px;
+	margin-top: 30px;
+}
+.adddevicePage .step .stepname{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #FFF;
+	font-weight: 100;
+}
+.adddevicePage .step .stepname span{
+	display: block;
+	text-align: center;
+}
+.adddevicePage .step .stepname span.name{
+	font-size: 20px;
+}
+.adddevicePage .step .stepname span.stepnum{
+	margin-bottom: 20px;
+}
+.adddevicePage .step .nextbtn{
+	margin-bottom: 30px;
+	color: #0070c0;
+	font-size: 18px;
+	height: 40px;
+	width: 140px;
+	text-align: center;
+	border-radius: 20px;
+	background: #FFF;
+	line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

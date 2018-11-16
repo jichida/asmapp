@@ -1,0 +1,73 @@
+.certificationPage{
+	display: flex;
+	flex-direction: column;
+}
+.certificationPage .body{
+	overflow-y:scroll;
+	flex-grow: 1;
+}
+.certificationPage .body .formlist{
+	padding: 20px;
+}
+.certificationPage .body .formlist .li{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	margin-bottom: 10px;
+}
+.certificationPage .body .formlist .li span{
+	margin-right: 10px;
+}
+.certificationPage .body .formlist .li input{
+	border: none;
+	flex-grow: 1;
+	height: 40px;
+	border-bottom: 1px solid #DDD;
+	background: none;
+}
+.certificationPage .body .formlist .li.img{
+	flex-direction: column;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	background: #FFF;
+	border-radius: 10px;
+}
+.certificationPage .body .formlist .li.img >div{
+	text-align: center;
+}
+.certificationPage .body .formlist .li.img .lnk{
+	margin-top: 20px;
+	font-size: 18px;
+}
+.certificationPage .body .formBtn{
+	background: #0074c3;
+	color: #FFF;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 20px;
+}
+.certificationPage .body .ant-upload.ant-upload-select-picture-card{
+	width: 100%;
+	background: #FFF;
+	height: 150px;
+}
+.certificationPage .ant-upload-select-picture-card .ant-upload-text.colorLnk{
+	font-size: 18px;
+	color: #0074c3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

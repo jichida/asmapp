@@ -97,6 +97,7 @@
 .wealthPage .sharetext{
 	text-align: center;
 	padding-bottom: 10px;
+	font-weight: 100;
 }
 .wealthPage .sharelist .li{
 	background: #FFF;
@@ -107,6 +108,82 @@
 	justify-content: space-between;
 	border-bottom: 1px solid #EEE;
 }
+.wealthPage .allnumowner{
+	text-align: center;
+}
+.withdrawcashdata .datahead .datainfo .allnumowner{
+	font-weight: 100;
+}
+.withdrawcashpage.wealthPage .sharetext{
+	text-align: center;
+	padding-bottom: 30px;
+}
+.withdrawcashdata .datalist{
+	padding: 20px;
+}
+.withdrawcashdata .datalist .t{
+	font-size: 22px;
+	font-weight: 100;
+	margin-bottom: 20px;
+}
+.withdrawcashdata .datalist .i{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 48px;
+	border-bottom: 1px solid #EEE;
+	margin: 20px;
+}
+.withdrawcashdata .datalist .i input{
+	border: none;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.withdrawcashdata .datalist .s{
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	justify-content: space-between;
+}
+.withdrawcashdata .datalist .s >div{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.withdrawcashdata .datalist .s >div >div{
+	width: 80px;
+	height: 80px;
+	background: #EEE;
+	border:1px solid #DDD;
+	border-radius: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.withdrawcashdata .datalist .s >div.sel{
+	color: #0070c0;
+}
+.withdrawcashdata .datalist .s >div.sel >div{
+	background: #84c5f4;
+	border:1px solid #0070c0;
+}
+.withdrawcashdata .datalist .s >div img{
+	width: 50px;
+	border-radius: 50px;
+}
+.withdrawcashdata .frombtn{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+
 
 
 

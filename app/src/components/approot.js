@@ -35,7 +35,9 @@ import Posts from './user/posts.js'//我的发帖
 import Shareinstructions from './user/shareinstructions.js'//分享说明
 import Postsmycreate from './user/postsmycreate.js'//我的发布
 import Postsmycomments from './user/postsmycomments.js'//我的评论
-import Postscollection from './user/postscollection.js'//我的收藏
+import Postscollection from './user/postscollection.js'//我的收藏帖子
+
+import Mycollections from './user/mycollections.js'//我的收藏商品
 import Postsshielding from './user/postsshielding.js'//我的屏蔽
 import Postshistory from './user/postshistory.js'//我的浏览历史
 import Postsmyzan from './user/postsmyzan.js'//我的赞过的帖子
@@ -49,7 +51,9 @@ import Rewards from './user/rewards.js'//我的佣金记录
 import Points from './user/points.js'//我的积分
 import Editaddress from './user/editaddress.js'//编辑地址
 import Addaddress from './user/addaddress.js'//新增地址
-
+import Certification from './user/certification.js'//认证
+import Withdrawcash from './user/withdrawcash.js'//提现
+import Recharge from './user/recharge.js'//充值
 
 //咨询详情
 import TranslateInfo from './translate/info.js';//咨询详情页面
@@ -62,6 +66,12 @@ import Communityinfo from './community/info.js';
 import Communityreplypage from './community/replypage.js';
 import MyTopiclist from './community/mytopiclist.js';
 import NewTopic from './community/newtopic.js';
+
+//智能
+import Device from './device/device.js';//智能设备首页
+import AddDevice1 from './device/adddevice1.js';//添加设备第一步
+import AddDevice2 from './device/adddevice2.js';//添加设备第二步
+import AddDevice3 from './device/adddevice3.js';//添加设备第三步
 
 //登录相关
 import Register from './login/register.js';
@@ -109,6 +119,8 @@ class AppRoot extends React.Component {
                   <Route path="/user/wealth" component={Wealth}/>
                   <Route path="/user/wealthdetails" component={Wealthdetails}/>
                   <Route path="/user/pointsdetails" component={Pointsdetails}/>
+                  <Route path="/user/certification" component={Certification}/>
+                  <Route path="/user/mycollections" component={Mycollections}/>
 
                   <Route path="/user/shareinstructions" component={Shareinstructions}/>
                   <Route path="/user/posts" component={Posts}/>
@@ -128,14 +140,8 @@ class AppRoot extends React.Component {
                   <Route path="/user/addaddress" component={Addaddress}/>
                   <Route path="/user/myreport" component={Myreport}/>
                   <Route path="/user/bereport" component={Bereport}/>
-
-
-
-
-
-
-
-
+                  <Route path="/user/withdrawcash" component={Withdrawcash}/>
+                  <Route path="/user/recharge" component={Recharge}/>
 
                   <Route path="/orderexpress/:expressid" component={OrderExpress}/>
                   <Route path="/shopping/car" component={ShoppingCar}/>
@@ -146,6 +152,11 @@ class AppRoot extends React.Component {
                   <Route path="/translate/reply" component={TranslateReplyList}/>
                   <Route path="/translate/add" component={TranslateAdd}/>
                   <Route path="/translate/selorder" component={TranslateSelOrder}/>
+
+                  <Route path="/device/index" component={Device}/>
+                  <Route path="/device/add1" component={AddDevice1}/>
+                  <Route path="/device/add2" component={AddDevice2}/>
+                  <Route path="/device/add3" component={AddDevice3}/>
 
                   <Route path="/index" component={Index}/>
                   <Route path="/login" component={Login}/>

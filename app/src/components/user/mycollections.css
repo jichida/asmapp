@@ -1,0 +1,93 @@
+.mycollectionsPage{
+	
+}
+.mycollectionsPage .nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	margin-bottom: 10px;
+	background: #FFF;
+	flex-shrink: 0;
+}
+.mycollectionsPage .nav span{
+	line-height: 50px;
+	position: relative;
+	padding: 0 10px;
+}
+.mycollectionsPage .nav span.sel{
+	color: #0070c0;
+}
+.mycollectionsPage .nav span.sel:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 3px;
+	background: #0070c0;
+	left: 0;
+}
+.mycollectionsPage .datalist .li{
+	display: flex;
+	padding: 20px;
+	margin-bottom: 10px;
+	background: #FFF;
+}
+.mycollectionsPage .datalist .li .img{
+	width: 72px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+.mycollectionsPage .datalist .li .img img{
+	width: 100%;
+	border-radius: 6px;
+}
+.mycollectionsPage .datalist .li .inf{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.mycollectionsPage .datalist .li .inf .name{
+	font-size: 14px;
+}
+.mycollectionsPage .datalist .li .inf p{
+	display: flex;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.mycollectionsPage .datalist .li .inf p .price{
+	color: #e60012;
+	font-weight: 400;
+	font-size: 16px;
+	margin-right: 30px;
+}
+.mycollectionsPage .datalist .li .inf p .num{
+	color: #bbb;
+	font-size: 14px;
+	font-weight: 100;
+	direction: flex;
+	align-items: center;
+}
+.mycollectionsPage .datalist .li .inf p .icon{
+	font-size: 12px;
+}
+.mycollectionsPage .datalist .li .inf p .store{
+	margin-right: 30px;
+	font-size: 12px;
+}
+.mycollectionsPage .datalist .li .inf p .storelnk{
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

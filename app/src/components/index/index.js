@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import Translate from '../translate/translate.js';
 import UserCenter from '../user/user.js';
 import Main from '../main/main.js';
+import Device from '../device/device.js';
 //action
 import { set_mainSelectedTab } from '../../actions/index.js';
 
@@ -72,7 +73,7 @@ class TabBarExample extends Component {
             onPress={() => {this.onPressFn("zhineng")}}
             data-seed="logId"
           >
-            {this.renderContent('智能')}
+            <Device />
           </TabBar.Item>
           <TabBar.Item
             icon={<i className="icon iconfont icon-xinxi" />}

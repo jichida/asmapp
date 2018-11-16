@@ -87,12 +87,13 @@
 	background: #FFF;
 }
 .mainPage .datalist .li .img{
-	width: 100px;
+	width: 72px;
 	flex-shrink: 0;
 	margin-right: 15px;
 }
 .mainPage .datalist .li .img img{
 	width: 100%;
+	border-radius: 6px;
 }
 .mainPage .datalist .li .inf{
 	display: flex;
@@ -100,22 +101,23 @@
 	flex-direction: column;
 }
 .mainPage .datalist .li .inf .name{
-	font-size: 16px;
+	font-size: 14px;
 }
 .mainPage .datalist .li .inf p{
 	display: flex;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	justify-content: space-between;
 }
 .mainPage .datalist .li .inf p .price{
 	color: #e60012;
 	font-weight: 400;
-	margin-right: 30px;
 	font-size: 16px;
 }
 .mainPage .datalist .li .inf p .num{
 	color: #bbb;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 100;
 }
 
 

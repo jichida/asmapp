@@ -12,9 +12,9 @@
 	flex-shrink: 0;
 }
 .head .title{
-	font-size: 20px;
+	font-size: 18px;
 	color: #FFF;
-	font-weight: bold;
+	font-weight: 100;
 }
 .head .city{
 	color: #FFF;
@@ -42,6 +42,52 @@
 	font-size: 16px;
 }
 .head .back{
+	color: #FFF;
+}
+
+
+.devicehead{
+	display: flex;
+	height: 70px;
+	justify-content: center;
+	padding: 15px 20px 0 20px;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+}
+.devicehead .title{
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 100;
+}
+.devicehead .city{
+	color: #FFF;
+	font-size: 16px;
+}
+.devicehead .rightlnk,.head .leftlnk{
+	position: absolute;
+	height: 55;
+	display: block;
+	line-height: 55px;
+	color: #FFF;
+	font-size: 16px;
+}
+.devicehead .rightlnk {
+	right: 20px;
+	top:15px;
+
+}
+.devicehead .leftlnk {
+	left: 20px;
+	top: 32px;
+	position: absolute;
+	left: 20px;
+}
+.devicehead .rightlnk .addPost{
+	color: #FFF;
+	font-size: 16px;
+}
+.devicehead .back{
 	color: #FFF;
 }
 
@@ -78,4 +124,12 @@
 }
 .f22{
 	font-size: 22px;
+}
+.subbtn {
+	background: #0074c3;
+	color: #FFF;
+}
+.devicebg{
+	background: url("./img/devicebg.png") repeat-x left top;
+	background-size: auto 100%;
 }
