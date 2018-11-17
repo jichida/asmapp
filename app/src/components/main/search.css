@@ -10,6 +10,8 @@
 	display: flex;
 	padding: 20px;
 	margin-bottom: 10px;
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
 }
 .searchPage .datalist .li .img{
 	width: 100px;

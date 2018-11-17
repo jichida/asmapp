@@ -22,7 +22,6 @@ import OrderExpress from './main/express.js'//订单快递信息
 import SetLocation from './main/setlocation.js'//定位
 import OrderEvaluate from './main/orderevaluate.js'//评价订单
 
-
 //个人中心
 import UserCenter from './user/user.js'//我的
 import AddressList from './user/addresslist.js'//评价订单
@@ -72,6 +71,29 @@ import Device from './device/device.js';//智能设备首页
 import AddDevice1 from './device/adddevice1.js';//添加设备第一步
 import AddDevice2 from './device/adddevice2.js';//添加设备第二步
 import AddDevice3 from './device/adddevice3.js';//添加设备第三步
+import UseDevice from './device/usedevice.js';//使用设备
+import DeviceSetting from './device/setting.js';//设备设置页面
+import Recommended from './device/recommended.js';//测量结果推荐
+import Association from './device/association.js';//智能设备关联账号
+import DeviceHistorydata from './device/devicehistorydata.js';//智能设备关联账号
+
+//积分
+import IntegralMain from './integral/main.js';//积分商城首页
+// import Good from './main/good.js';//商品详情页面
+// import OrderList from './main/orderlist.js';//订单列表
+// import Search from './main/search.js';//搜索页面
+// import Messages from './main/message.js';//消息页面
+// import MessageInfo from './main/messageinfo.js'//消息详情
+// import Aftersale from './main/aftersale.js'//售后
+// import Returngoods from './main/returngoods.js'//退货处理
+// import CreateOrder from './main/createorder.js'//订单确认
+// import ShoppingCar from './main/shoppingcar.js'//购物车
+// import Store from './main/store.js'//商家详情
+// import StoreAptitude from './main/storeaptitude.js'//商家资质
+// import OrderInfo from './main/orderinfo.js'//订单详情-待发货-待收货...
+// import OrderExpress from './main/express.js'//订单快递信息
+// import SetLocation from './main/setlocation.js'//定位
+// import OrderEvaluate from './main/orderevaluate.js'//评价订单
 
 //登录相关
 import Register from './login/register.js';
@@ -98,6 +120,9 @@ class AppRoot extends React.Component {
                   <Route path="/communityreplypage/:topicid" component={Communityreplypage}/>
                   <Route path="/mytopiclist" component={requireAuthentication(MyTopiclist)}/>
                   <Route path="/setlocation" component={SetLocation}/>
+
+
+                  <Route path="/integral/main" component={IntegralMain}/>
 
                   <Route path="/main" component={Main}/>
                   <Route path="/good/:goodid" component={Good}/>
@@ -153,10 +178,18 @@ class AppRoot extends React.Component {
                   <Route path="/translate/add" component={TranslateAdd}/>
                   <Route path="/translate/selorder" component={TranslateSelOrder}/>
 
-                  <Route path="/device/index" component={Device}/>
-                  <Route path="/device/add1" component={AddDevice1}/>
-                  <Route path="/device/add2" component={AddDevice2}/>
-                  <Route path="/device/add3" component={AddDevice3}/>
+                  <Route path="/device/index" component={Device} />
+                  <Route path="/device/add1" component={AddDevice1} />
+                  <Route path="/device/add2" component={AddDevice2} />
+                  <Route path="/device/add3" component={AddDevice3} />
+                  <Route path="/device/use" component={UseDevice} />
+                  <Route path="/device/setting" component={DeviceSetting} />
+                  <Route path="/device/recommended" component={Recommended} />
+                  <Route path="/device/association" component={Association} />
+                  <Route path="/device/historydata" component={DeviceHistorydata} />
+
+
+                  
 
                   <Route path="/index" component={Index}/>
                   <Route path="/login" component={Login}/>

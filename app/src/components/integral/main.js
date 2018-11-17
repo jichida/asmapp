@@ -39,7 +39,9 @@ export class Page extends React.Component {
                                 <div className="inf">
                                     <span className="name">智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈下单再减100元</span>
                                     <p>
-                                        <span className="price">￥260</span>
+                                        <span className="price">积分：2600</span>
+                                    </p>
+                                    <p>
                                         <span className="num">3345人已经购买</span>
                                     </p>
                                 </div>
@@ -50,16 +52,26 @@ export class Page extends React.Component {
                                 </div>
                                 <div className="inf">
                                     <span className="name">智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈下单再减100元</span>
-                                    <p><span className="price">￥260</span>
-                                    <span className="num">3345人已经购买</span></p>
+                                    <p>
+                                        <span className="price">积分：2600</span>
+                                        <span className="price">现金：￥260</span>
+                                    </p>
+                                    <p>
+                                        <span className="num">3345人已经购买</span>
+                                    </p>
                                 </div>
                             </div>
                             <div className="li">
                                 <div className="img"><img src="./img/2.png" /></div>
                                 <div className="inf">
                                     <span className="name">智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈下单再减100元</span>
-                                    <p><span className="price">￥260</span>
-                                    <span className="num">3345人已经购买</span></p>
+                                    <p>
+                                        <span className="price">积分：2600</span>
+                                        <span className="price">现金：￥260</span>
+                                    </p>
+                                    <p>
+                                        <span className="num">3345人已经购买</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>

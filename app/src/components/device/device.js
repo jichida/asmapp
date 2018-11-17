@@ -27,7 +27,7 @@ export class Page extends React.Component {
 
     render() {
         return (
-            <div className="devicePage devicebg" style={{height: window.innerHeight+"px"}}>
+            <div className="devicePage devicebg">
                 <div className="devicehead">
                     <div className="title">智能</div>
                 </div>
@@ -44,7 +44,7 @@ export class Page extends React.Component {
                     :
                     <div className="devicelist">
                         <div className="li">
-                            <div className="l">
+                            <div className="l" onClick={()=>{this.poppush("/device/use")}}>
                                 <span className="name">智能体脂称</span>
                                 <span className="color9">状态：正常</span>
                             </div>

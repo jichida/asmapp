@@ -8,6 +8,7 @@ import Translate from '../translate/translate.js';
 import UserCenter from '../user/user.js';
 import Main from '../main/main.js';
 import Device from '../device/device.js';
+import IntegralMain from '../integral/main.js';
 //action
 import { set_mainSelectedTab } from '../../actions/index.js';
 
@@ -94,7 +95,7 @@ class TabBarExample extends Component {
             selected={ mainSelectedTab === 'jifen'}
             onPress={() => {this.onPressFn("jifen")}}
           >
-            {this.renderContent('积分')}
+            <IntegralMain />
           </TabBar.Item>
           <TabBar.Item
             icon={<i className="icon iconfont icon-yonghu" />}

@@ -125,6 +125,12 @@
 	overflow-y: scroll;
 	justify-content: space-around;
 }
+.adddevicePage .step .img {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
 .adddevicePage .step .img img{
 	width: 170px;
 	margin-top: 30px;
@@ -135,6 +141,14 @@
 	align-items: center;
 	color: #FFF;
 	font-weight: 100;
+}
+.usedevicePage .step .img{
+	padding-top: 30px;
+	font-size: 22px;
+	color: #999;
+}
+.usedevicePage .step .img img{
+	margin-bottom: 20px;	
 }
 .adddevicePage .step .stepname span{
 	display: block;
@@ -157,10 +171,253 @@
 	background: #FFF;
 	line-height: 40px;
 }
+.usedevicePage{
+	background: #FFF;
+}
+.usedevicePage .step .nextbtn{
+	background: #0070c0;
+	color: #FFF;
+}
 
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.usedevicePage .step .usingimg img{
+	-webkit-animation: spin 1s linear 1s 5 alternate;
+    animation: spin 1s linear infinite;
+}
+.usedevicePage .step .usingimg{
+	position: relative;
+}
+.usedevicePage .step .usingimg .usetime{
+	position: absolute;
+	left: 78px;
+    top: 150px;
+	line-height: 40px;
+	display: flex;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	line-height: 30px;
+}
+.usedevicePage .step .usingimg .usetime span{
+	font-weight: 100;
+}
+.adddevicePage .step >div.usedeviceinfo{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 40px;
+}
+.devicesettingPage {
+	display: flex;
+	flex-direction: column;
+}
+.devicesettingPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.devicesettingPage .body .datalist >div{
+	display: flex;
+	justify-content: space-between;
+	height: 46px;
+	border-bottom: 1px solid #EEE;
+	align-items: center;
+	padding: 0 20px;
+	background: #FFF;
+}
+.devicesettingPage .body .datalist >div .iconfont{
+	color: #999;
+	font-size: 14px;
+}
+.recommendedPage .body{
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.recommendedPage .datalist{
+	padding: 20px;
+}
+.recommendedPage .datalist .li{
+	background: #FFF;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	padding: 15px;
+	padding-top: 0;
+}
+.recommendedPage .datalist .li .t{
+	color: #999;
+	line-height: 36px;
+}
+.recommendedPage .datalist .li .l img{
+	width: 100px;
+	height: 100px;
+	border-radius: 6px;
+}
+.recommendedPage .datalist .li .info{
+	display: flex;
+	justify-content: space-between;
+}
+.recommendedPage .datalist .li .info .r{
+	flex-grow: 1;
+	padding-left: 10px;
+	font-size: 11px;
+}
+.recommendedPage .datalist .li .info .r .cc{
+	color: #999;
+	padding: 3px 0;
+}
+.recommendedPage .datalist .li .info .r .tt{
+	font-size: 16px;
+	line-height: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.recommendedPage .datalist .li .info .r .tt .red{
+	font-size: 20px;
+	line-height: 20px;
+}
+.recommendedPage .datalist .li .info .r .address{
+	display: flex;
+	align-items: center;
+	color: #BBB;
+}
+.recommendedPage .datalist .li .info .r .address .icon{
+	font-size: 14px;
+	margin-right: 3px;
+}
+.recommendedPage .datalist .li .info .r .store{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #CCC;
+}
+.associationPage .nav{
+	height: 46px;
+	display: flex;
+	line-height: 46px;
+	align-items: center;
+	padding:  0 20px;
+	background: #FFF;
+	margin-bottom: 10px;
+}
+.associationPage .nav span{
+	margin-right: 20px;
+	font-weight: 100;
+}
+.associationPage .nav span.sel{
+	color: #0070c0;
+	font-weight: 600;
+}
+.associationPage .datalist{
+	background: #FFF;
+}
+.associationPage .datalist .li{
+	border-bottom: 1px solid #EEE;
+	display: flex;
+	padding:  0 20px;
+	align-items: center;
+	justify-content: space-between;
+	height: 46px;
+	font-size: 16px;
+}
+.associationPage .datalist .li .icon{
+	color: #C00;
+	margin-left: 10px;
+}
+.associationPage .datalist .btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 0;
+}
+.associationPage .datalist .btn span{
+	background: #00a0e9;
+	color: #FFF;
+	height: 40px;
+	width: 150px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 6px;
+}
+.devicehistorydataPage .nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
+	background: #FFF;
+	margin-bottom: 10px;
+}
+.devicehistorydataPage{
+	overflow: hidden
+}
+.devicehistorydataPage .nav .search{
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+	flex-shrink: 0;
+}
+.devicehistorydataPage .nav .am-list-item .am-list-line .am-list-content{
+	display: none;
+}
+.devicehistorydataPage .nav>div{
+	flex-grow: 1;
+	display: flex;
+}
+.devicehistorydataPage .nav>div.search{
+	flex-grow: 0;
+}
+.devicehistorydataPage .nav>div.search i{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #0074c3;
+	color: #FFF;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 15px;
+}
+.devicehistorydataPage .nav .am-list-item{
+	flex-grow: 1;
+	padding-left: 5px;
+}
+.devicehistorydataPage .nav .am-list-item .am-list-line .am-list-extra{
+	flex-grow: 1;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+	width: 100px;
+}
+.devicehistorydataPage .nav .am-list-item .am-list-line .am-list-arrow-horizontal{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 
+	margin-right: 10px;
+}
+.devicehistorydataPage .nav .am-list-item .am-list-line{
+	padding-right: 0;
+}
 
-
-
+/*animation: spin 1s linear infinite;*/
 
 
 

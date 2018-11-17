@@ -11,8 +11,10 @@ import "./device.css";
 export class Page extends React.Component {
 
     constructor(props) {  
-        super(props);
-        this.state = {};
+        super(props);  
+        this.state = {
+            hasdevice : false
+        };
     }
     back(){
         this.props.history.goBack();
@@ -22,21 +24,23 @@ export class Page extends React.Component {
     }
     render() {
         return (
-            <div className="adddevicePage  devicePage devicebg" style={{height: window.innerHeight+"px"}}>
-                <div className="devicehead">
+            <div className="associationPage">
+                <div className="head">
                     <div className="leftlnk"><span className="back" onClick={()=>{this.back()}}><i className="icon iconfont icon-Left" /></span></div>
-                    <div className="title">智能</div>
+                    <div className="title">智能体脂称账户关联</div>
                 </div>
-                <div className="step">
-                    <div className="img">
-                        <img src="../img/adddevice3.png" />
+                <div className="nav">
+                    <span className="sel">主账户</span>
+                    <span>张三丰</span>
+                </div>
+                <div className="body">
+                    <div className="datalist">
+                        <div className="li">
+                            <div>老爸</div>
+                            <div><span>李小四</span><i className="icon iconfont icon-delete2" /></div>
+                        </div>
+                        <div className="btn"><span>添加账号</span></div>
                     </div>
-                    <div className="stepname">
-                        <span className="name">第三步</span>
-                        <span className="stepnum">(3/3)</span>
-                        <span className="text">绑定成功<br/>您可以开始使用您的设备了</span>
-                    </div>
-                    <div className="nextbtn" onClick={()=>{this.poppush("/device/use")}}>开始使用</div>
                 </div>
             </div>
         );
