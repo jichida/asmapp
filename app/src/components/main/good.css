@@ -16,6 +16,11 @@
 .goodsinfoHead .goodImg{
 	position: relative;
 }
+.goodsinfoHead .goodImg .am-wingblank.am-wingblank-lg{
+	margin: 0;
+	padding: 0;
+	z-index: 1
+}
 .goodsinfoHead .goodImg img{
 	width: 100%;
 }
@@ -31,6 +36,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 2
 }
 .goodsinfoHead .goodImg .shoppingcar .iconfont,
 .goodsinfoHead .goodImg .backLnk .iconfont,
@@ -212,13 +218,68 @@
 	background: #f39800;
 	border-radius: 0 18px 18px 0;
 }
-
-
-
-
-
-
-
+.selprotype .seltype{
+	display: flex;
+	padding: 15px ;
+	justify-content: flex-start;
+}
+.selprotype .seltype span{
+	margin-left: 15px;
+	background: #EEE;
+	padding: 3px 10px;
+	border-radius: 4px;
+}
+.selprotype .seltype span.sel{
+	background: #0074c3;
+	color: #FFF;
+}
+.selprotypesetnum{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	align-items: center;
+	border-bottom: 1px solid #EEE;
+}
+.selprotypesetnum .addtools{
+	display: flex;
+	align-items: center;
+}
+.selprotypesetnum .addtools .del,
+.selprotypesetnum .addtools .add{
+	width: 30px;
+	height: 30px;
+	background: #EEE;
+	border:1px solid #DDD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.selprotypesetnum .addtools input{
+	background: none;
+	border-radius: none;
+	height: 40px;
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	border:none;
+}
+.selprotypesublnk{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+}
+.selprotypesublnk >div{
+	width: 50%;
+	height: 46px;
+	background: #0070c0;
+	color: #FFF;
+	text-align: center;
+	line-height: 46px;
+}
+.selprotypesublnk >div:last-child{
+	background: #f39800;
+}
 
 
 
