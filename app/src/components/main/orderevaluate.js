@@ -10,12 +10,7 @@ import "./orderevaluate.css";
 
 //顶部搜索
 let Head = (props)=> {
-    let poppush =(url)=>{
-        props.history.push(url);
-    }
-    let back=()=>{
-        props.history.goBack();
-    }
+    let back=()=>{ props.history.goBack(); }
     return (
         <div className="head">
             <div className="leftlnk"><span className="back" onClick={()=>{back()}}><i className="icon iconfont icon-Left" /></span></div>
@@ -34,7 +29,7 @@ let Data = (props)=> {
         <div className="body">
             <div className="datahead">
                 <div className="pli">
-                    <div className="img"><img src="./img/2.png" /></div>
+                    <div className="img"><img src="./img/2.png" alt="" /></div>
                     <div className="orderinfo">
                         <div className="name">爱上门新款血压仪送长辈十分有面子</div>
                         <div className="info"><p>颜色：黑色 / 型号 ：235ASM</p><p>版本：加强版</p></div>
@@ -51,9 +46,9 @@ let Data = (props)=> {
                 <textarea placeholder="输入您的评价"></textarea>
             </div>
             <div className="imglist">
-                <img src="./img/2.png" />
-                <img src="./img/2.png" />
-                <img src="./img/2.png" />
+                <img src="./img/2.png" alt="" />
+                <img src="./img/2.png" alt="" />
+                <img src="./img/2.png" alt="" />
                 <span className="imglistbtn">
                     <i className="icon iconfont icon-camera" />
                 </span>
@@ -96,29 +91,23 @@ let Data = (props)=> {
 Data = withRouter(Data);
 
 export class Page extends React.Component {
-
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight
-        };
+        this.state = {};
     } 
-
     render() {
         return (
             <div className="orderEvaluatePage"  style={{height: window.innerHeight+"px"}}>
                 <Head />
                 <Data />
-
                 <div className="foot">发表评价</div>
             </div>
         )
     }
-
 }
 const stores = ({userlogin}) => {
     return {...userlogin};
 }
+Page = withRouter(Page);
 Page = connect(stores)(Page);
 export default Page;

@@ -9,9 +9,6 @@ import "./orderinfo.css";
 
 //顶部搜索
 let Head = (props)=> {
-    let poppush =(url)=>{
-        props.history.push(url);
-    }
     let back=()=>{
         props.history.goBack();
     }
@@ -26,9 +23,6 @@ Head = withRouter(Head);
 
 //顶部搜索
 let Address = (props)=> {
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="address">
 
@@ -50,9 +44,6 @@ let Address = (props)=> {
 
 //快递信息
 let ExpressInfo = (props)=> {
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="expressinfo">
             <div className="address">
@@ -77,9 +68,6 @@ let ExpressInfo = (props)=> {
 
 //顶部搜索
 let OrderInfo = (props)=> {
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="orderinfobox">
             <div className="orderinfo">
@@ -163,10 +151,7 @@ export class Page extends React.Component {
 
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight
-        };
+        this.state = {};
     } 
 
     render() {

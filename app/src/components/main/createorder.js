@@ -9,9 +9,6 @@ import "./createorder.css";
 
 //顶部搜索
 let Head = (props)=> {
-    let poppush =(url)=>{
-        props.history.push(url);
-    }
     let back=()=>{
         props.history.goBack();
     }
@@ -26,9 +23,6 @@ Head = withRouter(Head);
 
 //顶部搜索
 let Address = (props)=> {
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="address">
 
@@ -49,9 +43,6 @@ let Address = (props)=> {
 };
 //顶部搜索
 let OrderInfo = (props)=> {
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="orderinfo">
             <div className="title">爱上门旗舰店</div>
@@ -69,7 +60,7 @@ let OrderInfo = (props)=> {
                     <div>购买数量</div>
                     <div className="addtools">
                         <div className="del">-</div>
-                        <input type="number" default="1" value="1" />
+                        <input type="number" onChange={()=>{}} value="1" />
                         <div className="add">+</div>
                     </div>
                 </div>
@@ -115,10 +106,7 @@ export class Page extends React.Component {
 
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight
-        };
+        this.state = {};
     } 
 
     render() {

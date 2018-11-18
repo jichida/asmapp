@@ -7,16 +7,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import { Modal, Button } from 'antd';
 import "./mycollections.css";
 
 export class Page extends React.Component {
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight,
-        };
+        this.state = {};
     }
     poppush(url){
         this.props.history.push(url);

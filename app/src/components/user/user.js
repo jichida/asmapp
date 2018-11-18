@@ -7,7 +7,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import "./user.css";
 
 //顶部搜索
@@ -15,13 +15,10 @@ let UserHead = (props)=> {
     let poppush =(url)=>{
         props.history.push(url);
     }
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="userhead" onClick={()=>{poppush("/user/info")}}>
             <div className="avatar">
-                <img src="./img/2.png" />
+                <img src="./img/2.png" alt="" />
             </div>
             <div className='userinfo'>
                 <div>张三丰</div>
@@ -38,9 +35,6 @@ let Nav = (props)=> {
     let poppush =(url)=>{
         props.history.push(url);
     }
-    let back=()=>{
-        props.history.goBack();
-    }
     return (
         <div className="nav">
             <div onClick={()=>{poppush("/user/Wealth")}}><span>2300</span><span>我的现金</span></div>
@@ -55,18 +49,13 @@ Nav = withRouter(Nav);
 export class Page extends React.Component {
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight,
-            serviceLine: false,
-        };
+        this.state = { serviceLine: false };
     }
     poppush(url){
         this.props.history.push(url);
     }
     //客服热线
     serviceLine(serviceLine) {
-        console.log("serviceLine")
         this.setState({ serviceLine });
     }
     render() {
@@ -104,9 +93,10 @@ export class Page extends React.Component {
         )
     }
 }
-Page = withRouter(Page);
+
 const stores = ({userlogin}) => {
     return {...userlogin};
 }
+Page = withRouter(Page);
 Page = connect(stores)(Page);
 export default Page;
