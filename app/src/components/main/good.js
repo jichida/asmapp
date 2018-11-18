@@ -17,7 +17,7 @@ const Brief = Item.Brief;
 //         props.history.goBack();
 //     }
 //     return (
-        
+
 //     );
 // };
 // GoodsImg = withRouter(GoodsImg);
@@ -27,7 +27,7 @@ const Brief = Item.Brief;
 //         props.history.push(url);
 //     }
 //     return (
-        
+
 //     );
 // };
 // GoodsFoot = withRouter(GoodsFoot);
@@ -65,7 +65,7 @@ class GoodsBtnList extends React.Component {
                     onClose={this.onClose('canshubox')}
                     animationType="slide-up"
                     >
-                    <List 
+                    <List
                         renderHeader={() => <div>参数</div>}
                         className="popup-list">
                         <Item extra={'参数1值参数1值'}>参数1</Item>
@@ -81,7 +81,7 @@ class GoodsBtnList extends React.Component {
                     animationType="slide-up"
                     className="selprotype"
                     >
-                    <List 
+                    <List
                         renderHeader={() => <div>选款</div>}
                         className="popup-list">
                         <div className="seltype"><span>款式1</span><span>款式1</span></div>
@@ -172,7 +172,7 @@ export class Page extends React.Component {
             <div className="goodInfoPage" style={{height: window.innerHeight+"px"}}>
                 <div className="goodsinfoHead">
                     <div className="goodImg">
-                        <a className="backLnk"><i className="icon iconfont icon-Left" onClick={this.back} /></a>
+                        <a className="backLnk"><i className="icon iconfont icon-Left" onClick={this.back.bind(this)} /></a>
                         <a className="shoppingcar" onClick={()=>{this.poppush("/shopping/car")}}><i className="icon iconfont icon-gouwuche" /></a>
                         <a className="moreLnk"><i className="icon iconfont icon-gengduo-tianchong" /></a>
                         <WingBlank>
@@ -228,7 +228,7 @@ export class Page extends React.Component {
                         onClose={this.onClose('canshubox')}
                         animationType="slide-up"
                         >
-                        <List 
+                        <List
                             renderHeader={() => <div>参数</div>}
                             className="popup-list">
                             <Item extra={'参数1值参数1值'}>参数1</Item>
@@ -244,7 +244,7 @@ export class Page extends React.Component {
                         animationType="slide-up"
                         className="selprotype"
                         >
-                        <List 
+                        <List
                             renderHeader={() => <div>选款</div>}
                             className="popup-list">
                             <div className="seltype"><span>款式1</span><span>款式1</span></div>
@@ -284,5 +284,6 @@ export class Page extends React.Component {
 const stores = ({userlogin}) => {
     return {...userlogin};
 }
+// Page = withRouter(Page);
 Page = connect(stores)(Page);
 export default Page;
