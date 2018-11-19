@@ -127,7 +127,6 @@ export class Page extends React.Component {
             data: ['1', '2', '3'],
             canshubox: false,
             xuankuan : false,
-
             formdata : {
                 num : 0,
                 type : 0,
@@ -135,8 +134,10 @@ export class Page extends React.Component {
             }
         };
     }
+    back(){
+        this.props.history.goBack();
+    }
     onClose(key){
-        console.log(key)
         this.setState({
             [key]: false,
         });
@@ -145,7 +146,6 @@ export class Page extends React.Component {
         this.props.history.push(url);
     }
     showModal(key){
-        console.log(key)
         this.setState({
             [key]: true,
         });
@@ -155,8 +155,8 @@ export class Page extends React.Component {
             <div className="goodInfoPage" style={{height: window.innerHeight+"px"}}>
                 <div className="goodsinfoHead">
                     <div className="goodImg">
-                        <a className="backLnk"><i className="icon iconfont icon-Left" onClick={this.back} /></a>
-                        <a className="shoppingcar"><i className="icon iconfont icon-gouwuche" /></a>
+                        <a className="backLnk"><i className="icon iconfont icon-Left" onClick={()=>{this.back()}} /></a>
+                        <a className="shoppingcar"  onClick={()=>{this.poppush("/shopping/car")}}><i className="icon iconfont icon-gouwuche" /></a>
                         <a className="moreLnk"><i className="icon iconfont icon-gengduo-tianchong" /></a>
                         <Carousel
                           autoplay={false}
@@ -238,7 +238,7 @@ export class Page extends React.Component {
                     </div>
                     <div className="sublnk">
                         <div onClick={()=>{this.showModal('xuankuan')}}>加入购物车</div>
-                        <div onClick={()=>{this.poppush('/order/createorder')}}>立刻购买</div>
+                        <div onClick={()=>{this.showModal('xuankuan')}}>立刻购买</div>
                     </div>
                 </div>
                 <Modal
