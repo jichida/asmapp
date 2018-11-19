@@ -42,7 +42,7 @@ let Datalist = (props)=> {
                                 <span className="red">￥ 250.00</span>
                                 <div className="addtools">
                                     <div className="del">-</div>
-                                    <input type="number" default="1" value="1" />
+                                    <input type="number" value="1" onChange={()=>{}} />
                                     <div className="add">+</div>
                                 </div>
                             </div>

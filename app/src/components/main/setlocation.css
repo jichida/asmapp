@@ -5,15 +5,16 @@
 .selLocationPage .datahead{
 	padding-bottom: 20px;
 }
-.selLocationPage .datahead .nowlocation{
+.selLocationPage .nowlocation{
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 20px;
 	background: #FFF;
 	font-size: 16px;
 	margin-bottom: 10px;
+	flex-shrink: 0;
 }
-.selLocationPage .datahead .nowlocation .selbtn span{
+.selLocationPage .nowlocation .selbtn span{
 	margin-right: 10px;
 }
 .selLocationPage .datahead .headlist .tit{
