@@ -15,7 +15,8 @@ export class Page extends React.Component {
     constructor(props) {  
         super(props);  
         this.state = {
-            nowCity : this.props.nowCity
+            nowCity : this.props.nowCity,
+            arealist : this.props.arealist,
         };
     }
     poppush(url){
@@ -24,6 +25,11 @@ export class Page extends React.Component {
     back(){
         this.props.history.goBack();
     }
+    selcity(name){
+        console.log(name)
+        this.setState({nowCity : name })
+    }
+
     render() {
         return (
             <div className="selLocationPage" style={{height: window.innerHeight+"px"}}>
@@ -32,7 +38,7 @@ export class Page extends React.Component {
                     <div className="title">定位</div>
                 </div>
                 <div className="nowlocation">
-                    <div><span>当前定位：</span><span>{this.state.nowCity.name}</span></div>
+                    <div><span>当前定位：</span><span>{this.state.nowCity}</span></div>
                     <div className="selbtn"><span>选择区域</span><i className="icon iconfont icon-down" /></div>
                 </div>
                 <div className="data">
@@ -42,7 +48,7 @@ export class Page extends React.Component {
                             <div className="headli">
                                 <div className="tit">最近定位</div>
                                 <div className="li">
-                                    <div className="sel"><span>上海</span></div>
+                                    <div><span>上海</span></div>
                                     <div><span>常州</span></div>
                                 </div>
                             </div>
@@ -52,7 +58,7 @@ export class Page extends React.Component {
                                     {
                                         lodashmap(CITY.hotcity, (val, i)=>{
                                             return (
-                                                <div><span>{val.name}</span></div>
+                                                <div key={i} onClick={()=>{this.selcity(val.name)}}><span>{val.name}</span></div>
                                             )
                                         })
                                     }
@@ -70,7 +76,7 @@ export class Page extends React.Component {
                                             {
                                                 lodashmap(val.list, (city, ii)=>{
                                                     return (
-                                                        <span>{city.name}</span>
+                                                        <span key={ii} onClick={()=>{this.selcity(city.name)}}>{city.name}</span>
                                                     )
                                                 })
                                             }
@@ -87,7 +93,16 @@ export class Page extends React.Component {
 
 }
 const stores = ({userlogin}) => {
-    let nowCity = { "name" : "常州" };
+
+    let provinces = CITY.provinces;
+    let arealib = {};
+    lodashmap(provinces, (citylist, i)=>{
+        let city = citylist.city;
+        lodashmap(city, (citys, ii)=>{
+            arealib[citys.name] = citys.area
+        })
+    })
+    let nowCity = "常州";
     return {...userlogin, nowCity};
 }
 Page = withRouter(Page);

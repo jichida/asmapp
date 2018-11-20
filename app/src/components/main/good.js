@@ -159,28 +159,28 @@ export class Page extends React.Component {
                         <a className="shoppingcar"  onClick={()=>{this.poppush("/shopping/car")}}><i className="icon iconfont icon-gouwuche" /></a>
                         <a className="moreLnk"><i className="icon iconfont icon-gengduo-tianchong" /></a>
                         <Carousel
-                          autoplay={false}
-                          infinite
-                          beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                          afterChange={index => console.log('slide to', index)}
-                        >
-                          {this.state.data.map(val => (
-                            <a
-                              key={val}
-                              style={{ display: 'inline-block', width: '100%' }}
+                            autoplay={false}
+                            infinite
+                            beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+                            afterChange={index => console.log('slide to', index)}
                             >
-                              <img
-                                src="./img/1.png"
-                                alt=""
-                                style={{ width: '100%', verticalAlign: 'top' }}
-                                onLoad={() => {
-                                  // fire window resize event to change height
-                                  window.dispatchEvent(new Event('resize'));
-                                  this.setState({ imgHeight: 'auto' });
-                                }}
-                              />
-                            </a>
-                          ))}
+                            {this.state.data.map(val => (
+                                <a
+                                    key={val}
+                                    style={{ display: 'inline-block', width: '100%' }}
+                                    >
+                                    <img
+                                        src="./img/1.png"
+                                        alt=""
+                                        style={{ width: '100%', verticalAlign: 'top' }}
+                                        onLoad={() => {
+                                            // fire window resize event to change height
+                                            window.dispatchEvent(new Event('resize'));
+                                            this.setState({ imgHeight: 'auto' });
+                                        }}
+                                    />
+                                </a>
+                            ))}
                         </Carousel>
                     </div>
                     <div className="data">
@@ -224,7 +224,7 @@ export class Page extends React.Component {
                 <div className="goodText">
                     <div className="goodTextHead">
                         <span>爱上门旗舰店</span>
-                        <span className="lnk">查看店铺</span>
+                        <span className="lnk" onClick={()=>{this.poppush('/shopping/store/storeid')}}>查看店铺</span>
                     </div>
                     <div className="text">
                         产品图文详情
@@ -232,9 +232,9 @@ export class Page extends React.Component {
                 </div>
                 <div className="goodsFoot">
                     <div className="leftlnk">
-                        <div><i className="icon iconfont icon-dianpu" /><span>店铺</span></div>
+                        <div onClick={()=>{this.poppush('/shopping/store/storeid')}}><i className="icon iconfont icon-dianpu" /><span>店铺</span></div>
                         <div><i className="icon iconfont icon-kefu" /><span>客服</span></div>
-                        <div><i className="icon iconfont icon-shoucang1" /><span>收藏</span></div>
+                        <div><i className={this.props.isCollection?"icon iconfont icon-shoucang warning":"icon iconfont icon-shoucang1"} /><span>收藏</span></div>
                     </div>
                     <div className="sublnk">
                         <div onClick={()=>{this.showModal('xuankuan')}}>加入购物车</div>
@@ -284,7 +284,8 @@ export class Page extends React.Component {
 
 }
 const stores = ({userlogin}) => {
-    return {...userlogin};
+    let isCollection = true; //是否已经收藏过
+    return {...userlogin, isCollection};
 }
 Page = withRouter(Page);
 Page = connect(stores)(Page);
