@@ -94,11 +94,9 @@ DataList = withRouter(DataList);
 export class Page extends React.Component {
     constructor(props) {  
         super(props);  
-        this.state = {
-            p: 0,
-            innerHeight : window.innerHeight
-        };
+        this.state = {};
     } 
+
     render() {
         return (
             <div className="searchPage" style={{height: window.innerHeight+"px"}}>
@@ -111,9 +109,16 @@ export class Page extends React.Component {
             </div>
         )
     }
-
 }
 const stores = ({userlogin}) => {
+    const searchData = {
+        name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+        price : 360,
+        point : 3600,
+        purchase : 100,
+        imgurl : "./img/2.png",
+        id: "TERT23424323fw"
+    }
     return {...userlogin};
 }
 Page = connect(stores)(Page);
