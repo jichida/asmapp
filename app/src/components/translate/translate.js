@@ -68,6 +68,9 @@ export class Page extends React.Component {
         NavData[i].sel = true;
         this.setState({  NavData });
     }
+    back = ()=>{
+        this.props.history.goBack();
+    }
     componentDidMount(){
         usecachemytopic = false;
         let MainBody = this.refs.mainbody;
@@ -194,4 +197,5 @@ const stores = ({userlogin}) => {
     return {...userlogin, NavData, TopImgList};
 }
 Page = connect(stores)(Page);
+Page = withRouter(Page);
 export default Page;

@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import {NavBar} from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
-import { Carousel, List, Modal } from 'antd-mobile';
+import { Carousel } from 'antd-mobile';
 import lodashmap from "lodash.map";
 import "./main.css";
 
