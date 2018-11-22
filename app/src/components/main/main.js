@@ -14,6 +14,8 @@ export class Page extends React.Component {
         super(props); 
         this.state = {
             NavData : this.props.NavData,
+            showloading : false,//是否显示加载中块
+            showfiexdnav : false,//是否显示固定导航条
         }
     } 
     poppush(url){
@@ -25,14 +27,60 @@ export class Page extends React.Component {
             val.sel = false;
         })
         NavData[i].sel = true;
-        this.setState({ NavData });
+        this.setState({  NavData });
     }
     componentDidMount(){
         // this.setState({ NavData : this.props.NavData })
+        // console.log(this.refs.mainbody);
+        let MainBody = this.refs.mainbody;
+        let MainSlideimg = this.refs.slideimg;
+        MainBody.addEventListener('scroll', ()=>{
+            //监听滚动到底部加载更多数据
+            // console.log(MainBody.scrollHeight);
+            // console.log();
+            // console.log(MainBody.scrollTop)
+            if((MainBody.scrollHeight- (MainBody.clientHeight + MainBody.scrollTop))<2){
+                this.showloading();
+            }
+            //监听滚动到一定距离后，固定导航条
+            // console.log(MainSlideimg.offsetHeight);
+            // console.log(MainBody.scrollTop);
+            if(MainBody.scrollTop>=MainSlideimg.offsetHeight){
+                this.showfiexdnav(true);
+            }else{
+                this.showfiexdnav(false);
+            }
+            
+        });
     }
     componentWillReceiveProps(nextProps) {
         //
     }
+
+    showfiexdnav(h){
+        this.setState({ showfiexdnav : h });
+    }
+
+    showloading(){//显示loading，加载更多数据
+        let addobj = {
+            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+            price : 360,
+            point : 3600,
+            purchase : 100,
+            imgurl : "./img/2.png",
+            id: "TERT23424323fw"
+        }
+        this.setState({ showloading : true });
+        this.refs.mainbody.scrollTop = this.refs.mainbody.scrollHeight;
+        setTimeout(()=>{
+            //添加数据
+            for(let i=0;i<5;i++){
+                this.props.MainDataList.push(addobj)
+            }
+            this.setState({ showloading : false });
+        }, 2000)
+    }
+
     render() {
         const {TopImgList, MainDataList} = this.props;
         console.log("render");
@@ -43,12 +91,14 @@ export class Page extends React.Component {
                     <div className="seatch"><input type="text" onClick={()=>{this.poppush("/search")}} /><i className="icon iconfont icon-sousuo" /></div>
                     <div className="more"><i className="icon iconfont icon-gengduo-tianchong moreLnk" /></div>
                 </div>
-                <div className="body">
+                <div className="body" ref="mainbody">
+                    <div className="mainslideimg" ref="slideimg">
                     <Carousel
                       autoplay={false}
                       infinite
                       beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                       afterChange={index => console.log('slide to', index)}
+                      
                     >
                       {TopImgList.map(val => (
                         <a
@@ -68,7 +118,8 @@ export class Page extends React.Component {
                         </a>
                       ))}
                     </Carousel>
-                    <div className="nav">
+                    </div>
+                    <div className="nav" ref="mainnav">
                     {
                         this.state.NavData.map(
                             (val, index) => {
@@ -79,8 +130,20 @@ export class Page extends React.Component {
                         )
                     }
                     </div>
+                    {
+                        !!this.state.showfiexdnav && <div className="nav navfixed">{
+                            this.state.NavData.map(
+                                (val, index) => {
+                                    return (
+                                        <span className={ !!val.sel?"sel":"" } key={index} onClick={()=>{this.seltype(index)}}>{val.name}</span>
+                                    )
+                                }
+                            )
+                        }</div>
+                    }
+
                     <div className="datalist">
-                        <div className="list">
+                        <div className="list" >
                             {
                                 lodashmap(MainDataList ,(val, index) => {
                                         return (
@@ -96,7 +159,7 @@ export class Page extends React.Component {
                                     }
                                 )
                             }
-                            
+                            { !!this.state.showloading && <div className="showloading">loading ...</div> }
                         </div>
                     </div>
                     </div>
@@ -143,6 +206,22 @@ const stores = ({userlogin}) => {
             imgurl : "./img/2.png",
             id: "TERT23424323fw"
         },
+        {
+            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+            price : 360,
+            point : 3600,
+            purchase : 100,
+            imgurl : "./img/2.png",
+            id: "TERT23424323fw"
+        },
+        {
+            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+            price : 360,
+            point : 3600,
+            purchase : 100,
+            imgurl : "./img/2.png",
+            id: "TERT23424323fw"
+        }
     ]
     return {...userlogin, TopImgList, NavData, MainDataList};
 }

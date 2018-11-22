@@ -62,11 +62,13 @@
 	margin-bottom: 10px;
 	background: #FFF;
 	flex-shrink: 0;
+	border-bottom: 1px solid #EEE;
 }
 .mainPage .nav span{
 	line-height: 50px;
 	position: relative;
 	padding: 0 10px;
+
 }
 .mainPage .nav span.sel{
 	color: #0070c0;
@@ -79,6 +81,12 @@
 	height: 3px;
 	background: #0070c0;
 	left: 0;
+}
+.mainPage .navfixed{
+	position: fixed;
+	top: 60px;
+	width: 100%;
+	height: 50px;
 }
 .mainPage .datalist .li{
 	display: flex;
@@ -118,6 +126,11 @@
 	color: #bbb;
 	font-size: 14px;
 	font-weight: 100;
+}
+.mainPage .showloading{
+	text-align: center;
+	color: #999;
+	line-height: 60px;
 }
 
 

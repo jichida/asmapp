@@ -70,7 +70,7 @@ export class Page extends React.Component {
                         {
                             lodashmap(CITY.citylist, (val, i)=>{
                                 return (
-                                    <div>
+                                    <div key={i}>
                                         <div className="tt">{val.initial}</div>
                                         <div className="li">
                                             {
