@@ -111,7 +111,7 @@ export class Page extends React.Component {
         return (
             <div className="translate">
                 <div className="head">
-                    <div className="leftlnk"><span className="city">常州 <i className="icon iconfont icon-down" /></span></div>
+                    <div className="leftlnk" onClick={()=>{this.poppush('/setlocation')}}><span className="city">常州 <i className="icon iconfont icon-down" /></span></div>
                     <div className="title">咨询</div>
                     <div className="rightlnk"><span className="addPost" onClick={()=>{this.poppush('/translate/add')}}>+ 发帖</span></div>
                 </div>

@@ -118,6 +118,18 @@ const Item = List.Item;
 //     );
 // };
 
+function closest(el, selector) {
+  const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
+  while (el) {
+    if (matchesSelector.call(el, selector)) {
+      return el;
+    }
+    el = el.parentElement;
+  }
+  return null;
+}
+
+
 
 export class Page extends React.Component {
 
@@ -127,6 +139,8 @@ export class Page extends React.Component {
             data: ['1', '2', '3'],
             canshubox: false,
             xuankuan : false,
+            sharebox : false,
+            kefu : false,
             formdata : {
                 num : 0,
                 type : 0,
@@ -150,6 +164,18 @@ export class Page extends React.Component {
             [key]: true,
         });
     }
+
+    onWrapTouchStart = (e) => {
+        // fix touch to scroll background page on iOS
+        if (!/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+          return;
+        }
+        const pNode = closest(e.target, '.am-modal-content');
+        if (!pNode) {
+          e.preventDefault();
+        }
+    }
+
     render() {
         return (
             <div className="goodInfoPage" style={{height: window.innerHeight+"px"}}>
@@ -190,7 +216,7 @@ export class Page extends React.Component {
                                 <span className="name">爱上门血压仪</span>
                             </div>
                             <div className="right">
-                                <span className="shear"><i className="icon iconfont icon-fenxiang"/> 分享</span>
+                                <span className="shear" onClick={()=>{this.showModal("sharebox")}}><i className="icon iconfont icon-fenxiang"/> 分享</span>
                             </div>
                         </div>
                         <div className="nm">
@@ -233,7 +259,7 @@ export class Page extends React.Component {
                 <div className="goodsFoot">
                     <div className="leftlnk">
                         <div onClick={()=>{this.poppush('/shopping/store/storeid')}}><i className="icon iconfont icon-dianpu" /><span>店铺</span></div>
-                        <div><i className="icon iconfont icon-kefu" /><span>客服</span></div>
+                        <div onClick={()=>{this.showModal("kefu")}}><i className="icon iconfont icon-kefu" /><span>客服</span></div>
                         <div><i className={this.props.isCollection?"icon iconfont icon-shoucang warning":"icon iconfont icon-shoucang1"} /><span>收藏</span></div>
                     </div>
                     <div className="sublnk">
@@ -276,6 +302,36 @@ export class Page extends React.Component {
                     <div className="selprotypesublnk">
                         <div onClick={()=>{this.onClose('xuankuan')}}>加入购物车</div>
                         <div onClick={()=>{this.poppush('/order/createorder')}}>立刻购买</div>
+                    </div>
+                </Modal>
+
+                <Modal
+                    visible={this.state.sharebox}
+                    transparent
+                    maskClosable={false}
+                    onClose={()=>{this.onClose('sharebox')}}
+                    title="分享到"
+                    footer={[{ text: 'Ok', onPress: () => { this.onClose('sharebox'); } }]}
+                    wrapProps={{ onTouchStart: this.onWrapTouchStart }}
+                    >
+                    <div className="ShareBox">
+                        <div>腾讯</div>
+                        <div>微信</div>
+                    </div>
+                </Modal>
+
+                <Modal
+                    visible={this.state.kefu}
+                    transparent
+                    maskClosable={false}
+                    onClose={()=>{this.onClose('kefu')}}
+                    title="联系到客服"
+                    footer={[{ text: 'Ok', onPress: () => { this.onClose('kefu'); } }]}
+                    wrapProps={{ onTouchStart: this.onWrapTouchStart }}
+                    >
+                    <div className="ShareBox">
+                        <div>客服热线</div>
+                        <div>18888888888</div>
                     </div>
                 </Modal>
             </div>
