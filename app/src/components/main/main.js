@@ -82,8 +82,7 @@ export class Page extends React.Component {
     }
 
     render() {
-        const {TopImgList, MainDataList} = this.props;
-        console.log("render");
+        const {TopImgList, MainDataList, NavData} = this.props;
         return (
             <div className="mainPage">
                 <div className="mainHead">
