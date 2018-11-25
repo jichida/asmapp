@@ -9,13 +9,14 @@ import { Carousel } from 'antd-mobile';
 import lodashmap from "lodash.map";
 import "./main.css";
 
-export class Page extends React.Component {
+class Page extends React.Component {
     constructor(props) {  
         super(props); 
         this.state = {
             NavData : this.props.NavData,
             showloading : false,//是否显示加载中块
             showfiexdnav : false,//是否显示固定导航条
+            MainDataList:[]
         }
     } 
     poppush(url){
@@ -30,6 +31,49 @@ export class Page extends React.Component {
         this.setState({  NavData });
     }
     componentDidMount(){
+        let MainDataList = [
+            {
+                name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈001",
+                price : 450,
+                point : 4500,
+                purchase : 300,
+                imgurl : "./img/2.png",
+                id: "qwdq23423323f"
+            },
+            {
+                name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈002",
+                price : 360,
+                point : 3600,
+                purchase : 100,
+                imgurl : "./img/2.png",
+                id: "TERT23424323f"
+            },
+            {
+                name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+                price : 360,
+                point : 3600,
+                purchase : 100,
+                imgurl : "./img/2.png",
+                id: "TERT23424323fw"
+            },
+            {
+                name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+                price : 360,
+                point : 3600,
+                purchase : 100,
+                imgurl : "./img/2.png",
+                id: "TERT23424323fw"
+            },
+            {
+                name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
+                price : 360,
+                point : 3600,
+                purchase : 100,
+                imgurl : "./img/2.png",
+                id: "TERT23424323fw"
+            }
+        ];
+        this.setState({MainDataList});
         // this.setState({ NavData : this.props.NavData })
         // console.log(this.refs.mainbody);
         let MainBody = this.refs.mainbody;
@@ -50,7 +94,7 @@ export class Page extends React.Component {
             }else{
                 this.showfiexdnav(false);
             }
-            
+
         });
     }
     componentWillReceiveProps(nextProps) {
@@ -74,15 +118,17 @@ export class Page extends React.Component {
         this.refs.mainbody.scrollTop = this.refs.mainbody.scrollHeight;
         setTimeout(()=>{
             //添加数据
+            let MainDataList = this.state.MainDataList;
             for(let i=0;i<5;i++){
-                this.props.MainDataList.push(addobj)
+                MainDataList.push(addobj)
             }
-            this.setState({ showloading : false });
+            this.setState({ showloading : false ,MainDataList});
         }, 2000)
     }
 
     render() {
-        const {TopImgList, MainDataList, NavData} = this.props;
+        const {TopImgList, NavData} = this.props;
+        const {MainDataList} = this.state;
         return (
             <div className="mainPage">
                 <div className="mainHead">
@@ -97,11 +143,10 @@ export class Page extends React.Component {
                       infinite
                       beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                       afterChange={index => console.log('slide to', index)}
-                      
+
                     >
                       {TopImgList.map(val => (
-                        <a
-                          key={val}
+                        <a key={val}
                           style={{ display: 'inline-block', width: '100%' }}
                         >
                           <img
@@ -147,13 +192,13 @@ export class Page extends React.Component {
                                 lodashmap(MainDataList ,(val, index) => {
                                         return (
                                             <div className="li" key={index} onClick={()=>{this.poppush(`/good/${val.id}`)}}>
-                                                <div className="img"><img src={val.imgurl} /></div>
+                                                <div className="img"><img src={val.imgurl} alt=''/></div>
                                                 <div className="inf">
                                                     <span className="name">{val.name}</span>
                                                     <p><span className="price">￥{val.price}</span>
                                                     <span className="num">{val.purchase}人已经购买</span></p>
                                                 </div>
-                                            </div>    
+                                            </div>
                                         )
                                     }
                                 )
@@ -180,53 +225,8 @@ const stores = ({userlogin}) => {
         { name:"智能家电",sel: false},
         { name:"健康穿戴",sel: false}
     ]
-    let MainDataList = [
-        {
-            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈001",
-            price : 450,
-            point : 4500,
-            purchase : 300,
-            imgurl : "./img/2.png",
-            id: "qwdq23423323f"
-        },
-        {
-            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈002",
-            price : 360,
-            point : 3600,
-            purchase : 100,
-            imgurl : "./img/2.png",
-            id: "TERT23424323f"
-        },
-        {
-            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
-            price : 360,
-            point : 3600,
-            purchase : 100,
-            imgurl : "./img/2.png",
-            id: "TERT23424323fw"
-        },
-        {
-            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
-            price : 360,
-            point : 3600,
-            purchase : 100,
-            imgurl : "./img/2.png",
-            id: "TERT23424323fw"
-        },
-        {
-            name : "智能体脂秤【现货发售】爱上门旗舰店双十一活动大回馈003",
-            price : 360,
-            point : 3600,
-            purchase : 100,
-            imgurl : "./img/2.png",
-            id: "TERT23424323fw"
-        }
-    ]
-    return {...userlogin, TopImgList, NavData, MainDataList};
+    return {...userlogin, TopImgList, NavData, };
 }
 Page = withRouter(Page);
 Page = connect(stores)(Page);
 export default Page;
-
-
-
